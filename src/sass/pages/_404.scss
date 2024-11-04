@@ -1,0 +1,26 @@
+.error-404 {
+	@include flex_center(column);
+
+	@media(min-width: 992px) {
+		img {
+			max-width: 990px;
+			height: auto;
+		}
+	}
+
+	.error-info {
+		@include flex_center(column);
+		gap: 10px;
+		padding-top: 40px;
+		text-align: center;
+		.error-title {
+			font-size: 44px;
+			margin-bottom: 15px;
+			line-height: 1.2;
+		}
+		p {
+			font-size: 28px;
+			line-height: 1.2;
+		}
+	}
+}

@@ -1,0 +1,149 @@
+/*-------------------------------------
+#. EL: Swiper Slider
+---------------------------------------*/
+.rt-swiper-slider {
+	overflow: hidden;
+	.swiper-wrapper {
+		align-items: center;
+	}
+}
+.hover-visibility {
+	.swiper-navigation {
+		.swiper-button {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+	&:hover {
+		.swiper-navigation {
+			.swiper-button {
+				opacity: 1;
+				visibility: visible;
+			}
+			.swiper-button-prev {
+				left: 12px !important;
+			}
+			.swiper-button-next {
+				right: 12px !important;
+			}
+		}
+	}
+}
+.swiper-navigation {
+	.swiper-button-prev {
+		left: 12px;
+	}
+	.swiper-button-next {
+		right: 12px;
+	}
+	.swiper-button {
+		position: absolute;
+		top: 50%;
+		width: 50px;
+		height: 50px;
+		font-size: 12px;
+		margin-top: -22px;
+		z-index: 2;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 6px;
+		background-color: $gray10;
+		color: $button_text_color;
+		@include transition_default();
+		&:hover {
+			background-color: $tertiary_color;
+			color: $button_text_color;
+		}
+		&:after {
+			display: none;
+		}
+	}
+}
+
+.swiper-pagination {
+	position: relative;
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	bottom: 0 !important;
+	z-index: 1;
+	.swiper-pagination-bullet {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		transition: all 0.21s ease-in-out;
+		background: $gray10;
+		opacity: 1;
+	}
+	.swiper-pagination-bullet-active {
+		width: 30px;
+		border-radius: 30px;
+		background: $primary_color;
+	}
+}
+@media(max-width: 767px) {
+	.swiper-navigation {
+		display: none;
+	}
+}
+
+.swiper-scrollbar {
+	position: relative !important;
+	border: 1px solid $meta_color;
+	background-color: $white_color;
+	height: 17px !important;
+	margin-top: 60px;
+	margin-bottom: 20px;
+	width: 100% !important;
+	left: 0 !important;
+	.swiper-scrollbar-drag {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		border-radius: 100px;
+		border: 2px solid $black_color;
+		background-color: $primary_color;
+		box-shadow: 4px 7px 0 0 rgba(0, 0, 0, 0.2);
+		color: $white_color;
+		width: 156px !important;
+		height: 40px;
+		padding: 10px 0;
+		top: -15px;
+		line-height: 18px;
+		text-align: center;
+		cursor: pointer;
+		z-index: 1;
+		i {
+			font-size: 12px;
+		}
+	}
+}
+.swiper {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1;
+}
+.swiper-3d,
+.swiper-3d.swiper-css-mode .swiper-wrapper {
+	perspective: 1200px;
+}
+.swiper-pointer-events {
+	touch-action: pan-y;
+}
+.swiper-3d .swiper-cube-shadow,
+.swiper-3d .swiper-slide,
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-bottom,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top,
+.swiper-3d .swiper-wrapper {
+	transform-style: preserve-3d;
+}

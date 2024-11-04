@@ -1,0 +1,165 @@
+/* Footer Widget wrapper
+***************************/
+.site-footer {
+	overflow: hidden;
+	z-index: 2;
+}
+.footer-widgets-wrapper {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	font-size: 15px;
+
+	//Default widgets overwrite
+	.footer-widgets {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+
+		.widget-title, .widgettitle {
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+
+		> .widget {
+			flex-grow: 25;
+		}
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+
+			ul {
+				padding-left: 20px;
+			}
+		}
+	}
+}
+.site-footer {
+	.footer-shortcode {
+		margin-top: 24px;
+	}
+	.footer-widget-logo {
+		img {
+			margin-bottom: 15px;
+		}
+	}
+
+	.footer-social:not(:has(*)) {
+		background: red;
+		padding: 15px;
+	}
+	.footer-social {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		flex-wrap: wrap;
+		margin-top: 24px;
+		a {
+			height: 38px;
+			width: 38px;
+			border-radius: 38px;
+			background-color: $tertiary_color;
+			color: $button_text_color;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.4s ease-in-out;
+			overflow: hidden;
+			svg {
+				fill: $button_color;
+			}
+			&:hover {
+				background-color: $primary_color;
+				color: $button_color;
+				svg {
+					animation: toBottomFromTop 0.7s forwards;
+				}
+			}
+		}
+		svg {
+			width: 14px;
+			height: 14px;
+		}
+	}
+	.fluentform {
+		.ff-t-container {
+			position: relative;
+			@media(min-width: 768px) {
+				gap: 0;
+				align-items: start;
+			}
+		}
+		.ff-el-group {
+			margin-bottom: 0;
+		}
+		.ff-btn-submit {
+			margin-bottom: 0 !important;
+			i {
+				display: block;
+				transition: all 0.4s ease-in-out;
+			}
+			&:hover {
+				i {
+					animation: headShake 1.5s;
+				}
+			}
+		}
+		.ff-t-cell {
+			&:first-of-type {
+				flex-basis: 100% !important;
+			}
+		}
+	}
+
+	.tagcloud {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5px;
+		a {
+			color: $primary_color;
+			background: $gray20;
+			border-radius: 6px;
+			display: inline-block;
+			font-size: 16px!important;
+			margin: 0;
+			padding: 8px 18px;
+			line-height: 1.4;
+			&:hover {
+				background-color: $secondary_color;
+				color: $button_color;
+			}
+		}
+	}
+
+	.widget_nav_menu,
+	.widget_archive,
+	.widget_categories,
+	.widget_pages,
+	.widget_meta {
+		ul {
+			li {
+				a {
+					position: relative;
+					&:before {
+						background-color: $primary_color;
+						position: absolute;
+						content: "";
+						bottom: 1px;
+						right: 0;
+						height: 1px;
+						width: 0;
+						opacity: 0;
+						transition: 0.5s;
+					}
+					&:hover {
+						&:before {
+							width: 100%;
+							left: 0;
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}

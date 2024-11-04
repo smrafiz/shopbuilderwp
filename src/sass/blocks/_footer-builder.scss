@@ -1,0 +1,47 @@
+// Header builder
+
+
+// Footer builder
+.elementor-widget-rt-site-logo {
+	.site-branding {
+		.rt-mobile-logo, .rt-site-logo {
+			display: none !important;
+		}
+		&.dark {
+			.dark-logo {
+				display: block !important;
+			}
+		}
+		&.light {
+			.light-logo {
+				display: block !important;
+			}
+		}
+	}
+}
+.finwave-footer-builder {
+	.finwave-navbar {
+		li {
+			a {
+				position: relative;
+				&:before {
+					background-color: $meta_color;
+					position: absolute;
+					content: "";
+					bottom: 8px;
+					left: 0;
+					height: 1px;
+					width: 0;
+					opacity: 0;
+					transition: 0.5s;
+				}
+				&:hover {
+					&:before {
+						width: 100%;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}

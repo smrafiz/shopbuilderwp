@@ -1,0 +1,30 @@
+// Rating style
+
+.rt-rating-layout {
+	.rating-number {
+		font-size: 32px;
+		font-weight: 700;
+		margin-bottom: 7px;
+		line-height: 1;
+	}
+	.rating-wrap {
+		display: inline-flex;
+		align-items: center;
+		column-gap: 12px;
+	}
+	.item-rating {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: inline-flex;
+		align-items: center;
+		column-gap: 4px;
+		font-size: 20px;
+		.active {
+			color: $tertiary_color;
+		}
+		.deactive {
+			color: $gray10;
+		}
+	}
+}

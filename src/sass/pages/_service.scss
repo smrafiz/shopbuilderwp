@@ -1,0 +1,345 @@
+// Service Archive
+.rt-service-default {
+	.service-item {
+		position: relative;
+		@include transition_default;
+		.service-thumbs {
+			margin-bottom: 30px;
+			img {
+				@include transition_default;
+			}
+		}
+		.service-icon {
+			display: flex;
+			font-size: 40px;
+			color: $primary_color;
+			i {
+				@include transition_default();
+			}
+		}
+		.service-title {
+			font-size: 22px;
+			line-height: 1.4;
+			a {
+				color: $title_color;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+		}
+		.service-info {
+			p {
+				margin-bottom: 0;
+			}
+		}
+		.rt-button {
+			margin-top: 28px;
+		}
+		&:hover {
+			.service-thumbs {
+				img {
+					transform: scale(1.08);
+				}
+			}
+		}
+	}
+}
+
+.rt-service-multi-layout-1 {
+	.service-item {
+		border-radius: 20px;
+		border: 1px solid $border_color;
+		background-color: $body_bg_color;
+		padding: 48px;
+		display: flex;
+		column-gap: 20px;
+		@media(max-width: 991px) {
+			display: block;
+		}
+		.service-icon {
+			position: relative;
+			z-index: 0;
+			background-color: $gray20;
+			color: $primary_color;
+			border-radius: 100%;
+			width: 80px;
+			height: 80px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.post-thumbnail {
+			border-radius: 12px;
+			width: 80px;
+			@media(max-width: 991px) {
+				width: 100%;
+			}
+		}
+		&:hover {
+			.service-icon {
+				color: $tertiary_color;
+				i {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}
+
+.rt-service-multi-layout-2 {
+	.service-item {
+		&:hover {
+			.service-icon {
+				color: $tertiary_color;
+				i {
+					transform: scale(1.2);
+				}
+			}
+		}
+
+	}
+	.service-content {
+		padding: 35px 45px;
+		border: 1px solid $border_color;
+		border-radius: 20px;
+		@include transition_default;
+	}
+
+	.service-info {
+		display: flex;
+		align-items: center;
+		column-gap: 15px;
+		margin-bottom: 18px;
+	}
+	.service-title {
+		margin-bottom: 0;
+	}
+	.rt-shape {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		display: block;
+		line-height: 0;
+		svg {
+			color: $border_color;
+			transition: color 0.4s ease;
+		}
+	}
+}
+.rt-service-multi-layout-3 {
+	.service-item {
+		border-radius: 20px;
+		background-color: $gray20;
+		padding: 55px;
+		text-align: center;
+		.service-icon {
+			justify-content: center;
+			background-color: $body_bg_color;
+			color: $primary_color;
+			border-radius: 12px;
+			width: 80px;
+			height: 80px;
+			display: inline-flex;
+			align-items: center;
+		}
+		.service-title {
+			@media(min-width: 1024px) {
+				padding: 0 45px;
+			}
+		}
+		.post-thumbnail {
+			border-radius: 12px;
+		}
+		&:hover {
+			.service-icon {
+				color: $tertiary_color;
+				i {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}
+
+.rt-service-multi-layout-4 {
+	.service-item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 48px;
+		@media(max-width: 1199px) {
+			display: block;
+		}
+		.service-content {
+			border-radius: 20px;
+			background-color: $body_bg_color;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+			padding: 28px;
+			@media(min-width: 1200px) {
+				width: 360px;
+			}
+			@media(max-width: 1199px) {
+				margin-bottom: 18px;
+			}
+		}
+		.service-icon {
+			justify-content: center;
+			background-color: $gray20;
+			color: $primary_color;
+			border-radius: 8px;
+			width: 70px;
+			height: 70px;
+			display: inline-flex;
+			align-items: center;
+			margin-bottom: 18px;
+		}
+		.service-thumbs {
+			margin-bottom: 0;
+			@media(min-width: 1200px) {
+				position: absolute;
+				right: 0;
+				z-index: -1;
+			}
+		}
+		.post-thumbnail {
+			border-radius: 12px;
+			img {
+				@media(min-width: 1200px) {
+					height: 274px;
+					width: 342px;
+				}
+			}
+		}
+		&:hover {
+			.service-icon {
+				color: $tertiary_color;
+				i {
+					transform: scale(1.2);
+				}
+			}
+		}
+		.post-thumbnail-wrap, .post-thumbnail {
+			height: 100%;
+		}
+	}
+}
+
+.rt-service-multi-layout-5 {
+	.service-item {
+		padding: 48px;
+		z-index: 0;
+		&:after {
+			content: "";
+			height: 71%;
+			width: 100%;
+			background-color: $body_bg_color;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			text-align: center;
+			z-index: -1;
+			border-radius: 15px;
+			transition: all 0.5s ease-in-out 0s;
+		}
+		.service-icon {
+			position: absolute;
+			left: 15px;
+			top: 15px;
+			z-index: 1;
+			justify-content: center;
+			background-color: $primary_color;
+			color: $button_color;
+			border-radius: 8px;
+			width: 60px;
+			height: 60px;
+			font-size: 30px;
+			display: inline-flex;
+			align-items: center;
+			margin-bottom: 18px;
+		}
+		.post-thumbnail {
+			border-radius: 12px;
+		}
+		.service-thumbs {
+			position: relative;
+		}
+		.rt-button {
+			.btn {
+				width: 100%;
+			}
+		}
+		&:hover {
+			&:after {
+				height: 100%;
+			}
+		}
+		&.no-image {
+			.service-icon {
+				position: unset;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+// Service single
+.service-single {
+	.service-single-item {
+		.entry-title {
+			font-size: clamp(30px, 4vw, 36px);
+			margin-bottom: 20px;
+			line-height: 1.2;
+		}
+		.post-thumbnail {
+			display: block;
+			overflow: hidden;
+			border-radius: 20px;
+			margin-bottom: 30px;
+		}
+		.wp-block-image {
+			img {
+				border-radius: 12px;
+			}
+		}
+		ul.wp-block-list {
+			list-style: none;
+			margin: 0 0 10px;
+			padding: 0;
+			li {
+				position: relative;
+				padding-left: 32px;
+				font-size: 16px;
+				color: $title_color;
+				+ li {
+					margin-top: 10px;
+				}
+				&:before {
+					position: absolute;
+					left: 0;
+					top: 2px;
+					font-size: 11px;
+					content: "\e825";
+					font-family: "rt-fontello";
+					transition: all ease 0.31s;
+					background-color: $tertiary_color;
+					color: $button_text_color;
+					width: 22px;
+					height: 22px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}
+// Related service
+.rt-related-service {
+	margin-top: 60px;
+	.related-title {
+		font-size: 30px;
+		margin-bottom: 26px;
+	}
+}

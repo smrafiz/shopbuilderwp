@@ -1,0 +1,51 @@
+.content-area {
+	padding-top: 140px;
+	padding-bottom: 140px;
+	@media(max-width: 767px) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+}
+.finwave-breadcrumb-wrapper.no-bg.no-color + div {
+	padding-top: 0;
+}
+.post-edit-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 13px;
+	color: $white_color !important;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 5px 10px;
+	line-height: 1;
+	max-width: 44px;
+	max-height: 24px;
+	opacity: 0;
+	visibility: hidden;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		background: $black_color;
+	}
+
+	.post-thumbnail:hover & {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+/*blend mode*/
+.rt-blend img {
+	filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg) !important;
+}
+/*scroll bar*/
+.finwave-offcanvas-drawer::-webkit-scrollbar {
+	width: 1px;
+}
+.finwave-offcanvas-drawer::-webkit-scrollbar {
+	background: $primary_color;
+}
+.finwave-offcanvas-drawer::-webkit-scrollbar-thumb {
+	background: $primary_color;
+}

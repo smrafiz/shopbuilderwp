@@ -1,0 +1,62 @@
+// Contact Info Box
+.rt-contact-info {
+	.info-title {
+		font-size: 24px;
+		font-weight: 700;
+		color: $title_color;
+		margin-bottom: 20px;
+		line-height: 1.2;
+	}
+	.contact-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			position: relative;
+			font-size: 18px;
+			font-weight: 500;
+			color: $body_color;
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0 !important;
+			}
+			span {
+				color: $title_color;
+				font-weight: 600;
+				margin-right: 5px;
+			}
+			i {
+				margin-right: 5px;
+			}
+			a {
+				color: $body_color;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+		}
+	}
+	.list-horizontal {
+		display: flex;
+		align-items: center;
+		column-gap: 30px;
+		flex-wrap: wrap;
+		@media(max-width: 767px) {
+			justify-content: center;
+		}
+		li {
+			&:not(:last-child) {
+				&:after {
+					content: "";
+					height: 5px;
+					width: 5px;
+					background-color: #8DA4A2;
+					position: absolute;
+					top: 12px;
+					right: -18px;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}

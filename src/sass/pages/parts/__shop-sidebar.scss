@@ -1,0 +1,56 @@
+// Shop sidebar
+.rtsb-product-filters {
+	.filter-content {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.woo-archive-sidebar {
+	border: 1px solid $border_color;
+	border-radius: 12px;
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 40px;
+	padding: 25px 30px 30px;
+	&.widget_search {
+		border: unset;
+		border-radius: unset;
+		padding: 0;
+	}
+	.wc-block-product-categories {
+		margin-bottom: 0;
+	}
+}
+.woocommerce {
+	ul.product_list_widget {
+		li {
+			color: $primary_color;
+			font-weight: 700;
+			del {
+				opacity: 0.5;
+				font-weight: 400;
+			}
+			ins {
+				background-color: transparent;
+				color: inherit;
+			}
+			img {
+				width: 60px;
+				border-radius: 6px;
+			}
+			a {
+				color: $title_color;
+				font-size: 16px;
+				font-weight: 700;
+				margin-bottom: 4px;
+				&:hover {
+					color: $primary_color;
+				}
+			}
+			.rtsb-star-rating {
+				margin-bottom: 6px;
+			}
+		}
+	}
+}

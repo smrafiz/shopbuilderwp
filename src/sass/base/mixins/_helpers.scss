@@ -1,0 +1,31 @@
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin list_default {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+@mixin flex_center($direction:row) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: $direction;
+}
+
+@mixin button_style($color, $bg, $bg_hover) {
+	color: $color;
+	background-color: $bg;
+	border-color: $bg;
+	&:hover {
+		color: $color;
+		background-color: $bg_hover;
+		border-color: $bg_hover;
+	}
+}

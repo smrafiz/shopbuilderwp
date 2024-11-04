@@ -1,0 +1,129 @@
+/* Mega-menu CSS
+***************************/
+.mega-menu-wrap {
+	.e-con-inner {
+		position: relative;
+	}
+	.elementor-element,
+	.elementor-widget-container {
+		position: unset;
+	}
+}
+.finwave-navigation {
+	ul.menu li.mega-menu ul.dropdown-menu li a:before,
+	ul.menu li.mega-menu ul.dropdown-menu li:after,
+	ul.menu li.mega-menu ul.dropdown-menu li.menu-item-has-children:before {
+		display: none;
+	}
+
+	ul.menu li.mega-menu ul.dropdown-menu li a {
+		padding: 0 0 8px;
+	}
+
+	ul.menu li.mega-menu .dropdown-menu .dropdown-toggle {
+		padding-bottom: 0 !important;
+	}
+
+	ul li.mega-menu {
+		position: static;
+	}
+
+	ul li.mega-menu:hover ul {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	ul li.mega-menu > ul.dropdown-menu {
+		justify-content: flex-start;
+		display: flex;
+		background-color: $body_bg_color;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+
+	ul li > ul.dropdown-menu {
+		transform: translate3d(0px, 2rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+		pointer-events: none;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	ul > li:hover > ul.dropdown-menu {
+		transform: translateY(0);
+		pointer-events: all;
+	}
+
+	/*start mega menu two column*/
+	ul li.mega-menu.two-column {
+		position: relative;
+	}
+
+	ul li.mega-menu.two-column > ul.dropdown-menu {
+		background-color: $white_color !important;
+		width: 520px !important;
+	}
+
+	/*start mega menu three column*/
+	ul li.mega-menu.two-column {
+		position: relative;
+	}
+
+	ul li.mega-menu.three-column > ul.dropdown-menu {
+		background-color: $white_color !important;
+		width: 780px !important;
+	}
+
+	/*end mega menu three column*/
+	ul li.mega-menu {
+		> ul.dropdown-menu {
+			> li {
+				display: inline-block;
+				width: 100%;
+				border: none;
+				> ul.dropdown-menu {
+					transform: unset;
+				}
+				ul {
+					position: relative;
+					width: inherit;
+					left: inherit;
+					box-shadow: none;
+					border-top: none;
+					padding: 0;
+				}
+				> a {
+					font-weight: 800;
+					font-size: 16px;
+					margin-bottom: 10px;
+					padding-left: 24px;
+					border-bottom: 1px dashed $border_color;
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+
+	}
+
+	ul li.mega-menu.hide-header > ul.dropdown-menu > li > a {
+		display: none;
+	}
+
+	ul li.mega-menu > ul .caret {
+		display: none !important;
+	}
+
+	ul li.mega-menu.mega-menu-col-2 > ul {
+		width: 45%;
+	}
+
+	ul li.mega-menu.mega-menu-col-3 > ul {
+		width: 65%;
+	}
+}
+
+

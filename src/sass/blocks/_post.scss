@@ -1,0 +1,29 @@
+/*===============================
+RT Post Grid
+================================*/
+.blog-grid-5 {
+	.separate-meta {
+		position: absolute;
+		left: 24px;
+		top: 24px;
+		a {
+			background-color: $primary_color;
+			color: $button_color;
+			&:hover {
+				background-color: $tertiary_color;
+				color: $button_text_color;
+			}
+		}
+	}
+	.rt-post-meta {
+		margin-bottom: 16px;
+	}
+	.entry-wrapper {
+		padding-top: 24px;
+	}
+}
+@media (min-width: 1025px) {
+	.blog-list-2.rt-el-post-wrapper .post-thumbnail-wrap {
+		max-width: 286px;
+	}
+}

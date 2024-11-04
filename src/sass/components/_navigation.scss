@@ -1,0 +1,234 @@
+/* Main Navigation
+***************************/
+.navigation-menu-wrap {
+	@media (min-width: 1350px) {
+		position: relative;
+	}
+	@media(max-width: 1024px) {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+	@media(max-width: 575px) {
+		justify-content: center;
+		gap: 12px;
+		.menu-icon-wrapper {
+			margin-left: unset;
+			padding-left: 0;
+			> ul {
+				justify-content: center;
+			}
+		}
+	}
+}
+.finwave-navigation {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	.main-header-section & {
+		@media (max-width: 1024px) {
+			display: none;
+		}
+	}
+
+	ul.finwave-navbar {
+		padding: 0;
+		margin: 0;
+	}
+
+	ul li {
+		display: inline-block;
+		position: relative;
+		margin-bottom: 0;
+	}
+
+	ul li a {
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 22px;
+		color: $title_color;
+		text-decoration: none;
+		text-transform: capitalize;
+		padding: 32px 16px;
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+
+		@media (max-width: 1199px) {
+			padding: 26px 15px;
+		}
+	}
+
+	ul li.current-menu-item > a svg,
+	ul li.current-menu-ancestor > a svg {
+		fill: $tertiary_color;
+	}
+
+	ul li.current-menu-item > a,
+	ul li.current-menu-ancestor > a {
+		@extend .tertiaryColor;
+	}
+
+	ul li a:hover {
+		@extend .tertiaryColor;
+		svg {
+			fill: $tertiary_color;
+		}
+	}
+
+	ul.menu > li > a:hover {
+		@extend .tertiaryColor;
+	}
+
+	ul.menu li.current-menu-item > a,
+	ul.menu li.current > a {
+		@extend .tertiaryColor;
+	}
+
+	/* #. Submenu */
+	ul > li > ul {
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 100%;
+		z-index: 10;
+		padding: 0;
+		width: $dropdown_width;
+		text-align: left;
+		border-radius: 0 0 15px 15px;
+		background-color: $body_bg_color;
+		box-shadow: 0 8px 8px rgba(23,22,24,.04),0 4px 4px rgba(23,22,24,.04),0 2px 2px rgba(23,22,24,.04);
+		transition: transform .3s cubic-bezier(.175,.885,.32,1.275);
+	}
+
+	ul > li:hover > ul {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	ul li ul li ul {
+		left: 100%;
+		top: 0;
+		width: $dropdown_width;
+	}
+
+	ul li ul li {
+		display: block;
+		padding: 0 24px;
+	}
+
+	ul li ul li a {
+		position: relative;
+		display: block;
+		color: $title_color;
+		padding: 10px 0;
+		z-index: 2;
+		font-size: 15px;
+		border-bottom: 1px dashed $border_color;
+	}
+	ul li ul li > a:before {
+		position: absolute;
+		content: '';
+		left: -5px;
+		top: 50%;
+		width: 5px;
+		height: 5px;
+		opacity: 0;
+		visibility: hidden;
+		border-radius: 50%;
+		@extend .tertiaryBG;
+		transform: translateY(-50%);
+		@include transition_default();
+	}
+	ul li ul li:hover > a {
+		padding-left: 15px;
+	}
+	ul li ul li:hover > a:before {
+		opacity: 1;
+		visibility: visible;
+		left: 0;
+	}
+
+	ul li ul > li:last-child {
+		> a {
+			border-bottom: none;
+		}
+	}
+
+	ul li ul li:hover > a {
+		color: $tertiary_color;
+	}
+
+	/*Menu hover effect*/
+	ul.menu li ul.dropdown-menu li:last-child:after {
+		border-bottom: none;
+	}
+
+	ul.menu li ul.dropdown-menu li a:hover {
+		color: $tertiary_color;
+	}
+
+	ul.menu li ul.dropdown-menu li a:before {
+		position: absolute;
+		z-index: 1;
+		content: "";
+		@extend .tertiaryBG;
+		height: 0.0625rem;
+		width: 0;
+		right: 0;
+		left: inherit;
+		bottom: 0;
+		transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+	}
+
+	ul.menu li ul.dropdown-menu li a:hover:before {
+		width: 100%;
+		left: 0;
+		right: inherit;
+	}
+
+	> ul li.page_item_has_children > a:after,
+	> ul li.menu-item-has-children > a:after {
+		content: "";
+		width: 7px;
+		height: 7px;
+		border: 1px solid var(--rt-primary-color);
+		display: inline-block;
+		transform: rotate(45deg) translate(1px, -4px);
+		border-left: none;
+		border-top: none;
+		margin-left: 8px;
+		@include transition_default();
+	}
+
+	.caret svg {
+		fill: unset;
+		transition: fill 0.4s;
+	}
+
+	.dropdown-menu .caret {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	}
+
+	.dropdown-menu .caret svg {
+		transform: rotate(-90deg) scale(.9);
+	}
+}
+
+//Navigation offset change if it try to cross the body width
+.finwave-navbar li > .dropdown-menu li {
+	&.dropdown-inverse .dropdown-menu {
+		left: auto;
+		min-width: 195px;
+		transition: all .2s;
+	}
+
+	&.dropdown-inverse:hover .dropdown-menu {
+		margin-right: -5px;
+	}
+}

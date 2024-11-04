@@ -1,0 +1,16 @@
+/*===============================
+Fluent form style
+================================*/
+
+.hero-subscribe {
+	@media (min-width: 768px) {
+		.frm-fluent-form .ff-t-container {
+			gap: 8px;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.frm-fluent-form .ff-t-container {
+		align-items: self-start;
+	}
+}

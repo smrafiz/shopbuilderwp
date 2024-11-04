@@ -1,0 +1,37 @@
+// RT Social Icon
+.rt-social-icon {
+	display: inline-flex;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	.rt-social-item {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		flex-wrap: wrap;
+		a {
+			height: 38px;
+			width: 38px;
+			font-size: 14px;
+			border-radius: 50px;
+			background-color: $primary_color;
+			color: $button_color;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.21s ease-in-out;
+			overflow: hidden;
+			i {
+				display: block;
+			}
+			&:hover {
+				background-color: $tertiary_color;
+				color: $button_text_color;
+				i {
+					animation: headShake 1.5s;
+				}
+			}
+		}
+	}
+}
+

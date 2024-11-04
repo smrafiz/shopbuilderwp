@@ -1,0 +1,44 @@
+.ham-burger {
+	.menu-bar {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: transparent;
+		column-gap: 12px;
+		padding: 0;
+		@include transition_default();
+	}
+	.menu-label {
+		color: $title_color;
+		font-weight: 600;
+	}
+	.btn-hamburger {
+		span {
+			display: block;
+			width: 22px;
+			height: 2px;
+			margin-bottom: 5px;
+			background-color: $meta_color;
+			border-radius: 12px;
+			@include transition_default();
+			&:nth-child(2) {
+				width:18px;
+			}
+			&:nth-child(3) {
+				width:12px;
+			}
+			&:nth-child(3) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&:hover {
+		.btn-hamburger {
+			span {
+				width: 22px;
+			}
+		}
+	}
+}

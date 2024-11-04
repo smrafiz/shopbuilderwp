@@ -1,0 +1,56 @@
+//Style 4
+.single-post.finwave-single-4 {
+	.content-area {
+		padding-top: 0;
+	}
+	.single-post-container {
+		.finwave-widget-area {
+			display: none !important;
+		}
+
+		.content-row {
+			justify-content: center;
+			margin-top: -90px;
+		}
+
+		.content-col {
+			max-width: 86% !important;
+			flex: 0 0 86% !important;
+			background-color: $body_bg_color;
+			padding: 30px;
+			border-radius: 15px;
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+			z-index: 1;
+			@media (min-width: 992px) {
+				padding: 70px 80px;
+			}
+		}
+
+		.content-top-area {
+			padding: 0;
+			.post-thumbnail-wrap {
+				margin-bottom: 0;
+				position: relative;
+				overflow: hidden;
+				@media(min-width: 992px) {
+					height: 840px;
+				}
+				.wp-caption-text {
+					position: absolute;
+					right: 24px;
+					bottom: 9px;
+					background-color: rgba(0, 0, 0, 0.3);
+					color: $white_color;
+					padding: 5px 16px;
+				}
+
+			}
+			.post-thumbnail {
+				img {
+					border-radius: 0;
+				}
+			}
+		}
+
+	}
+}

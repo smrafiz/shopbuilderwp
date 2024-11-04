@@ -1,0 +1,42 @@
+/*-------------------------------------
+#. EL: Logo Slider
+---------------------------------------*/
+.rt-logo-brand {
+	.logo-box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		&.gray {
+			img {
+				filter: grayscale(1);
+				transition: all ease 0.21s;
+				opacity: 0.5;
+			}
+			&:hover {
+				img {
+					filter: grayscale(0);
+					opacity: 1;
+				}
+
+			}
+		}
+		&.brightness {
+			img {
+				filter: brightness(0)invert(1);
+				transition: all ease 0.21s;
+				opacity: 0.4;
+			}
+			&:hover {
+				img {
+					opacity: 1;
+				}
+
+			}
+		}
+		a {
+			line-height: 1;
+		}
+
+	}
+}

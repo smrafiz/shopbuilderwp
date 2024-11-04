@@ -1,0 +1,43 @@
+.rt-sidebar.widget_shopbuilderwp_search,
+.rt-single-sidebar.widget_shopbuilderwp_search {
+	border: none;
+	padding: 0;
+	border-radius: unset;
+}
+.finwave-search-form .search-box {
+	position: relative;
+	border: 1px solid $border_color;
+	border-radius: 6px;
+	overflow: hidden;
+	input {
+		font-size: 16px;
+		font-weight: 500;
+		height: 65px;
+		padding: 0 55px 0 20px;
+		border: none;
+		width: 100%;
+		border-radius: 6px;
+		background-color: $body_bg_color;
+
+	}
+	button {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		border: none;
+		color: $meta_color;
+		background: transparent;
+		padding: 0 20px;
+
+		svg {
+			fill: $primary_color;
+			width: 22px;
+			height: 22px;
+			margin-top: 1.5px;
+		}
+		.btn-label {
+			display: none;
+		}
+	}
+}

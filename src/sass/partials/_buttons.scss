@@ -1,0 +1,225 @@
+button {
+	@include transition_default();
+	cursor: pointer;
+}
+
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	border-radius: 8px;
+	letter-spacing: 0.5px;
+	padding: 16px 26px;
+	font-size: 16px;
+	line-height: 1;
+	overflow: hidden;
+	z-index: 1;
+	@include transition_default();
+
+	&:active {
+		box-shadow: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&.btn-xl {
+		$xl_size: $base_fs + 8;
+		padding: ($base_fs+8) ($base_fs + 16);
+		@include font_size($xl_size, $xl_size);
+	}
+
+	&.btn-lg {
+		$lg_size: $base_fs + 2;
+		padding: ($base_fs + 2) ($base_fs + 8);
+		@include font_size($lg_size, $lg_size);
+	}
+
+	&.btn-sm {
+		$lg_size: $base_fs - 3;
+		padding: ($base_fs - 4) ($base_fs + 4);
+		@include font_size($lg_size, $lg_size);
+	}
+
+	&.btn-xs {
+		$lg_size: $base_fs - 6;
+		padding: ($base_fs - 5) ($base_fs + 2);
+		@include font_size($lg_size, $lg_size);
+	}
+
+}
+
+//Button style
+.btn-primary {
+	@include button_style($white_color, $primary_color, $secondary_color);
+}
+
+.btn-secondary {
+	@include button_style($white_color, $secondary_color, rgba($secondary_rgb, 0.8));
+}
+
+.btn-light {
+	@include button_style($white_color, $meta_color, $primary_color);
+}
+
+.btn-gray {
+	@include button_style($white_color, $meta_color, $primary_color);
+}
+.rt-button .btn {
+	column-gap: 10px;
+	&:before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		@include transition_default();
+	}
+	i {
+		font-size: 12px;
+		display: inline-block;
+		transition: all 0.3s ease-in-out 0s;
+	}
+	&:hover {
+		i {
+			transform: translateX(5px);
+		}
+	}
+}
+// button 1
+.button-1 {
+	color: $button_color;
+	&:before {
+		background-color: $primary_color;
+		transform: translate3D(0, 0, 0);
+		z-index: -1;
+	}
+	&::after {
+		background-color: $secondary_color;
+		transform: translate3D(0, -100%, 0);
+		z-index: -1;
+	}
+	&:hover {
+		color: $button_color;
+		&:after {
+			transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
+			transform: translate3D(0, 0, 0);
+			transition: all 0.5s;
+		}
+	}
+
+}
+// button 2
+.rt-button .button-2 {
+	color: $button_text_color;
+	i {
+		color: $button_text_color;
+	}
+	&:before {
+		background-color: $tertiary_color;
+		transform: translate3D(0, 0, 0);
+		z-index: -1;
+	}
+	&::after {
+		background-color: $primary_color;
+		transform: translate3D(0, -100%, 0);
+		z-index: -1;
+	}
+	&:hover {
+		color: $button_color;
+		i {
+			color: $button_color;
+		}
+		&:after {
+			transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
+			transform: translate3D(0, 0, 0);
+			transition: all 0.5s;
+		}
+	}
+}
+// button 3
+.rt-button .button-3 {
+	color: $button_color;
+	i {
+		color: $button_color;
+	}
+	&:before {
+		background-color: $primary_color;
+		transform: translate3D(0, 0, 0);
+		z-index: -1;
+	}
+	&::after {
+		background-color: $tertiary_color;
+		transform: translate3D(0, -100%, 0);
+		z-index: -1;
+	}
+	&:hover {
+		color: $button_text_color;
+		i {
+			color: $button_text_color;
+		}
+		&:after {
+			transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
+			transform: translate3D(0, 0, 0);
+			transition: all 0.5s;
+		}
+	}
+}
+
+// button 4
+.rt-button .button-4 {
+	color: $button_text_color;
+	border: 1px solid $border_color;
+	&:before {
+		background-color: $body_bg_color;
+		transform: translate3D(0, 0, 0);
+		z-index: -1;
+	}
+	&::after {
+		background-color: $primary_color;
+		transform: translate3D(0, -100%, 0);
+		z-index: -1;
+	}
+	&:hover {
+		color: $button_color;
+		&:after {
+			transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
+			transform: translate3D(0, 0, 0);
+			transition: all 0.5s;
+		}
+		i {
+			color: $button_color;
+		}
+	}
+}
+// button 5
+.rt-button .button-5 {
+	color: $button_text_color;
+	&:before {
+		background-color: $gray20;
+		transform: translate3D(0, 0, 0);
+		z-index: -1;
+	}
+	&::after {
+		background-color: $tertiary_color;
+		transform: translate3D(0, -100%, 0);
+		z-index: -1;
+	}
+	&:hover {
+		&:after {
+			transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
+			transform: translate3D(0, 0, 0);
+			transition: all 0.5s;
+		}
+	}
+}

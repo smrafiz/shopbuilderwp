@@ -1,0 +1,50 @@
+.metaStyleDash {
+	content: "-----";
+	margin-right: 7px;
+	letter-spacing: -4px;
+	transform: scaleY(.8);
+	width: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	//@include transition_default();
+}
+
+.primaryColor {
+	color: $primary_color;
+}
+
+.primaryBG {
+	background-color: $primary_color;
+}
+
+.secondaryColor {
+	color: $secondary_color;
+}
+
+.secondaryBG {
+	background-color: $secondary_color;
+}
+
+.tertiaryColor {
+	color: $tertiary_color;
+}
+
+.tertiaryBG {
+	background-color: $tertiary_color;
+}
+
+.whiteColor {
+	color: $white_color;
+}
+
+.whiteBG {
+	background-color: $white_color;
+}
+
+.blackColor {
+	color: $black_color;
+}
+
+.blackBG {
+	background-color: $black_color;
+}

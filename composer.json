@@ -1,0 +1,33 @@
+{
+	"name": "radiustheme/shopbuilderwp",
+	"description": "ShopBuilder WordPress Theme",
+	"keywords": [
+		"WordPress",
+		"Theme",
+		"Starter"
+	],
+	"homepage": "https://github.com/smrafiz/shopbuilderwp/",
+	"license": "GPL-3.0",
+	"version": "4.0.0",
+	"authors": [
+		{
+			"name": "S.M. Rafiz",
+			"email": "s.m.rafiz@gmail.com",
+			"homepage": "https://radiustheme.com",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"RT\\ShopBuilderWP\\": "./inc"
+		},
+		"files": [
+			"./inc/template-tags.php"
+		]
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": false
+		}
+	}
+}

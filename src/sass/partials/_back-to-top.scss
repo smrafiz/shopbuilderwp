@@ -1,0 +1,44 @@
+/* Back to top
+======================*/
+
+.scrollToTop {
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background-color: $primary_color;
+	color: $button_color;
+	box-shadow: 0 4px 50px rgba(0, 0, 0, 0.15);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+		right: 30px;
+		bottom: 30px;
+		width: 40px;
+		height: 40px;
+	}
+
+	svg {
+		fill: $button_color;
+	}
+
+	&:hover {
+		background: $tertiary_color;
+		color: $button_text_color;
+		i {
+			animation: toBottomFromTop 0.7s forwards;
+		}
+		svg {
+			fill: $button_text_color;
+		}
+	}
+}

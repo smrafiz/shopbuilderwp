@@ -1,0 +1,84 @@
+.single-post-pagination {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	align-items: flex-start;
+	border-bottom: 1px solid $border_color;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	padding-bottom: 50px;
+
+	p {
+		margin: 0;
+	}
+
+	.post-navigation {
+		display: flex;
+		flex-wrap: wrap;
+		flex: 1 0 50%;
+
+		&.next {
+			justify-content: flex-end;
+		}
+
+		@media (max-width: 767px) {
+			flex: 0 0 100%;
+			&:not(:last-child) {
+				margin-bottom: 15px;
+				padding-bottom: 15px;
+			}
+
+		}
+	}
+
+	.post-thumb {
+		width: 50px;
+		height: 50px;
+		border-radius: 6px;
+		background-size: cover;
+		background-position: center;
+		flex: 0 0 50px;
+	}
+	.link {
+		display: flex;
+		flex: 0 0 calc(100% - 50px);
+		align-items: center;
+		gap: 15px;
+		font-size: 16px;
+		line-height: 1.4;
+		color: $title_color;
+
+		&:hover {
+			@extend .primaryColor;
+		}
+	}
+
+	.nav-title {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		flex: 0 0 100%;
+		font-weight: 600;
+		font-size: 20px;
+		margin-bottom: 15px;
+		color: $title_color;
+
+		&:hover {
+			@extend .primaryColor;
+			svg {
+				fill: $primary_color;
+			}
+		}
+
+		svg {
+			width: 12px;
+			height: 12px;
+		}
+	}
+
+	.next .nav-title,
+	.next .link {
+		justify-content: flex-end;
+	}
+}
