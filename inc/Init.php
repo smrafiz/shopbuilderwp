@@ -30,6 +30,8 @@ final class Init {
 	public function register() {
 		Core\Tags::instance();
 		Core\Sidebar::instance();
+		Core\PostTypes::instance();
+		Core\Elementor::instance();
 		Setup\Setup::instance();
 		Setup\Menus::instance();
 		Setup\Enqueue::instance();
