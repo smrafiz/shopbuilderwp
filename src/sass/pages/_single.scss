@@ -1,5 +1,5 @@
 .single-content {
-	.finwave-post-card {
+	.shopbuilderwp-post-card {
 		.entry-content {
 			margin-bottom: 40px;
 
@@ -50,24 +50,5 @@
 	margin-bottom: 15px;
 }
 
-// Related post
-.rt-related-post {
-	margin-top: 60px;
-	.related-title {
-		font-size: 30px;
-		margin-bottom: 26px;
-	}
-	.rt-post-meta {
-		margin-bottom: 0 !important;
-	}
-}
 
 @import "parts/_single-style";
-@import "parts/_single-style-2";
-@import "parts/_single-style-3";
-@import "parts/_single-style-4";
-@import "parts/_single-style-5";
-@import "parts/_thumbnail-pagination";
-@import "parts/_service-sidebar";
-@import "parts/_single-product";
-@import "parts/_shop-sidebar";

@@ -15,20 +15,16 @@ get_header();
 	<div class="container">
 		<main id="main" class="site-main error-404" role="main">
 			<?php
-			if ( ! empty( shopbuilderwp_option( 'rt_error_image' ) ) ) {
-				echo wp_get_attachment_image( shopbuilderwp_option( 'rt_error_image' ), 'full', true );
-			} else {
-				shopbuilderwp_get_img( '404.png', true, 'width="1007" height="530"' ) . "' alt='";
-			}
+			shopbuilderwp_get_img( '404.png', true, 'width="1007" height="530"' ) . "' alt='";
 			?>
 
 			<div class="error-info">
-				<h2 class="error-title"><?php shopbuilderwp_html( shopbuilderwp_option( 'rt_error_heading' ), 'allow_title' ); ?></h2>
-				<p><?php shopbuilderwp_html( shopbuilderwp_option( 'rt_error_text' ), 'allow_title' ); ?></p>
+				<h2 class="error-title"><?php shopbuilderwp_html( '404', 'allow_title' ); ?></h2>
+				<p><?php shopbuilderwp_html( 'The page you are looking for was moved, removed, renamed or might never have existed.', 'allow_title' ); ?></p>
 
 				<div class="rt-button">
-					<a class="btn button-3" href="<?php echo esc_url( home_url() ) ?>">
-						<?php shopbuilderwp_html( shopbuilderwp_option( 'rt_error_button_text' ), 'allow_title' ); ?><i class="icon-rt-right-arrow"></i>
+					<a class="btn btn-primary" href="<?php echo esc_url( home_url() ); ?>">
+						<?php shopbuilderwp_html( 'Go to Home', 'allow_title' ); ?><i class="icon-rt-right-arrow"></i>
 					</a>
 				</div>
 

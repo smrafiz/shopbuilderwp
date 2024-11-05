@@ -1,4 +1,4 @@
-=== Finwave ===
+=== ShopBuilderWP ===
 Contributors: RadiusTheme
 Requires at least: 6.4
 Tested up to: 6.6
@@ -9,7 +9,7 @@ License URI: https://themeforest.net/licenses/terms/regular
 
 == Description ==
 
-Finwave is an Responsive Finance and Business WordPress Theme.
+ShopBuilderWP is an Responsive Finance and Business WordPress Theme.
 
 == Changelog ==
 

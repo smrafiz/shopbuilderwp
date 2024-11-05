@@ -1096,7 +1096,7 @@
     },
     {
       "uid": "c94aa17439b6ff4bb5d285dedd853a64",
-      "css": "icon-finwave-quote",
+      "css": "icon-shopbuilderwp-quote",
       "code": 59490,
       "src": "custom_icons",
       "selected": true,
@@ -1105,7 +1105,7 @@
         "width": 1393
       },
       "search": [
-        "icon-finwave-quote"
+        "icon-shopbuilderwp-quote"
       ]
     },
     {

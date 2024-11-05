@@ -12,6 +12,7 @@ class Menus {
 
 	/**
 	 * register default hooks and actions for WordPress
+	 *
 	 * @return
 	 */
 	public function __construct() {
@@ -22,8 +23,10 @@ class Menus {
 		/*
 			Register all your menus here
 		*/
-		register_nav_menus( [
-			'primary' => esc_html__( 'Primary', 'shopbuilderwp' ),
-		] );
+		register_nav_menus(
+			[
+				'primary' => esc_html__( 'Primary', 'shopbuilderwp' ),
+			]
+		);
 	}
 }

@@ -28,21 +28,21 @@
 				wp_kses(
 				/* translators: %s: Name of current post. */
 					__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'shopbuilderwp' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
+					[
+						'span' => [
+							'class' => [],
+						],
+					]
 				),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			)
 		);
 
 		wp_link_pages(
-			array(
+			[
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'shopbuilderwp' ),
 				'after'  => '</div>',
-			)
+			]
 		);
 		?>
 	</div><!-- .entry-content -->

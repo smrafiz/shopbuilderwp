@@ -6,7 +6,7 @@
 		padding-bottom: 80px;
 	}
 }
-.finwave-breadcrumb-wrapper.no-bg.no-color + div {
+.shopbuilderwp-breadcrumb-wrapper.no-bg.no-color + div {
 	padding-top: 0;
 }
 .post-edit-link {
@@ -40,12 +40,12 @@
 	filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg) !important;
 }
 /*scroll bar*/
-.finwave-offcanvas-drawer::-webkit-scrollbar {
+.shopbuilderwp-offcanvas-drawer::-webkit-scrollbar {
 	width: 1px;
 }
-.finwave-offcanvas-drawer::-webkit-scrollbar {
+.shopbuilderwp-offcanvas-drawer::-webkit-scrollbar {
 	background: $primary_color;
 }
-.finwave-offcanvas-drawer::-webkit-scrollbar-thumb {
+.shopbuilderwp-offcanvas-drawer::-webkit-scrollbar-thumb {
 	background: $primary_color;
 }

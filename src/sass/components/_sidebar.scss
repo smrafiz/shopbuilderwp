@@ -1,12 +1,12 @@
 .layout-left-sidebar {
-	.finwave-widget-area {
+	.shopbuilderwp-widget-area {
 		@media (min-width: 1140px) {
 			padding-right: 40px;
 		}
 	}
 }
 .layout-right-sidebar {
-	.finwave-widget-area {
+	.shopbuilderwp-widget-area {
 		@media (min-width: 1140px) {
 			padding-left: 40px;
 		}
@@ -14,12 +14,12 @@
 }
 @media(max-width: 1140px) {
 	.layout-right-sidebar {
-		.finwave-widget-area {
+		.shopbuilderwp-widget-area {
 			padding-top: 60px;
 		}
 	}
 	.layout-left-sidebar {
-		.finwave-widget-area {
+		.shopbuilderwp-widget-area {
 			padding-bottom: 60px;
 		}
 	}
@@ -41,7 +41,7 @@
 		top: 200px;
 	}
 }
-.finwave-widget-area {
+.shopbuilderwp-widget-area {
 	.widget:last-child {
 		margin-bottom: 0;
 	}

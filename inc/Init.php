@@ -13,7 +13,6 @@ namespace RT\ShopBuilderWP;
 use RT\ShopBuilderWP\Traits\SingletonTraits;
 
 final class Init {
-
 	use SingletonTraits;
 
 	/**
@@ -25,6 +24,7 @@ final class Init {
 
 	/**
 	 * Instantiate all class
+	 *
 	 * @return void
 	 */
 	public function register() {
@@ -35,16 +35,5 @@ final class Init {
 		Setup\Enqueue::instance();
 		Custom\Hooks::instance();
 		Custom\Extras::instance();
-		Custom\DynamicStyles::instance();
-		Plugins\ThemeJetpack::instance();
-
-		if ( is_admin() ) {
-			Custom\UtilityHelper::instance();
-			Custom\Utility::instance();
-		}
-
-		if ( class_exists( 'WooCommerce' ) ) {
-			Plugins\FinwaveWcFunctions::instance();
-		}
 	}
 }

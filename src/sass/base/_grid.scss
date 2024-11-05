@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .row {
 	display: flex;
 	flex-direction: row;
@@ -102,7 +104,7 @@
 
 @for $i from 1 through $columns {
 	.col-xs-#{$i} {
-		width: percentage(calc(calc($i / $columns)));
+		width: math.percentage(calc(calc($i / $columns)));
 	}
 }
 
@@ -110,8 +112,8 @@ $breakpoint-counter: 0;
 
 @for $i from 1 through $columns {
 	.col-#{$i} {
-		max-width: percentage(calc(calc($i / $columns)));
-		flex: 0 0 percentage(calc($i / $columns));
+		max-width: math.percentage(calc(calc($i / $columns)));
+		flex: 0 0 math.percentage(calc($i / $columns));
 	}
 }
 
@@ -121,8 +123,8 @@ $breakpoint-counter: 0;
 	@media (min-width: $val) {
 		@for $i from 1 through $columns {
 			.col-#{$breakpoint}-#{$i} {
-				max-width: percentage(calc($i / $columns));
-				flex: 0 0 percentage(calc($i / $columns));
+				max-width: math.percentage(calc($i / $columns));
+				flex: 0 0 math.percentage(calc($i / $columns));
 			}
 		}
 

@@ -6,7 +6,7 @@
  */
 ?>
 
-<form role="search" method="get" class="finwave-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<form role="search" method="get" class="shopbuilderwp-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<div class="search-box">
 		<input type="text" class="search-query form-control" placeholder="<?php esc_attr_e( 'Search here ...', 'shopbuilderwp' ) ?>" value="<?php echo get_search_query(); ?>" name="s">
 		<button class="item-btn" type="submit">

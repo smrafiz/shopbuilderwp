@@ -231,7 +231,7 @@ $dropdown_top_bottom_margin: 10px;
 		}
 	}
 }
-.finwave-header-2 {
+.shopbuilderwp-header-2 {
 	.menu-icon-wrapper {
 		.menu-icon-action {
 			flex-direction: row-reverse;
@@ -273,16 +273,7 @@ $dropdown_top_bottom_margin: 10px;
 //Header search
 @import "parts/_header-search";
 
-// Off canvas drawer
-@import "parts/_header-offcanvas";
-
-//Topbar Navigation
-@import "parts/_header-topbar";
-
 // Sticky Menu CSS
 @import "parts/_header-sticky";
-
-//Transparent Header
-@import "parts/_header-transparent";
 
 @import "parts/_hamburg-menu";

@@ -8,7 +8,6 @@
  */
 
 use RT\ShopBuilderWP\Helpers\Fns;
-use RT\ShopBuilderWP\Modules\Pagination;
 
 get_header();
 $content_columns = Fns::content_columns();
@@ -19,20 +18,19 @@ $content_columns = Fns::content_columns();
 			<div class="row align-stretch">
 				<div class="<?php echo esc_attr( $content_columns ); ?>">
 					<main id="main" class="site-main" role="main">
-						<div class="row <?php echo esc_attr( shopbuilderwp_option( 'rt_blog_column_gap' ) ); ?> rt-masonry-grid">
+						<div class="row rt-masonry-grid">
 							<?php
 							if ( have_posts() ) :
 								/* Start the Loop */
 								while ( have_posts() ) :
 									the_post();
-									get_template_part( 'views/content', shopbuilderwp_option( 'rt_blog_style' ) );
+									get_template_part( 'views/content' );
 								endwhile;
 							else :
 								get_template_part( 'views/content', 'none' );
 							endif;
 							?>
 						</div>
-						<?php Pagination::pagination(); ?>
 					</main><!-- #main -->
 				</div><!-- .col- -->
 				<?php get_sidebar(); ?>

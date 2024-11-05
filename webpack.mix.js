@@ -104,22 +104,36 @@ if (
 
 	// Frontend CSS
 	if (!mix.inProduction()) {
-		mix.sass("src/sass/style.scss", "assets/css/",).sourceMaps(true, 'source-map');
-		mix.sass("src/sass/admin.scss", "assets/css/",).sourceMaps(true, 'source-map');
-		mix.sass("src/sass/rtl.scss", "assets/css/rtl/rtl.css").sourceMaps(true, 'source-map');
+		mix
+			.sass("src/sass/style.scss", "assets/css/",).sourceMaps(true, 'source-map')
+			.sass("src/sass/admin.scss", "assets/css/",).sourceMaps(true, 'source-map')
+			.webpackConfig({
+				module: {
+					rules: [
+						{
+							test: /\.scss$/,
+							use: [
+								{
+									loader: 'sass-loader',
+									options: {
+										sassOptions: {
+											// Silences all deprecation warnings
+											logger: {
+												warn: () => {}
+											}
+										}
+									}
+								}
+							]
+						}
+					]
+				}
+			});
 	} else {
-		mix.sass("src/sass/style.scss", "assets/css/");
-		mix.sass("src/sass/admin.scss", "assets/css/");
-		mix.sass("src/sass/rtl.scss", "assets/css/rtl/rtl.css");
+		mix
+			.sass("src/sass/style.scss", "assets/css/")
+			.sass("src/sass/admin.scss", "assets/css/");
 	}
-
-	mix.postCss('src/sass/style.scss', 'assets/css/rtl/compile-rtl.css', [
-		require('rtlcss'),
-	]);
-	mix.combine([
-		'assets/css/rtl/compile-rtl.css',
-		'assets/css/rtl/rtl.css'
-	], 'assets/css-rtl/style.css');
 }
 
 if (process.env.npm_config_zip) {

@@ -24,10 +24,10 @@ $classes = Fns::class_list( [
 				<?php do_action( 'shopbuilderwp_before_single_content', get_the_ID() ); ?>
 				<div class="container">
 					<div class="row content-row">
-						<div class="content-col <?php echo esc_attr( Fns::single_content_colums() ); ?>">
+						<div class="content-col <?php echo esc_attr( Fns::single_content_columns() ); ?>">
 							<main id="main" class="site-main single-content" role="main">
 								<?php
-								get_template_part( 'views/content-single', Opt::$single_style );
+								get_template_part( 'views/content-single' );
 								get_template_part( 'views/custom/single', 'pagination' );
 								if ( comments_open() || get_comments_number() ) :
 									comments_template();
@@ -40,7 +40,6 @@ $classes = Fns::class_list( [
 				</div><!-- .container -->
 				<?php do_action( 'shopbuilderwp_after_single_content' ); ?>
 			<?php endwhile; ?>
-			<?php PostRelated::rt_post_related(); ?>
 		</div>
 	</div><!-- #primary -->
 <?php

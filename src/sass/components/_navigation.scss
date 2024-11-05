@@ -20,7 +20,7 @@
 		}
 	}
 }
-.finwave-navigation {
+.shopbuilderwp-navigation {
 	flex: 1;
 	display: flex;
 	align-items: center;
@@ -30,7 +30,7 @@
 		}
 	}
 
-	ul.finwave-navbar {
+	ul.shopbuilderwp-navbar {
 		padding: 0;
 		margin: 0;
 	}
@@ -221,7 +221,7 @@
 }
 
 //Navigation offset change if it try to cross the body width
-.finwave-navbar li > .dropdown-menu li {
+.shopbuilderwp-navbar li > .dropdown-menu li {
 	&.dropdown-inverse .dropdown-menu {
 		left: auto;
 		min-width: 195px;

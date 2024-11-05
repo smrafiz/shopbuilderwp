@@ -9,6 +9,7 @@ class Setup {
 
 	/**
 	 * register default hooks and actions for WordPress
+	 *
 	 * @return void
 	 */
 	public function __construct() {
@@ -18,6 +19,7 @@ class Setup {
 
 	/**
 	 * Setup Theme
+	 *
 	 * @return void
 	 */
 	public function setup() {
@@ -29,19 +31,13 @@ class Setup {
 
 	/**
 	 * Add Image Size
+	 *
 	 * @return void
 	 */
 	private function add_image_size() {
 		$sizes = [
-			'finwave-size1' => [ 1344, 625, true ],
-			'finwave-size2'  => [ 960, 520, true ],
-			'finwave-size3'  => [ 960, 690, true ],
-			'finwave-size4'  => [ 450, 450, true ],
-			'finwave-size5'  => [ 600, 682, true ],
-			'finwave-size6'  => [ 960, 960, true ],
+			'shopbuilderwp-size1' => [ 800, 533, true ],
 		];
-
-		$sizes = apply_filters( 'shopbuilderwp_image_size', $sizes );
 
 		foreach ( $sizes as $size => $value ) {
 			add_image_size( $size, $value[0], $value[1], $value[2] );
@@ -50,6 +46,7 @@ class Setup {
 
 	/**
 	 * Add Theme Support
+	 *
 	 * @return void
 	 */
 	private function add_theme_support() {
@@ -65,29 +62,31 @@ class Setup {
 		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'editor-styles' );
 		add_theme_support( 'custom-logo' );
-		add_theme_support( "custom-header" );
-		add_theme_support( "custom-background" );
+		add_theme_support( 'custom-header' );
+		add_theme_support( 'custom-background' );
 
 		/**
 		 * Add woocommerce support and woocommerce override
 		 */
 		add_theme_support( 'woocommerce' );
 
-
 		/*
 		 * Activate Post formats if you need
 		 */
-		add_theme_support( 'post-formats', [
-			'aside',
-			'gallery',
-			'link',
-			'image',
-			'quote',
-			'status',
-			'video',
-			'audio',
-			'chat',
-		] );
+		add_theme_support(
+			'post-formats',
+			[
+				'aside',
+				'gallery',
+				'link',
+				'image',
+				'quote',
+				'status',
+				'video',
+				'audio',
+				'chat',
+			]
+		);
 	}
 
 	/*
@@ -96,5 +95,4 @@ class Setup {
 	public function content_width() {
 		$GLOBALS['content_width'] = apply_filters( 'content_width', 1440 );
 	}
-
 }

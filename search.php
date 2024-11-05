@@ -31,7 +31,6 @@ get_header();
 							endif;
 							?>
 						</div>
-						<?php Pagination::pagination(); ?>
 					</main><!-- #main -->
 				</div><!-- .col- -->
 				<?php get_sidebar(); ?>

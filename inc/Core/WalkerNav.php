@@ -5,19 +5,19 @@ namespace RT\ShopBuilderWP\Core;
 use Walker_Nav_Menu;
 
 class WalkerNav extends Walker_Nav_Menu {
-	public function start_lvl( &$output, $depth = 0, $args = array() ) {
+	public function start_lvl( &$output, $depth = 0, $args = [] ) {
 		$indent  = str_repeat( "\t", $depth );
 		$submenu = ( $depth > 0 ) ? ' sub-menu' : '';
-		$output  .= "\n$indent<ul class=\"dropdown-menu$submenu depth_$depth\" >\n";
+		$output .= "\n$indent<ul class=\"dropdown-menu$submenu depth_$depth\" >\n";
 	}
 
-	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+	public function start_el( &$output, $item, $depth = 0, $args = [], $id = 0 ) {
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
 		$li_attributes = '';
 		$class_names   = $value = '';
 
-		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+		$classes = empty( $item->classes ) ? [] : (array) $item->classes;
 		// managing divider: add divider class to an element to get a divider before it.
 		$divider_class_position = array_search( 'divider', $classes );
 		if ( $divider_class_position !== false ) {
@@ -45,13 +45,13 @@ class WalkerNav extends Walker_Nav_Menu {
 
 		$output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
 
-		$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) . '"' : '';
+		$attributes  = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) . '"' : '';
 		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) . '"' : '';
 		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) . '"' : '';
 		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) . '"' : '';
 		$attributes .= ( $args->has_children ) ? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
 
-		$item_output = $args->before;
+		$item_output  = $args->before;
 		$item_output .= '<a' . $attributes . '>';
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 
@@ -63,7 +63,7 @@ class WalkerNav extends Walker_Nav_Menu {
 		if ( strlen( $item->description ) > 2 ) {
 			$item_output .= '</a> <span class="sub">' . $item->description . '</span>';
 		}
-		$caret       = '<svg width="10" height="10" viewBox="0 0 10 10" fill="#575757" xmlns="http://www.w3.org/2000/svg"><path d="M9.78571 2.21429C9.5 1.92857 9.07143 1.92857 8.78571 2.21429L5 6L1.21429 2.21429C0.928571 1.92857 0.5 1.92857 0.214286 2.21429C-0.0714286 2.5 -0.0714286 2.92857 0.214286 3.21429L4.5 7.5C4.64286 7.64286 4.85714 7.71429 5 7.71429C5.14286 7.71429 5.35714 7.64286 5.5 7.5L9.78571 3.21429C10.0714 2.92857 10.0714 2.5 9.78571 2.21429Z"/></svg>';
+		$caret        = '<svg width="10" height="10" viewBox="0 0 10 10" fill="#575757" xmlns="http://www.w3.org/2000/svg"><path d="M9.78571 2.21429C9.5 1.92857 9.07143 1.92857 8.78571 2.21429L5 6L1.21429 2.21429C0.928571 1.92857 0.5 1.92857 0.214286 2.21429C-0.0714286 2.5 -0.0714286 2.92857 0.214286 3.21429L4.5 7.5C4.64286 7.64286 4.85714 7.71429 5 7.71429C5.14286 7.71429 5.35714 7.64286 5.5 7.5L9.78571 3.21429C10.0714 2.92857 10.0714 2.5 9.78571 2.21429Z"/></svg>';
 		$item_output .= ( ( $depth == 0 || 1 ) && $args->has_children ) ? ' <b class="caret">' . $caret . '</b></a>' : '</a>';
 		$item_output .= $args->after;
 
@@ -77,15 +77,15 @@ class WalkerNav extends Walker_Nav_Menu {
 
 		$id_field = $this->db_fields['id'];
 
-		//display this element
+		// display this element
 		if ( is_array( $args[0] ) ) {
 			$args[0]['has_children'] = ! empty( $children_elements[ $element->$id_field ] );
 		} elseif ( is_object( $args[0] ) ) {
 			$args[0]->has_children = ! empty( $children_elements[ $element->$id_field ] );
 		}
 
-		$cb_args = array_merge( array( &$output, $element, $depth ), $args );
-		call_user_func_array( array( $this, 'start_el' ), $cb_args );
+		$cb_args = array_merge( [ &$output, $element, $depth ], $args );
+		call_user_func_array( [ $this, 'start_el' ], $cb_args );
 
 		$id = $element->$id_field;
 
@@ -94,9 +94,9 @@ class WalkerNav extends Walker_Nav_Menu {
 			foreach ( $children_elements[ $id ] as $child ) {
 				if ( ! isset( $newlevel ) ) {
 					$newlevel = true;
-					//start the child delimiter
-					$cb_args = array_merge( array( &$output, $depth ), $args );
-					call_user_func_array( array( $this, 'start_lvl' ), $cb_args );
+					// start the child delimiter
+					$cb_args = array_merge( [ &$output, $depth ], $args );
+					call_user_func_array( [ $this, 'start_lvl' ], $cb_args );
 				}
 				$this->display_element( $child, $children_elements, $max_depth, $depth + 1, $args, $output );
 			}
@@ -104,13 +104,13 @@ class WalkerNav extends Walker_Nav_Menu {
 		}
 
 		if ( isset( $newlevel ) && $newlevel ) {
-			//end the child delimiter
-			$cb_args = array_merge( array( &$output, $depth ), $args );
-			call_user_func_array( array( $this, 'end_lvl' ), $cb_args );
+			// end the child delimiter
+			$cb_args = array_merge( [ &$output, $depth ], $args );
+			call_user_func_array( [ $this, 'end_lvl' ], $cb_args );
 		}
 
-		//end this element
-		$cb_args = array_merge( array( &$output, $element, $depth ), $args );
-		call_user_func_array( array( $this, 'end_el' ), $cb_args );
+		// end this element
+		$cb_args = array_merge( [ &$output, $element, $depth ], $args );
+		call_user_func_array( [ $this, 'end_el' ], $cb_args );
 	}
 }

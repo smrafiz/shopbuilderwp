@@ -1,26 +1,32 @@
 /* Post Block
 ===================================*/
-.finwave-post-card {
+.shopbuilderwp-post-card {
 	.article-inner-wrapper {
 		@include transition_default();
+
 		.entry-content {
 			margin-top: 15px;
 		}
 	}
+
 	//Post Title
 	.entry-title {
 		@include font_size(22px, 1.4);
 		margin-bottom: 12px;
+
 		a {
 			color: $title_color;
+
 			&:hover {
 				@extend .primaryColor;
 			}
 		}
 	}
+
 	.entry-footer {
 		margin-top: 22px;
 	}
+
 	&:hover {
 		.article-inner-wrapper {
 			.post-thumbnail {
@@ -35,16 +41,19 @@
 //Post Thumbnail
 .post-thumbnail-wrap {
 	position: relative;
+
 	.post-thumbnail {
 		overflow: hidden;
 		margin-bottom: 0;
 		line-height: 0;
+
 		img {
 			object-fit: cover;
 			object-position: center;
 			transition: all 0.4s;
 		}
 	}
+
 	.rt-video {
 		position: absolute;
 		top: 50%;
@@ -55,6 +64,7 @@
 		display: flex;
 		justify-content: center;
 		z-index: 1;
+
 		.video-popup-icon {
 			position: relative;
 			display: flex;
@@ -70,6 +80,7 @@
 			font-size: 18px;
 		}
 	}
+
 	.swiper-slide {
 		line-height: 0;
 	}
@@ -80,6 +91,7 @@
 	.entry-wrapper {
 		padding: 36px;
 	}
+
 	.article-inner-wrapper {
 		position: relative;
 		overflow: hidden;
@@ -88,29 +100,34 @@
 		background-color: $body_bg_color;
 	}
 }
+
 .blog-list {
-	  .entry-wrapper {
-		  padding: 50px;
-		  @media (max-width: 767px) {
-			  padding: 24px;
-		  }
-	  }
+	.entry-wrapper {
+		padding: 50px;
+		@media (max-width: 767px) {
+			padding: 24px;
+		}
+	}
+
 	.separate-meta {
 		a {
 			background-color: $body_bg_color;
 			color: $primary_color;
+
 			&:hover {
 				background-color: $tertiary_color;
 				color: $button_text_color;
 			}
 		}
 	}
+
 	.article-inner-wrapper {
-		  position: relative;
-		  overflow: hidden;
-		  border-radius: 15px;
-		  background-color: $gray20;
+		position: relative;
+		overflow: hidden;
+		border-radius: 15px;
+		background-color: $gray20;
 	}
+
 	.rt-button {
 		.btn {
 			height: 55px;
@@ -123,28 +140,33 @@
 		a {
 			background-color: $gray20;
 			color: $primary_color;
+
 			&:hover {
 				background-color: $primary_color;
 				color: $white_color;
 			}
 		}
 	}
+
 	.entry-wrapper {
 		flex: 1;
 	}
+
 	.article-inner-wrapper {
+		position: relative;
+		overflow: hidden;
 		@media(min-width: 1025px) {
 			display: flex;
 			align-items: center;
 			gap: 30px;
 		}
-		position: relative;
-		overflow: hidden;
 	}
+
 	.post-thumbnail-wrap {
 		@media(min-width: 1025px) {
 			max-width: 410px;
 		}
+
 		.post-thumbnail {
 			border-radius: 20px;
 			@media(max-width: 1024px) {
@@ -161,8 +183,10 @@
 	.post-thumbnail {
 		border-radius: 15px;
 	}
+
 	.post-thumbnail-wrap {
 		margin-bottom: 20px;
+
 		img {
 			border-radius: 15px;
 		}
@@ -182,6 +206,7 @@
 			height: 65px;
 			font-size: 14px;
 			line-height: 1.1;
+
 			.day {
 				display: block;
 				font-size: 26px;
@@ -190,7 +215,7 @@
 		}
 	}
 
-	.rt-post-meta  {
+	.rt-post-meta {
 		margin-bottom: 12px;
 	}
 
@@ -208,10 +233,12 @@
 	.post-thumbnail {
 		border-radius: 15px;
 	}
+
 	.article-inner-wrapper {
 		position: relative;
 		overflow: hidden;
 		border-radius: 15px;
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -223,6 +250,7 @@
 			z-index: 1;
 		}
 	}
+
 	.entry-wrapper {
 		position: absolute;
 		left: 0;
@@ -230,45 +258,55 @@
 		padding: 0 30px 26px;
 		color: $white_color;
 		z-index: 1;
+
 		.entry-title {
 			a {
 				color: $white_color;
+
 				&:hover {
 					color: $tertiary_color;
 				}
 			}
 		}
 	}
+
 	.rt-post-meta {
 		color: $white_color;
+
 		a {
 			color: $white_color;
+
 			&:hover {
 				color: $tertiary_color;
 			}
 		}
 	}
 }
+
 .blog-grid-4 {
 	.post-thumbnail, img {
 		border-radius: 15px;
 	}
+
 	.separate-meta {
 		a {
 			background-color: $gray20;
 			border: 1px solid $border_color;
 			color: $primary_color;
 			border-radius: 50px;
+
 			&:hover {
 				border: 1px solid $primary_color;
 				color: $primary_color;
 			}
 		}
 	}
+
 	.is-image {
 		.post-thumbnail-wrap {
 			margin-bottom: 34px;
 		}
+
 		.separate-meta {
 			position: absolute;
 			left: 24px;
@@ -283,6 +321,7 @@
 		}
 	}
 }
+
 .sticky {
 	.article-inner-wrapper {
 		background-color: rgba($primary_rgb, 0.08);
@@ -290,6 +329,7 @@
 		border-radius: 15px;
 	}
 }
+
 .blog-grid-2.sticky {
 	.entry-wrapper {
 		padding: 0 24px 24px;

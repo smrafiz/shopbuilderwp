@@ -1,3 +1,9 @@
+:root {
+	--rt-primary-color: #006D5B;
+	--rt-secondary-color: #00473B;
+	--rt-title-color: #00030C;
+}
+
 //Grid
 $columns: 12;
 $gutter: 24px;
@@ -24,23 +30,20 @@ $breakpoints: ('sm': $sm, 'md': $md, 'lg': $lg, 'xl': $xl);
 
 $primary_color: var(--rt-primary-color);
 $secondary_color: var(--rt-secondary-color);
-$tertiary_color: var(--rt-tertiary-color);
-$body_bg_color: var(--rt-body-bg-color);
-$body_color: var(--rt-body-color);
-$border_color: var(--rt-border-color);
+$tertiary_color: #00473B;
 $title_color: var(--rt-title-color);
-$button_color: var(--rt-button-color);
-$button_text_color: var(--rt-button-text-color);
-$meta_color: var(--rt-meta-color);
-$meta_light: var(--rt-meta-light);
-$gray10: var(--rt-gray10);
-$gray20: var(--rt-gray20);
+$gray10: #F6F6F6;
+$gray20: #E5E5E5;
+$meta_color: #8F8F8F;
+$meta_light: #8F8F8F;
+$border_color: #DDDDDD;
+$button_color: #006D5B;
+$button_text_color: #FFFFFF;
+$body_color: #333333;
+$body_bg_color: #FFFFFF;
 
-$body_rgb: var(--rt-body-rgb);
-$title_rgb: var(--rt-title-rgb);
 $primary_rgb: var(--rt-primary-rgb);
 $secondary_rgb: var(--rt-secondary-rgb);
-$tertiary_rgb: var(--rt-tertiary-rgb);
 
 
 $white_color: #FFFFFF;
@@ -58,11 +61,6 @@ $transparent_menu_color: rgba(255, 255, 255, 0.9);
 $colors: (
 	'primary': $primary_color,
 	'secondary': $secondary_color,
-	'body': $body_color,
-	'title': $title_color,
-	'meta': $meta_color,
-	'grey1': $gray10,
-	'grey2': $gray20,
 	'white': $white_color,
 	'black': $black_color,
 );

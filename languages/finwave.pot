@@ -1,8 +1,8 @@
-# Copyright (C) 2024 Finwave Theme
-# This file is distributed under the same license as the Finwave Theme package.
+# Copyright (C) 2024 ShopBuilderWP Theme
+# This file is distributed under the same license as the ShopBuilderWP Theme package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Finwave Theme\n"
+"Project-Id-Version: ShopBuilderWP Theme\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -872,11 +872,11 @@ msgstr ""
 msgid "ShopBuilder - Elementor WooCommerce Builder Addons"
 msgstr ""
 
-#: ../inc/Plugins/FinwaveWcFunctions.php:189
+#: ../inc/Plugins/ShopBuilderWPWcFunctions.php:189
 msgid "Sale!"
 msgstr ""
 
-#: ../inc/Plugins/FinwaveWcFunctions.php:354
+#: ../inc/Plugins/ShopBuilderWPWcFunctions.php:354
 msgid "Share:"
 msgstr ""
 
@@ -1001,7 +1001,7 @@ msgid "Header - Topbar - Menu"
 msgstr ""
 
 #: ../inc/Api/Customizer/Pannels.php:37
-msgid "Finwave Header"
+msgid "ShopBuilderWP Header"
 msgstr ""
 
 #: ../inc/Api/Customizer/Pannels.php:42
@@ -1009,7 +1009,7 @@ msgid "Typography"
 msgstr ""
 
 #: ../inc/Api/Customizer/Pannels.php:43
-msgid "Finwave Typography"
+msgid "ShopBuilderWP Typography"
 msgstr ""
 
 #: ../inc/Api/Customizer/Pannels.php:48
@@ -1017,7 +1017,7 @@ msgid "Colors"
 msgstr ""
 
 #: ../inc/Api/Customizer/Pannels.php:49
-msgid "Finwave Color Settings"
+msgid "ShopBuilderWP Color Settings"
 msgstr ""
 
 #: ../inc/Api/Customizer/Pannels.php:54
@@ -1025,7 +1025,7 @@ msgid "Layout Settings"
 msgstr ""
 
 #: ../inc/Api/Customizer/Pannels.php:55
-msgid "Finwave Layout Settings"
+msgid "ShopBuilderWP Layout Settings"
 msgstr ""
 
 #: ../inc/Api/Customizer/Pannels.php:60
@@ -1033,7 +1033,7 @@ msgid "Contact & Socials"
 msgstr ""
 
 #: ../inc/Api/Customizer/Pannels.php:61
-msgid "Finwave Contact & Socials"
+msgid "ShopBuilderWP Contact & Socials"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Banner.php:28
@@ -1853,7 +1853,7 @@ msgid "Footer Copyright Text"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Footer.php:89
-msgid "Copyright© [y] Finwave by RadiusTheme"
+msgid "Copyright© [y] ShopBuilderWP by RadiusTheme"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/Footer.php:90
@@ -2689,7 +2689,7 @@ msgid "Woocommerce Settings"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/WooArchiveSettings.php:19
-msgid "finwave Woocommerce Archive Settings"
+msgid "shopbuilderwp Woocommerce Archive Settings"
 msgstr ""
 
 #: ../inc/Api/Customizer/Sections/WooArchiveSettings.php:36

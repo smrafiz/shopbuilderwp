@@ -22,29 +22,12 @@ use RT\ShopBuilderWP\Options\Opt;
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<!-- preloader -->
-<?php if ( shopbuilderwp_option( 'rt_preloader' ) ) {
-	if( !empty( shopbuilderwp_option( 'rt_preloader_logo' ) ) ) { ?>
-		<div id="preloader"><?php echo wp_get_attachment_image( shopbuilderwp_option( 'rt_preloader_logo' ), 'full', true );?></div>
-	<?php } else { ?>
-		<div id="preloader" class="loader">
-			<div class="cssload-loader">
-				<div class="cssload-inner cssload-one"></div>
-				<div class="cssload-inner cssload-two"></div>
-				<div class="cssload-inner cssload-three"></div>
-			</div>
-		</div>
-	<?php }
-}
-?>
-
 <!-- ajax search overlay -->
 <div class="rt-focus"></div>
 
 <div id="page" class="site">
 	<header id="masthead" class="site-header headroom" role="banner">
-		<?php get_template_part( 'views/header/topbar', Opt::$topbar_style ); ?>
-		<?php get_template_part( 'views/header/header', Opt::$header_style ); ?>
+		<?php get_template_part( 'views/header/header' ); ?>
 	</header><!-- #masthead -->
 
 	<?php get_template_part( 'views/header/offcanvas', 'drawer' ); ?>
