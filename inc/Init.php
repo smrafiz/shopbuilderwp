@@ -32,6 +32,7 @@ final class Init {
 		Core\Sidebar::instance();
 		Core\PostTypes::instance();
 		Core\Elementor::instance();
+		Core\Shortcodes::instance();
 		Setup\Setup::instance();
 		Setup\Menus::instance();
 		Setup\Enqueue::instance();
