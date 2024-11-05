@@ -140,17 +140,16 @@ if (process.env.npm_config_zip) {
 	async function getVersion() {
 		let data;
 		try {
-			data = await fs.readFile(package_path + `/${package_slug}.php`, "utf-8");
+			data = await fs.readFile(package_path + `/style.css`, "utf-8");
 		} catch (err) {
 			console.error(err);
 		}
 		const lines = data.split(/\r?\n/);
 		let version = "";
 		for (let i = 0; i < lines.length; i++) {
-			if (lines[i].includes("* Version:") || lines[i].includes("*Version:")) {
+			if (lines[i].includes("* Version:") || lines[i].includes("Version:")) {
 				version = lines[i]
-					.replace("* Version:", "")
-					.replace("*Version:", "")
+					.replace("Version:", "")
 					.trim();
 				break;
 			}

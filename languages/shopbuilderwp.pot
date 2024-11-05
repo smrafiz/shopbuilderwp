@@ -1,0 +1,300 @@
+# Copyright (C) 2024 ShopBuilder WordPress Theme
+# This file is distributed under the same license as the ShopBuilder WordPress Theme package.
+msgid ""
+msgstr ""
+"Project-Id-Version: ShopBuilder WordPress Theme\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-11-05 12:18+0000\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. translators: 1: Comments count.
+#: ../comments.php:35
+msgid "%d Comment"
+msgid_plural "%d Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../comments.php:56
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:62
+msgid "Older Comments"
+msgstr ""
+
+#: ../comments.php:63
+msgid "Newer Comments"
+msgstr ""
+
+#: ../comments.php:77
+msgid "Comments are closed."
+msgstr ""
+
+#: ../header.php:39
+msgid "Type your search........"
+msgstr ""
+
+#: ../inc/template-tags.php:211
+msgid "Add %s Menu"
+msgstr ""
+
+#: ../inc/template-tags.php:212
+msgid "Add a menu"
+msgstr ""
+
+#: ../inc/template-tags.php:215, ../inc/template-tags.php:866
+msgid "Home"
+msgstr ""
+
+#: ../inc/template-tags.php:249
+msgid "Continue Reading"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: ../inc/template-tags.php:268, ../inc/Core/Tags.php:60, ../inc/Core/Tags.php:65
+msgid ", "
+msgstr ""
+
+#: ../inc/template-tags.php:323
+msgid "%1$s %2$s"
+msgstr ""
+
+#: ../inc/template-tags.php:561
+msgid "%s mins read"
+msgstr ""
+
+#: ../inc/template-tags.php:559
+msgid "1 min read"
+msgstr ""
+
+#: ../inc/template-tags.php:557
+msgid "%s hours read"
+msgstr ""
+
+#: ../inc/template-tags.php:555
+msgid "Less than a minute"
+msgstr ""
+
+#: ../inc/template-tags.php:581
+msgid "By"
+msgstr ""
+
+#: ../inc/template-tags.php:587
+msgid "Comment: %s"
+msgid_plural "Comments: %s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../inc/template-tags.php:942
+msgid "Shop"
+msgstr ""
+
+#: ../inc/template-tags.php:938
+msgid "Blog"
+msgstr ""
+
+#: ../inc/template-tags.php:929
+msgid "Posts by: "
+msgstr ""
+
+#: ../inc/template-tags.php:901
+msgid "Posts Category: "
+msgstr ""
+
+#: ../inc/template-tags.php:889
+msgid "404"
+msgstr ""
+
+#: ../inc/template-tags.php:884
+msgid "Search results for: "
+msgstr ""
+
+#: ../inc/template-tags.php:879
+msgid "Posts made in: "
+msgstr ""
+
+#: ../inc/template-tags.php:872
+msgid "Posts Tagged: "
+msgstr ""
+
+#: ../inc/template-tags.php:975
+msgid "Pingback:"
+msgstr ""
+
+#: ../inc/template-tags.php:997
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr ""
+
+#. translators: 1: date, 2: time
+#: ../inc/template-tags.php:1005
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../inc/template-tags.php:1012
+msgid "Edit"
+msgstr ""
+
+#: ../inc/template-tags.php:1022
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../inc/template-tags.php:1038
+msgid "Reply"
+msgstr ""
+
+#: ../inc/Core/Sidebar.php:35
+msgctxt "Widget Name"
+msgid "%s"
+msgstr ""
+
+#: ../inc/Core/Tags.php:40
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: ../inc/Core/Tags.php:44
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: ../inc/Core/Tags.php:62
+msgid "Posted in %1$s"
+msgstr ""
+
+#: ../inc/Core/Tags.php:67
+msgid "Tagged %1$s"
+msgstr ""
+
+#. translators: %s: post title
+#: ../inc/Core/Tags.php:73
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: ../inc/Core/Tags.php:79
+msgid "Edit %s"
+msgstr ""
+
+#: ../inc/Custom/Extras.php:57
+msgid "Make as Mega Menu"
+msgstr ""
+
+#: ../inc/Custom/Extras.php:59
+msgid "Choose Mega Menu"
+msgstr ""
+
+#: ../inc/Custom/Extras.php:74
+msgid "Mega menu - %1$s Col %2$s"
+msgstr ""
+
+#: ../inc/Custom/Extras.php:86
+msgid "Query String"
+msgstr ""
+
+#: ../inc/Custom/Extras.php:145
+msgid "Search here..."
+msgstr ""
+
+#: ../inc/Custom/Extras.php:148
+msgid "Search"
+msgstr ""
+
+#: ../inc/Helpers/Fns.php:32
+msgid "Facebook"
+msgstr ""
+
+#: ../inc/Helpers/Fns.php:36
+msgid "Twitter"
+msgstr ""
+
+#: ../inc/Helpers/Fns.php:40
+msgid "Linkedin"
+msgstr ""
+
+#: ../inc/Helpers/Fns.php:44
+msgid "Youtube"
+msgstr ""
+
+#: ../inc/Helpers/Fns.php:48
+msgid "Pinterest"
+msgstr ""
+
+#: ../inc/Helpers/Fns.php:52
+msgid "Instagram"
+msgstr ""
+
+#: ../inc/Helpers/Fns.php:56
+msgid "Skype"
+msgstr ""
+
+#: ../inc/Helpers/Fns.php:60
+msgid "TikTok"
+msgstr ""
+
+#: ../inc/Helpers/Fns.php:220
+msgid "Main Sidebar"
+msgstr ""
+
+#: ../inc/Helpers/Fns.php:225
+msgid "Single Sidebar"
+msgstr ""
+
+#: ../inc/Helpers/Fns.php:233
+msgid "WooCommerce Archive Sidebar"
+msgstr ""
+
+#: ../inc/Helpers/Fns.php:238
+msgid "WooCommerce Single Sidebar"
+msgstr ""
+
+#: ../inc/Setup/Menus.php:28
+msgid "Primary"
+msgstr ""
+
+#: ../inc/Traits/SingletonTraits.php:42, ../inc/Traits/SingletonTraits.php:51
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: ../page-templates/rt-icons.php:3
+msgid "RT Icons"
+msgstr ""
+
+#: ../page-templates/template-fullwidth.php:3
+msgid "Fullwidth Template"
+msgstr ""
+
+#: ../searchform.php:11
+msgid "Search here ..."
+msgstr ""
+
+#: ../views/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: ../views/content-none.php:50
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: ../views/content-none.php:41
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: ../views/content-none.php:27
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../views/content-page.php:20, ../views/content-search.php:43
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: Name of current post.
+#: ../views/content-search.php:30
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
