@@ -3,18 +3,18 @@ Contributors: RadiusTheme
 Requires at least: 6.4
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0
-License: Envato split License
-License URI: https://themeforest.net/licenses/terms/regular
+Stable tag: 1.0.0
+License: GNU General Public License v3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-ShopBuilderWP is an Responsive Finance and Business WordPress Theme.
+ShopBuilderWP WordPress Theme.
 
 == Changelog ==
 
 = 1.0 =
-* Released: August 13, 2024
+* Released: November 05, 2024
 
 == Copyright ==
 
