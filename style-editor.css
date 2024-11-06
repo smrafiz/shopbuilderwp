@@ -1,5 +1,5 @@
 body {
-	font-family: 'Archivo', sans-serif;
+	font-family: 'Inter', sans-serif;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 28px;
@@ -84,7 +84,7 @@ h6,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6,
 .editor-post-title__block .editor-post-title__input {
-	font-family: 'Archivo', sans-serif;
+	font-family: 'Inter', sans-serif;
 	color: #041b16;
 	margin: 0 0 15px 0;
 	font-weight: 800;

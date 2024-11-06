@@ -74,17 +74,6 @@ button {
 }
 .rt-button .btn {
 	column-gap: 10px;
-	&:before,
-	&::after {
-		content: "";
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		height: 100%;
-		@include transition_default();
-	}
 	i {
 		font-size: 12px;
 		display: inline-block;
@@ -98,128 +87,18 @@ button {
 }
 // button 1
 .button-1 {
-	color: $button_color;
-	&:before {
-		background-color: $primary_color;
-		transform: translate3D(0, 0, 0);
-		z-index: -1;
-	}
-	&::after {
-		background-color: $secondary_color;
-		transform: translate3D(0, -100%, 0);
-		z-index: -1;
-	}
+	color: $button_text_color;
+	background-color: $primary_color;
 	&:hover {
-		color: $button_color;
-		&:after {
-			transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
-			transform: translate3D(0, 0, 0);
-			transition: all 0.5s;
-		}
+		color: $button_text_color;
+		background-color: $secondary_color;
 	}
 
 }
 // button 2
 .rt-button .button-2 {
 	color: $button_text_color;
-	i {
-		color: $button_text_color;
-	}
-	&:before {
-		background-color: $tertiary_color;
-		transform: translate3D(0, 0, 0);
-		z-index: -1;
-	}
-	&::after {
-		background-color: $primary_color;
-		transform: translate3D(0, -100%, 0);
-		z-index: -1;
-	}
 	&:hover {
 		color: $button_color;
-		i {
-			color: $button_color;
-		}
-		&:after {
-			transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
-			transform: translate3D(0, 0, 0);
-			transition: all 0.5s;
-		}
-	}
-}
-// button 3
-.rt-button .button-3 {
-	color: $button_color;
-	i {
-		color: $button_color;
-	}
-	&:before {
-		background-color: $primary_color;
-		transform: translate3D(0, 0, 0);
-		z-index: -1;
-	}
-	&::after {
-		background-color: $tertiary_color;
-		transform: translate3D(0, -100%, 0);
-		z-index: -1;
-	}
-	&:hover {
-		color: $button_text_color;
-		i {
-			color: $button_text_color;
-		}
-		&:after {
-			transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
-			transform: translate3D(0, 0, 0);
-			transition: all 0.5s;
-		}
-	}
-}
-
-// button 4
-.rt-button .button-4 {
-	color: $button_text_color;
-	border: 1px solid $border_color;
-	&:before {
-		background-color: $body_bg_color;
-		transform: translate3D(0, 0, 0);
-		z-index: -1;
-	}
-	&::after {
-		background-color: $primary_color;
-		transform: translate3D(0, -100%, 0);
-		z-index: -1;
-	}
-	&:hover {
-		color: $button_color;
-		&:after {
-			transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
-			transform: translate3D(0, 0, 0);
-			transition: all 0.5s;
-		}
-		i {
-			color: $button_color;
-		}
-	}
-}
-// button 5
-.rt-button .button-5 {
-	color: $button_text_color;
-	&:before {
-		background-color: $gray20;
-		transform: translate3D(0, 0, 0);
-		z-index: -1;
-	}
-	&::after {
-		background-color: $tertiary_color;
-		transform: translate3D(0, -100%, 0);
-		z-index: -1;
-	}
-	&:hover {
-		&:after {
-			transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
-			transform: translate3D(0, 0, 0);
-			transition: all 0.5s;
-		}
 	}
 }

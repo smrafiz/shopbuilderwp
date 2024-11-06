@@ -50,7 +50,7 @@ dfn {
 
 mark {
 	background: #ff0;
-	color: $black_color;
+	color: $title_color;
 }
 
 small {
@@ -152,7 +152,7 @@ th {
 
 /* Track */
 ::-webkit-scrollbar-track {
-	background: $gray20;
+	background: $gray_color;
 }
 
 /* Handle */

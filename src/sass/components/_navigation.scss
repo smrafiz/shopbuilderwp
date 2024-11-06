@@ -1,35 +1,14 @@
 /* Main Navigation
 ***************************/
 .navigation-menu-wrap {
-	@media (min-width: 1350px) {
-		position: relative;
-	}
-	@media(max-width: 1024px) {
+	align-items: center;
+	justify-content: space-between;
+	@media (max-width: 1199px) {
 		padding-top: 12px;
 		padding-bottom: 12px;
 	}
-	@media(max-width: 575px) {
-		justify-content: center;
-		gap: 12px;
-		.menu-icon-wrapper {
-			margin-left: unset;
-			padding-left: 0;
-			> ul {
-				justify-content: center;
-			}
-		}
-	}
 }
 .shopbuilderwp-navigation {
-	flex: 1;
-	display: flex;
-	align-items: center;
-	.main-header-section & {
-		@media (max-width: 1024px) {
-			display: none;
-		}
-	}
-
 	ul.shopbuilderwp-navbar {
 		padding: 0;
 		margin: 0;
@@ -45,7 +24,7 @@
 		font-size: 16px;
 		font-weight: 600;
 		line-height: 22px;
-		color: $title_color;
+		color: $white_color;
 		text-decoration: none;
 		text-transform: capitalize;
 		padding: 32px 16px;
@@ -62,28 +41,28 @@
 
 	ul li.current-menu-item > a svg,
 	ul li.current-menu-ancestor > a svg {
-		fill: $tertiary_color;
+		fill: $primary_color;
 	}
 
 	ul li.current-menu-item > a,
 	ul li.current-menu-ancestor > a {
-		@extend .tertiaryColor;
+		color: $primary_color;
 	}
 
 	ul li a:hover {
-		@extend .tertiaryColor;
+		color: $primary_color;
 		svg {
-			fill: $tertiary_color;
+			fill: $primary_color;
 		}
 	}
 
 	ul.menu > li > a:hover {
-		@extend .tertiaryColor;
+		color: $primary_color;
 	}
 
 	ul.menu li.current-menu-item > a,
 	ul.menu li.current > a {
-		@extend .tertiaryColor;
+		color: $primary_color;
 	}
 
 	/* #. Submenu */
@@ -158,7 +137,7 @@
 	}
 
 	ul li ul li:hover > a {
-		color: $tertiary_color;
+		color: $primary_color;
 	}
 
 	/*Menu hover effect*/
@@ -167,7 +146,7 @@
 	}
 
 	ul.menu li ul.dropdown-menu li a:hover {
-		color: $tertiary_color;
+		color: $primary_color;
 	}
 
 	ul.menu li ul.dropdown-menu li a:before {
@@ -201,11 +180,6 @@
 		border-top: none;
 		margin-left: 8px;
 		@include transition_default();
-	}
-
-	.caret svg {
-		fill: unset;
-		transition: fill 0.4s;
 	}
 
 	.dropdown-menu .caret {

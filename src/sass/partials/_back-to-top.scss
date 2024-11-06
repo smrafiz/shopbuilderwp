@@ -1,6 +1,4 @@
-/* Back to top
-======================*/
-
+/* Back to top */
 .scrollToTop {
 	width: 0;
 	height: 0;
@@ -18,6 +16,10 @@
 	opacity: 0;
 	visibility: hidden;
 
+	@media(max-width: 767px) {
+		display: none;
+	}
+
 	&.show {
 		opacity: 1;
 		visibility: visible;
@@ -28,11 +30,12 @@
 	}
 
 	svg {
-		fill: $button_color;
+		width: 12px;
+		fill: $button_text_color;
 	}
 
 	&:hover {
-		background: $tertiary_color;
+		background: $secondary_color;
 		color: $button_text_color;
 		i {
 			animation: toBottomFromTop 0.7s forwards;

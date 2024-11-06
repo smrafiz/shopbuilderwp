@@ -6,60 +6,27 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: $meta_color;
-	font-size: 16px;
+	color: $body_color;
+	border-top: 1px solid $border_color;
+	font-size: clamp(14px, 4vw, 15px);
 	.copyright-text {
 		text-align: center;
+		line-height: 1.4;
 	}
-
-	a {
+	.payment-text {
+		display: flex;
+		column-gap: 5px;
+		flex-wrap: wrap;
 		color: $meta_color;
+		font-size: 14px;
+	}
+	a {
+		color: $primary_color;
 		&:hover {
-			color: $tertiary_color;
+			color: $secondary_color;
 		}
 	}
-	.social-icon {
-		align-items: center;
-		a {
-			height: 38px;
-			width: 38px;
-			border-radius: 38px;
-			background-color: $tertiary_color;
-			color: $button_text_color;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			transition: all 0.4s ease-in-out;
-			overflow: hidden;
-			svg {
-				fill: $button_color;
-			}
-			&:hover {
-				background-color: $primary_color;
-				color: $button_color;
-				svg {
-					animation: toBottomFromTop 0.7s forwards;
-				}
-			}
-		}
-		svg {
-			width: 14px;
-			height: 14px;
-		}
-	}
-}
-@media (min-width: 1400px) {
-	.has-sticky-footer {
-		.site-footer {
-			position: sticky;
-			bottom: 0;
-			top: 0;
-			z-index: 0;
-		}
-		.site-content {
-			position: relative;
-			background-color: $body_bg_color;
-			z-index: 1;
-		}
+	.copy-right-wrap {
+		justify-content: space-between;
 	}
 }

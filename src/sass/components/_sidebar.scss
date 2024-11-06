@@ -1,27 +1,7 @@
-.layout-left-sidebar {
-	.shopbuilderwp-widget-area {
-		@media (min-width: 1140px) {
-			padding-right: 40px;
-		}
-	}
-}
-.layout-right-sidebar {
-	.shopbuilderwp-widget-area {
-		@media (min-width: 1140px) {
-			padding-left: 40px;
-		}
-	}
-}
+// Sidebar css
 @media(max-width: 1140px) {
-	.layout-right-sidebar {
-		.shopbuilderwp-widget-area {
-			padding-top: 60px;
-		}
-	}
-	.layout-left-sidebar {
-		.shopbuilderwp-widget-area {
-			padding-bottom: 60px;
-		}
+	.shopbuilderwp-widget-area {
+		padding-top: 60px;
 	}
 }
 @media(min-width: 1025px) {
@@ -29,16 +9,6 @@
 		align-self: flex-start;
 		position: sticky;
 		top: 32px;
-	}
-	body .sidebar-sticky-100 {
-		align-self: flex-start;
-		position: sticky;
-		top: 100px;
-	}
-	body .sidebar-sticky-200 {
-		align-self: flex-start;
-		position: sticky;
-		top: 200px;
 	}
 }
 .shopbuilderwp-widget-area {
@@ -115,37 +85,6 @@
 		}
 	}
 
-	.wp-block-categories.category-layout-2,
-	.wp-block-archives.category-layout-2,
-	.widget_archive.category-layout-2 ul,
-	.widget_categories.category-layout-2 ul {
-		li {
-			a {
-				color: $meta_color;
-				&:before {
-					position: absolute;
-					content: '';
-					left: 0;
-					top: 5px;
-					width: 8px;
-					height: 8px;
-					opacity: 1;
-					visibility: visible;
-					border-radius: 50%;
-					background-color: $border_color;
-					@include transition_default();
-				}
-				&:hover {
-					padding-left: 22px;
-					color: $primary_color;
-					&:before {
-						background-color: $primary_color;
-					}
-				}
-			}
-		}
-	}
-
 	.widget_nav_menu,
 	.widget_pages,
 	.widget_meta {
@@ -187,7 +126,7 @@
 		gap: 8px;
 		a {
 			color: $primary_color;
-			background: $gray20;
+			background: $gray_color;
 			border-radius: 4px;
 			display: inline-block;
 			font-size: 14px!important;

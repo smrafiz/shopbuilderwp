@@ -14,16 +14,23 @@
 		font-weight: 600;
 	}
 	.btn-hamburger {
+		display: flex;
+		flex-direction: column;
+		justify-content: right;
+		align-items: end;
+		border: 1px solid $meta_color;
+		border-radius: 3px;
+		padding: 7px;
 		span {
 			display: block;
-			width: 22px;
+			width: 20px;
 			height: 2px;
 			margin-bottom: 5px;
 			background-color: $meta_color;
 			border-radius: 12px;
-			@include transition_default();
+			transition: all 120ms ease;
 			&:nth-child(2) {
-				width:18px;
+				width:16px;
 			}
 			&:nth-child(3) {
 				width:12px;
@@ -34,10 +41,19 @@
 		}
 	}
 
-	&:hover {
+	.is-open {
 		.btn-hamburger {
 			span {
-				width: 22px;
+				&:nth-child(2) {
+					opacity: 0;
+				}
+				&:nth-child(1) {
+					transform: rotate(45deg)translate(5px,5px);
+				}
+				&:nth-child(3) {
+					transform: rotate(-45deg)translate(5px,-5px);
+					width: 20px;
+				}
 			}
 		}
 	}

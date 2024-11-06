@@ -1,14 +1,14 @@
 :root {
-	--rt-primary-color: #006D5B;
-	--rt-secondary-color: #00473B;
-	--rt-title-color: #00030C;
+	--rt-primary-color: #004BFF;
+	--rt-secondary-color: #0241d9;
+	--rt-title-color: #000719;
 }
 
 //Grid
 $columns: 12;
 $gutter: 24px;
 $spacing: 20;
-$container_width: var(--rt-container-width, 1364px);
+$container_width: 1290px;
 
 //Spacing
 $paddings: ('pt': 'padding-top', 'pr': 'padding-right', 'pb': 'padding-bottom', 'pl': 'padding-left');
@@ -30,27 +30,20 @@ $breakpoints: ('sm': $sm, 'md': $md, 'lg': $lg, 'xl': $xl);
 
 $primary_color: var(--rt-primary-color);
 $secondary_color: var(--rt-secondary-color);
-$tertiary_color: #00473B;
 $title_color: var(--rt-title-color);
-$gray10: #F6F6F6;
-$gray20: #E5E5E5;
-$meta_color: #8F8F8F;
-$meta_light: #8F8F8F;
-$border_color: #DDDDDD;
-$button_color: #006D5B;
-$button_text_color: #FFFFFF;
-$body_color: #333333;
-$body_bg_color: #FFFFFF;
-
 $primary_rgb: var(--rt-primary-rgb);
 $secondary_rgb: var(--rt-secondary-rgb);
 
-
+$tertiary_color: #020415;
+$body_color: #323846;
+$meta_light: #D7D7D7;
+$meta_color: #989BA2;
+$gray_color: #F7F9FB;
+$border_color: #D9DCE3;
+$button_color: #000719;
+$button_text_color: #FFFFFF;
+$body_bg_color: #FFFFFF;
 $white_color: #FFFFFF;
-$black_color: #000000;
-$meta_overlay_color: #CBCBCB;
-$footer_bg_color: #006d5b;
-$footer_border_color: #177d6c;
 
 //Headers
 $dropdown_width: 240px;
@@ -62,14 +55,13 @@ $colors: (
 	'primary': $primary_color,
 	'secondary': $secondary_color,
 	'white': $white_color,
-	'black': $black_color,
 );
 
 //Typography
 
-$base_font: var(--rt-body-font, 'Archivo'), sans-serif;
-$heading_font: var(--rt-heading-font, 'Archivo'), sans-serif;
-$menu_font: var(--rt-menu-font, 'Archivo'), sans-serif;
+$base_font: 'Inter', sans-serif;
+$heading_font: 'Inter', sans-serif;
+$menu_font: 'Inter', sans-serif;
 
 $base_fs: 16px;
 

@@ -507,7 +507,7 @@ if ( ! function_exists( 'shopbuilderwp_scroll_top' ) ) {
 	 */
 	function shopbuilderwp_scroll_top( $class = '', $icon = 'scroll-top' ) {
 		?>
-		<a href="#" class="scrollToTop <?php echo esc_attr( $class ); ?>"><i class="icon-rt-up-angle-bar"></i></a>
+		<a href="#" class="scrollToTop <?php echo esc_attr( $class ); ?>"><?php echo shopbuilderwp_get_svg('scroll-top'); ?></a>
 		<?php
 	}
 }

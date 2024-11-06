@@ -2,45 +2,17 @@
 //  HeadRoom Sticky
 ==========================================*/
 .site-header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
 	&.scrolling {
-		background-color: $body_bg_color;
+		background-color: #011040;
 		box-shadow: 6px 6px 32px 0 rgba(0, 80, 191, 0.08);
 	}
 }
-.has-trheader {
-	.site-header {
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		background-color: transparent;
-	}
-}
-.has-sticky-header {
-	.site-header {
-		position: fixed;
-		top: 0;
-		right: 0;
-		left: 0;
-	}
-	&.tr-header-dark {
-		.site-header {
-			&.scrolling {
-				background-color: $body_bg_color;
-			}
-		}
-	}
-	&.tr-header-light {
-		.site-header {
-			&.scrolling {
-				background-color: $primary_color;
-			}
-		}
-	}
-}
 
-.admin-bar.has-trheader,
-.admin-bar.has-sticky-header {
+.admin-bar {
 	.site-header {
 		top: 32px;
 		@media (max-width: 782px) {

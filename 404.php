@@ -14,9 +14,7 @@ get_header();
 <div id="primary" class="content-area">
 	<div class="container">
 		<main id="main" class="site-main error-404" role="main">
-			<?php
-			shopbuilderwp_get_img( '404.png', true, 'width="1007" height="530"' ) . "' alt='";
-			?>
+			<?php shopbuilderwp_get_img( '404.png', true, 'width="1007" height="530"' ) . "' alt='"; ?>
 
 			<div class="error-info">
 				<h2 class="error-title"><?php shopbuilderwp_html( '404', 'allow_title' ); ?></h2>

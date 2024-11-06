@@ -125,7 +125,7 @@
 		position: relative;
 		overflow: hidden;
 		border-radius: 15px;
-		background-color: $gray20;
+		background-color: $gray_color;
 	}
 
 	.rt-button {
@@ -138,7 +138,7 @@
 .blog-list-2 {
 	.separate-meta {
 		a {
-			background-color: $gray20;
+			background-color: $gray_color;
 			color: $primary_color;
 
 			&:hover {
@@ -290,7 +290,7 @@
 
 	.separate-meta {
 		a {
-			background-color: $gray20;
+			background-color: $gray_color;
 			border: 1px solid $border_color;
 			color: $primary_color;
 			border-radius: 50px;

@@ -225,6 +225,11 @@ class Fns {
 				'name'  => __( 'Single Sidebar', 'shopbuilderwp' ),
 				'class' => 'rt-single-sidebar',
 			],
+			'footer' => [
+				'id'    => 'rt-footer-sidebar',
+				'name'  => 'Footer Sidebar',
+				'class' => 'footer-sidebar col-lg-3 col-md-6',
+			],
 		];
 
 		if ( class_exists( 'WooCommerce' ) ) {

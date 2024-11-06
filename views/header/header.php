@@ -10,11 +10,11 @@
 
 <div class="main-header-section">
 	<div class="header-container rt-container">
-		<div class="row navigation-menu-wrap align-middle m-0">
+		<div class="row navigation-menu-wrap m-0">
 			<div class="site-branding">
 				<?php echo shopbuilderwp_site_logo(); ?>
 			</div><!-- .site-branding -->
-			<nav class="shopbuilderwp-navigation pl-15 pr-15" role="navigation">
+			<nav class="shopbuilderwp-navigation" role="navigation">
 				<?php
 				wp_nav_menu(
 					[
@@ -27,6 +27,9 @@
 				);
 				?>
 			</nav><!-- .shopbuilderwp-navigation -->
+            <div class="shopbuilder-button rt-button">
+                <a class="btn button-1" href="https://www.radiustheme.com/downloads/woocommerce-bundle/" target="_blank"><?php echo esc_html__('Purchase Now', 'shopbuilderwp'); ?></a>
+            </div>
 		</div><!-- .row -->
 	</div><!-- .container -->
 </div>

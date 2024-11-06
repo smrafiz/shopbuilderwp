@@ -37,6 +37,7 @@ class Enqueue {
 
 		// JS.
 		wp_enqueue_script( 'rt-headroom' );
+		wp_enqueue_script( 'shopbuilderwp-main', shopbuilderwp_get_js( 'scripts' ), [ 'jquery', 'imagesloaded' ], Constants::get_version(), true );
 
 		// Extra.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
