@@ -1,5 +1,27 @@
 // Info box css
 
-.sb-bottom-info-box {
+.rtsb-icon-box {
+  transition: all 0.5s cubic-bezier(0.08, 0.27, 0.04, 1.11);
+  &:hover {
+    transform: translateY(-5px);
+    .elementor-icon-box-title {
+      a {
+        color: $primary_color !important;
+      }
+    }
+  }
+}
 
+.image-hover-animation {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  img {
+    transition: all 520ms ease;
+    transform: perspective(0px) rotateX(0deg) rotateY(0deg) scaleX(1.01) scaleY(1.01);
+  }
+  &:hover {
+    img {
+      transform: perspective(500px) rotateX(0.03deg) rotateY(0deg) scaleX(1.10) scaleY(1.10)
+    }
+  }
 }
