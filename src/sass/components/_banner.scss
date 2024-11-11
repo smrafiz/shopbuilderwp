@@ -16,4 +16,11 @@
     color: $white_color;
     font-size: clamp(32px, 4vw, 44px);
   }
+  p {
+    br {
+      @media(max-width: 767px) {
+        display: none;
+      }
+    }
+  }
 }

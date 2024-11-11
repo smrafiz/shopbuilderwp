@@ -32,12 +32,13 @@ elseif ( is_home() ) {
 }
 
 $banner_title = ! empty( get_field('page_title') ) ? get_field('page_title') : get_the_title();
+$page_description = get_field('page_description');
 
 ?>
 
 <div class="sb-breadcrumb-banner">
 	<div class="container d-flex flex-column">
 		<h1 class="entry-title"><?php echo esc_html( $banner_title );?></h1>
-		<p><?php echo esc_html__( 'The WooCommerce Flash Sales feature boosts sales by creating urgency. Easily schedule ', 'shopbuilderwp' ); ?></p>
+		<?php if($page_description) { ?><p><?php shopbuilderwp_html( $page_description, false );?></p><?php } ?>
 	</div>
 </div>

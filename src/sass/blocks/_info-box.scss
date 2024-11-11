@@ -1,27 +1,45 @@
 // Info box css
 
-.rtsb-icon-box {
-  transition: all 0.5s cubic-bezier(0.08, 0.27, 0.04, 1.11);
-  &:hover {
-    transform: translateY(-5px);
-    .elementor-icon-box-title {
-      a {
-        color: $primary_color !important;
+.rtsb-info-box-01 {
+  .elementor-widget-icon-box {
+    transition: all 0.5s cubic-bezier(0.08, 0.27, 0.04, 1.11);
+    &:hover {
+      transform: translateY(-5px);
+      .elementor-icon-box-title {
+        a {
+          color: $primary_color !important;
+        }
       }
     }
   }
 }
 
-.image-hover-animation {
-  border-radius: 10px 10px 0 0;
-  overflow: hidden;
-  img {
+// info box style 02
+
+.rtsb-info-box-02 {
+  .elementor-icon-box-wrapper {
+    background-color: $gray_color;
+    border-radius: 15px;
+    padding: 45px;
     transition: all 520ms ease;
-    transform: perspective(0px) rotateX(0deg) rotateY(0deg) scaleX(1.01) scaleY(1.01);
+    @media(max-width: 767px) {
+      padding: 30px;
+    }
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+    }
   }
-  &:hover {
-    img {
-      transform: perspective(500px) rotateX(0.03deg) rotateY(0deg) scaleX(1.10) scaleY(1.10)
+  .elementor-icon-box-icon {
+    .elementor-icon {
+      background-color: $primary_color;
+      border-radius: 6px;
+      font-size: 17px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
