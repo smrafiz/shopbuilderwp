@@ -2,7 +2,6 @@
 
 namespace RT\ShopBuilderWP\Shortcodes;
 
-use Elementor\Plugin;
 use RT\ShopBuilderWP\Traits\SingletonTraits;
 
 class SBTyping {
