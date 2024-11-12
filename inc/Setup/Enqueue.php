@@ -24,6 +24,8 @@ class Enqueue {
 
 	function register_scripts() {
 		wp_register_script( 'rt-headroom', shopbuilderwp_get_js( 'headroom' ), [ 'jquery' ], Constants::get_version(), true );// headRoom js
+		wp_register_script( 'rt-typed-umd', shopbuilderwp_get_js( 'typed.umd' ), [ 'jquery' ], Constants::get_version(), true );// typed js
+		wp_register_script( 'rt-typed-demos', shopbuilderwp_get_js( 'typed.demos' ), [ 'jquery' ], Constants::get_version(), true );// typed js
 	}
 
 	/**
@@ -37,6 +39,8 @@ class Enqueue {
 
 		// JS.
 		wp_enqueue_script( 'rt-headroom' );
+		wp_enqueue_script( 'rt-typed-umd' );
+		wp_enqueue_script( 'rt-typed-demos' );
 		wp_enqueue_script( 'shopbuilderwp-main', shopbuilderwp_get_js( 'scripts' ), [ 'jquery', 'imagesloaded' ], Constants::get_version(), true );
 
 		// Extra.

@@ -8,6 +8,12 @@
 }
 
 .elementor-heading-title {
+  .type-wrap {
+    display: inline-block;
+    background-color: #E50052;
+    font-weight: 400;
+    padding: 0 12px;
+  }
   a {
     &:hover {
       color: $primary_color !important;
