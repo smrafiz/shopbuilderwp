@@ -2,6 +2,7 @@
 
 namespace RT\ShopBuilderWP\Core;
 
+use RT\ShopBuilderWP\Shortcodes\SBTyping;
 use RT\ShopBuilderWP\Shortcodes\SBWidgets;
 use RT\ShopBuilderWP\Traits\SingletonTraits;
 
@@ -26,6 +27,7 @@ class Shortcodes {
 	public function register_shortcodes() {
 		$widgets = [
 			SBWidgets::class,
+			SBTyping::class,
 		];
 
 		foreach ( $widgets as $class ) {
