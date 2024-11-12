@@ -87,24 +87,6 @@
             })
         },
 
-        headerSearchOpen: function () {
-			$('a[href="#header-search"]').on("click", function (event) {
-				event.preventDefault();
-				$("#header-search").addClass("open");
-				$('#header-search > form > input[type="search"]').focus();
-			});
-
-			$("#header-search, #header-search button.close").on("click keyup", function (event) {
-				if (
-					event.target === this ||
-					event.target.className === "close" ||
-					event.keyCode === 27
-				) {
-					$(this).removeClass("open");
-				}
-			});
-        },
-
         backToTop: function () {
             /* Scroll to top */
             $('.scrollToTop').on('click', function () {
@@ -121,30 +103,6 @@
                 $('.scrollToTop').removeClass('show');
             }
         },
-
-		/* Counter */
-		counterUp: function () {
-			const counterContainer = $('.counter');
-			if (counterContainer.length) {
-				counterContainer.counterUp({
-					delay: counterContainer.data('rtsteps'),
-					time: counterContainer.data('rtspeed')
-				});
-			}
-		},
-
-  		/* Pricing Switch */
-		pricingTab: function () {
-			$(".pricing-switch-container").on("click", function () {
-				let $this = $(this);
-				let $wrapper = $this.closest('.rt-pricing-tab');
-				$wrapper.find(".pricing-switch")
-					.parents(".price-switch-box")
-					.toggleClass("price-switch-box--active");
-				$wrapper.find(".pricing-switch").toggleClass("pricing-switch-active");
-				$wrapper.find(".price-box").toggleClass("price-box-show price-box-hide");
-			});
-		},
 
 		/* preloader */
 		preLoader: function () {
@@ -349,8 +307,7 @@
         if (elementorFrontend.isEditMode()) {
             //For all widgets
             elementorFrontend.hooks.addAction('frontend/element_ready/widget', () => {
-				ShopBuilderWP.counterUp();
-				ShopBuilderWP.pricingTab();
+				//ShopBuilderWP.counterUp();
             });
 
         }

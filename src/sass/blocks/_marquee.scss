@@ -1,0 +1,42 @@
+.rt-marquee-wrap {
+  position: relative;
+  .rt-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-grid;
+    height: 690px;
+    .marquee-item {
+      display: inline-grid;
+      row-gap: 24px;
+      > div {
+        position: relative;
+        white-space: normal;
+      }
+      img {
+        display: block;
+        border: 1px solid $border_color;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+    }
+    &.marquee-top {
+      .rt-marquee-item {
+        display: inline-block;
+        will-change: transform;
+        animation: marquee_top 20s linear infinite;
+      }
+    }
+    &.marquee-bottom {
+      .rt-marquee-item {
+        display: inline-block;
+        will-change: transform;
+        animation: marquee_bottom 20s linear infinite;
+      }
+    }
+    &:hover {
+      .rt-marquee-item {
+        animation-play-state: paused;
+      }
+    }
+  }
+}

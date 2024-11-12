@@ -48,6 +48,10 @@
     padding: 15px;
   }
   .elementor-heading-title {
+    @media (max-width: 991px) {
+      padding-top: 40px;
+    }
+    position: relative;
     a {
       position: relative;
       span {
@@ -61,6 +65,11 @@
         text-transform: uppercase;
         letter-spacing: 0.05em;
         line-height: 1.2;
+        @media (max-width: 991px) {
+            top: -30px !important;
+            left: 50% !important;
+            transform: translateX(-50%);
+        }
         &.free {
           background: #13C324;
         }
@@ -73,6 +82,29 @@
   &:hover {
     .elementor-widget-image {
       box-shadow: 0 5px 24px rgba(0, 75, 255, 0.1);
+    }
+    .elementor-heading-title {
+      a {
+        color: $primary_color;
+      }
+    }
+  }
+}
+
+.sb-image-box-03 {
+  .elementor-widget-image {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    img {
+      transition: all 520ms ease;
+      transform: perspective(0px) rotateX(0deg) rotateY(0deg) scaleX(1.01) scaleY(1.01);
+    }
+  }
+  &:hover {
+    .elementor-widget-image {
+      img {
+        transform: perspective(500px) rotateX(0.03deg) rotateY(0deg) scaleX(1.10) scaleY(1.10)
+      }
     }
     .elementor-heading-title {
       a {

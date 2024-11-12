@@ -207,7 +207,7 @@
 	}
 }
 .move1 {
-	animation: move1 2s linear infinite;
+	animation: move1 3s linear infinite;
 }
 
 @keyframes move1 {
@@ -216,7 +216,7 @@
 	}
 
 	50% {
-		transform: translateY(-10px) translateX(30px);
+		transform: translateY(-5px) translateX(5px);
 	}
 
 	100% {
@@ -224,14 +224,14 @@
 	}
 }
 .move2 {
-	animation: move2 2s linear infinite;
+	animation: move2 3s linear infinite;
 }
 @keyframes move2 {
 	0% {
 		transform: translateY(0) translateX(0);
 	}
 	50% {
-		transform: translateY(-20px) translateX(10px);
+		transform: translateY(5px) translateX(-5px);
 	}
 	100% {
 		transform: translateY(0) translateX(0);

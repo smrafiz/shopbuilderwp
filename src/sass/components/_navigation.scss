@@ -39,11 +39,6 @@
 		}
 	}
 
-	ul li.current-menu-item > a svg,
-	ul li.current-menu-ancestor > a svg {
-		fill: $primary_color;
-	}
-
 	ul li.current-menu-item > a,
 	ul li.current-menu-ancestor > a {
 		color: $primary_color;
@@ -51,9 +46,6 @@
 
 	ul li a:hover {
 		color: $primary_color;
-		svg {
-			fill: $primary_color;
-		}
 	}
 
 	ul.menu > li > a:hover {
@@ -117,7 +109,7 @@
 		opacity: 0;
 		visibility: hidden;
 		border-radius: 50%;
-		@extend .tertiaryBG;
+		background-color: $primary_color;
 		transform: translateY(-50%);
 		@include transition_default();
 	}

@@ -7,8 +7,16 @@
 	right: 0;
 	left: 0;
 	&.scrolling {
-		background-color: #011040;
+		background-color: $white_color;
 		box-shadow: 6px 6px 32px 0 rgba(0, 80, 191, 0.08);
+		.shopbuilderwp-navigation ul > li > a {
+			color: $title_color;
+		}
+		.shopbuilderwp-navigation ul li ul li:hover > a,
+		.shopbuilderwp-navigation ul li.current-menu-item > a,
+		.shopbuilderwp-navigation ul li.current-menu-ancestor > a {
+			color: $primary_color;
+		}
 	}
 }
 
