@@ -1,10 +1,20 @@
 <?php
+/**
+ * Shortcode: SBWidgets.
+ *
+ * Renders ShopBuilder widgets with tabs.
+ *
+ * @package RT\ShopBuilderWP
+ */
 
 namespace RT\ShopBuilderWP\Shortcodes;
 
 use Elementor\Plugin;
 use RT\ShopBuilderWP\Traits\SingletonTraits;
 
+/**
+ * Shortcode: SBWidgets.
+ */
 class SBWidgets {
 	use SingletonTraits;
 

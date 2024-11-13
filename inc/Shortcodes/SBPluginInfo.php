@@ -1,9 +1,19 @@
 <?php
+/**
+ * Shortcode: SBPluginInfo.
+ *
+ * Renders plugin info.
+ *
+ * @package RT\ShopBuilderWP
+ */
 
 namespace RT\ShopBuilderWP\Shortcodes;
 
 use RT\ShopBuilderWP\Traits\SingletonTraits;
 
+/**
+ * Shortcode: SBPluginInfo.
+ */
 class SBPluginInfo {
 	use SingletonTraits;
 
@@ -34,8 +44,8 @@ class SBPluginInfo {
 		$data          = get_transient( $transient_key );
 
 		if ( false === $data ) {
-			$api      = 'https://api.wordpress.org/plugins/info/1.2/?action=query_plugins&request[author]=techlabpro1';
-			$response = wp_remote_get( $api );
+			$api_url  = 'https://api.wordpress.org/plugins/info/1.2/?action=query_plugins&request[author]=techlabpro1';
+			$response = wp_remote_get( $api_url );
 
 			if ( is_wp_error( $response ) ) {
 				return 'Error fetching plugin data.';
@@ -74,23 +84,23 @@ class SBPluginInfo {
 			case 'reviews':
 				$ratings     = $data['ratings'] ?? [];
 				$num_ratings = ! empty( $ratings[5] ) ? number_format( $ratings[5] ) : 'N/A';
-				$output      = "<strong>5</strong> (<strong>{$num_ratings}</strong> Reviews)";
+				$output      = "<strong>5</strong> (<strong>$num_ratings</strong> Reviews)";
 				break;
 
 			case 'version':
 				$version = $data['version'] ?? 'N/A';
-				$output  = "Current Version: <strong>{$version}</strong>";
+				$output  = "Current Version: <strong>$version</strong>";
 				break;
 
 			case 'last_updated':
 				$last_updated = $data['last_updated'];
 				$last_updated = gmdate( 'd M, Y', strtotime( $last_updated ) ) ?? 'N/A';
-				$output       = "Last Updated: <strong>{$last_updated}</strong>";
+				$output       = "Last Updated: <strong>$last_updated</strong>";
 				break;
 
 			case 'wp_compat':
 				$wp_compat = $data['tested'] ?? 'N/A';
-				$output    = "WP Compatibility: <strong>{$wp_compat}+</strong>";
+				$output    = "WP Compatibility: <strong>$wp_compat+</strong>";
 				break;
 
 			default:

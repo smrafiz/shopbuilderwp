@@ -507,7 +507,7 @@ if ( ! function_exists( 'shopbuilderwp_scroll_top' ) ) {
 	 */
 	function shopbuilderwp_scroll_top( $class = '', $icon = 'scroll-top' ) {
 		?>
-		<a href="#" class="scrollToTop <?php echo esc_attr( $class ); ?>"><?php echo shopbuilderwp_get_svg('scroll-top'); ?></a>
+		<a href="#" class="scrollToTop <?php echo esc_attr( $class ); ?>"><?php echo shopbuilderwp_get_svg( 'scroll-top' ); ?></a>
 		<?php
 	}
 }
@@ -568,7 +568,7 @@ if ( ! function_exists( 'shopbuilderwp_reading_time' ) ) {
 
 if ( ! function_exists( 'shopbuilderwp_post_meta' ) ) {
 	/**
-	 * Get post meta
+	 * Get post-meta
 	 *
 	 * @return string
 	 */
@@ -1055,5 +1055,23 @@ if ( ! function_exists( 'shopbuilderwp_comments_cbf' ) ) {
 				// IMPORTANT: Note that we do NOT close the opening tag, WordPress does this for us
 				break;
 	endswitch; // End comment_type check.
+	}
+}
+
+if ( ! function_exists( 'get_custom_field' ) ) {
+	/**
+	 * Retrieves a custom field value.
+	 *
+	 * @param string   $field_name The name of the custom field.
+	 * @param int|null $post_id The post-ID to retrieve the field from.
+	 *
+	 * @return mixed
+	 */
+	function get_custom_field( $field_name, $post_id = null ) {
+		if ( function_exists( 'get_field' ) ) {
+			return get_field( $field_name, $post_id );
+		}
+
+		return get_post_meta( $post_id ? $post_id : get_the_ID(), $field_name, true );
 	}
 }

@@ -7,8 +7,6 @@
  * @package shopbuilderwp
  */
 
-use RT\ShopBuilderWP\Options\Opt;
-
 ?>
 <article data-post-id="<?php the_ID(); ?>" <?php post_class( shopbuilderwp_post_class() ); ?>>
 	<div class="single-inner-wrapper">

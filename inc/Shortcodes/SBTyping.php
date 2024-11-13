@@ -1,9 +1,19 @@
 <?php
+/**
+ * Shortcode: SBTyping.
+ *
+ * Renders dynamic taglines with animated typing effect.
+ *
+ * @package RT\ShopBuilderWP
+ */
 
 namespace RT\ShopBuilderWP\Shortcodes;
 
 use RT\ShopBuilderWP\Traits\SingletonTraits;
 
+/**
+ * Shortcode: SBTyping.
+ */
 class SBTyping {
 	use SingletonTraits;
 
@@ -21,10 +31,16 @@ class SBTyping {
 	 * @return string Shortcode output.
 	 */
 	public function render( $atts ) {
+		$atts = shortcode_atts(
+			[
+				'words' => '',
+			],
+			$atts,
+			'sb_dynamic_tagline'
+		);
+
 		$fixed_words  = [ 'Checkout', 'Cart' ];
 		$random_words = [
-			'Checkout',
-			'Cart',
 			'Orders',
 			'Payments',
 			'Sales',
@@ -37,7 +53,7 @@ class SBTyping {
 
 		shuffle( $random_words );
 
-		$words   = array_merge( $fixed_words, $random_words );
+		$words   = ! empty( $atts['words'] ) ? explode( ',', $atts['words'] ) : array_merge( $fixed_words, $random_words );
 		$output  = '<div class="sb-headline clip is-full-width">';
 		$output .= '<span class="sb-words-wrapper">';
 

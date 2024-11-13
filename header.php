@@ -8,7 +8,7 @@
  *
  * @package shopbuilderwp
  */
-use RT\ShopBuilderWP\Options\Opt;
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -24,20 +24,20 @@ use RT\ShopBuilderWP\Options\Opt;
 
 <div id="page" class="site">
 	<header id="masthead" class="site-header headroom" role="banner">
-        <div class="header-desktop">
-	        <?php get_template_part( 'views/header/header' ); ?>
-        </div>
-        <div class="header-mobile">
+		<div class="header-desktop">
+			<?php get_template_part( 'views/header/header' ); ?>
+		</div>
+		<div class="header-mobile">
 			<?php get_template_part( 'views/header/header', 'mobile' ); ?>
-        </div>
+		</div>
 	</header>
 
 	<div id="content" class="site-content">
 		<?php
-        $banner_display = get_field('banner_display');
+		$banner_display = get_custom_field( 'banner_display' );
 
-        if ( ! $banner_display ) {
-            get_template_part( 'views/content-banner' );
-        }
+		if ( ! $banner_display ) {
+			get_template_part( 'views/content-banner' );
+		}
 
-        ?>
+		?>

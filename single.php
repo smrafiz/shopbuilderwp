@@ -8,19 +8,21 @@
  */
 
 use RT\ShopBuilderWP\Helpers\Fns;
-use RT\ShopBuilderWP\Options\Opt;
-use RT\ShopBuilderWP\Modules\PostRelated;
 
 get_header();
-$classes = Fns::class_list( [
-	'single-post-container',
-	Fns::is_single_fullwidth() ? 'should-full-width' : ''
-] );
+$classes = Fns::class_list(
+	[
+		'single-post-container',
+		Fns::is_single_fullwidth() ? 'should-full-width' : '',
+	]
+);
 ?>
 	<div id="primary" class="content-area">
-		<div class="<?php echo esc_attr( $classes ) ?>">
-			<?php while ( have_posts() ) :
-				the_post(); ?>
+		<div class="<?php echo esc_attr( $classes ); ?>">
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				?>
 				<?php do_action( 'shopbuilderwp_before_single_content', get_the_ID() ); ?>
 				<div class="container">
 					<div class="row content-row">

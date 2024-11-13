@@ -1,12 +1,12 @@
 <?php
+/**
+ * Theme Helpers.
+ */
 
 namespace RT\ShopBuilderWP\Helpers;
 
-use RT\ShopBuilderWP\Core\Sidebar;
-use RT\ShopBuilderWP\Options\Opt;
-
 /**
- * Extras.
+ * Theme Helpers.
  */
 class Fns {
 

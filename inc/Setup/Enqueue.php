@@ -3,7 +3,6 @@
 namespace RT\ShopBuilderWP\Setup;
 
 use RT\ShopBuilderWP\Helpers\Constants;
-use RT\ShopBuilderWP\Options\Opt;
 use RT\ShopBuilderWP\Traits\SingletonTraits;
 
 /**
@@ -13,9 +12,9 @@ class Enqueue {
 	use SingletonTraits;
 
 	/**
-	 * register default hooks and actions for WordPress
+	 * Register default hooks and actions for WordPress
 	 *
-	 * @return
+	 * @return void
 	 */
 	public function __construct() {
 		add_action( 'wp_enqueue_scripts', [ $this, 'register_scripts' ], 12 );
@@ -23,7 +22,7 @@ class Enqueue {
 	}
 
 	function register_scripts() {
-		wp_register_script( 'rt-headroom', shopbuilderwp_get_js( 'headroom' ), [ 'jquery' ], Constants::get_version(), true );// headRoom js
+		wp_register_script( 'sb-headroom', shopbuilderwp_get_js( 'headroom' ), [ 'jquery' ], Constants::get_version(), true );
 	}
 
 	/**
@@ -36,7 +35,7 @@ class Enqueue {
 		wp_enqueue_style( 'shopbuilderwp-main', shopbuilderwp_get_css( 'style', true ), [], Constants::get_version() );
 
 		// JS.
-		wp_enqueue_script( 'rt-headroom' );
+		wp_enqueue_script( 'sb-headroom' );
 		wp_enqueue_script( 'shopbuilderwp-main', shopbuilderwp_get_js( 'scripts' ), [ 'jquery', 'imagesloaded' ], Constants::get_version(), true );
 
 		// Extra.
