@@ -23,26 +23,41 @@
             ShopBuilderWP.preLoader();
             ShopBuilderWP.menuOffset();
             ShopBuilderWP.headRoom();
+            ShopBuilderWP.magnificPopup();
             ShopBuilderWP.typingEffect();
         },
 
 		// headRoom js
 		headRoom: function () {
-				var myElement = document.querySelector(".headroom");
-				var headroom = new Headroom(myElement);
-				headroom.init();
+			var myElement = document.querySelector(".headroom");
+			var headroom = new Headroom(myElement);
+			headroom.init();
 
-				$(window).on('scroll', function () {
-					var height = $(window).scrollTop();
-					if (height < 86) {
-						$('.site-header').removeClass('scrolling');
-					} else {
-						$('.site-header').addClass('scrolling');
-					}
+			$(window).on('scroll', function () {
+				var height = $(window).scrollTop();
+				if (height < 86) {
+					$('.site-header').removeClass('scrolling');
+				} else {
+					$('.site-header').addClass('scrolling');
+				}
+			});
+
+			var intHeight = $('.headroom')[0].getBoundingClientRect().height;
+			$('.fixed-header-space').height(intHeight);
+		},
+
+		magnificPopup: function (){
+			var yPopup = $(".popup-youtube");
+			if (yPopup.length) {
+				yPopup.magnificPopup({
+					disableOn: 700,
+					type: 'iframe',
+					mainClass: 'mfp-fade',
+					removalDelay: 160,
+					preloader: false,
+					fixedContentPos: false
 				});
-
-				var intHeight = $('.headroom')[0].getBoundingClientRect().height;
-				$('.fixed-header-space').height(intHeight);
+			}
 		},
 
 		menuOffset: function () {
@@ -307,7 +322,7 @@
         if (elementorFrontend.isEditMode()) {
             //For all widgets
             elementorFrontend.hooks.addAction('frontend/element_ready/widget', () => {
-				//ShopBuilderWP.counterUp();
+				ShopBuilderWP.magnificPopup();
             });
 
         }
