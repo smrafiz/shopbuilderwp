@@ -2,7 +2,6 @@
 
 namespace RT\ShopBuilderWP\Core;
 
-use RT\ShopBuilderWP\Helpers\Constants;
 use RT\ShopBuilderWP\Helpers\Fns;
 use RT\ShopBuilderWP\Traits\SingletonTraits;
 

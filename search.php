@@ -8,7 +8,6 @@
  */
 
 use RT\ShopBuilderWP\Helpers\Fns;
-use RT\ShopBuilderWP\Modules\Pagination;
 
 get_header();
 ?>

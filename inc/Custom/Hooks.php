@@ -2,9 +2,7 @@
 
 namespace RT\ShopBuilderWP\Custom;
 
-use RT\ShopBuilderWP\Helpers\Fns;
 use RT\ShopBuilderWP\Traits\SingletonTraits;
-use RT\ShopBuilderWP\Options\Opt;
 
 /**
  * Extras.
@@ -13,7 +11,7 @@ class Hooks {
 	use SingletonTraits;
 
 	/**
-	 * register default hooks and actions for WordPress
+	 * Register default hooks and actions for WordPress
 	 */
 	public function __construct() {
 		add_action( 'admin_enqueue_scripts', [ __CLASS__, 'meta_css' ] );
@@ -47,7 +45,7 @@ class Hooks {
 		?>
 		<style>
 			.single_post_style {
-				display: <?php echo esc_attr($display) ?>;
+				display: <?php echo esc_attr( $display ); ?>;
 			}
 		</style>
 		<?php

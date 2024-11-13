@@ -6,9 +6,7 @@
  * @package shopbuilderwp
  */
 
-use RT\ShopBuilderWP\Options\Opt;
 use RT\ShopBuilderWP\Helpers\Fns;
-use RT\ShopBuilderWP\Modules\PostShare;
 
 /*Allow HTML for the kses post*/
 function shopbuilderwp_html( $html, $context = '' ) {
