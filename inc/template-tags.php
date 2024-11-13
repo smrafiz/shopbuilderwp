@@ -1050,7 +1050,7 @@ if ( ! function_exists( 'shopbuilderwp_comments_cbf' ) ) {
 				</div>
 					<?php
 				}
-				// IMPORTANT: Note that we do NOT close the opening tag, WordPress does this for us
+				// IMPORTANT: Note that we do NOT close the opening tag, WordPress does this for us.
 				break;
 	endswitch; // End comment_type check.
 	}
@@ -1070,6 +1070,6 @@ if ( ! function_exists( 'get_custom_field' ) ) {
 			return get_field( $field_name, $post_id );
 		}
 
-		return get_post_meta( $post_id ? $post_id : get_the_ID(), $field_name, true );
+		return get_post_meta( $post_id ?: get_the_ID(), $field_name, true );
 	}
 }
