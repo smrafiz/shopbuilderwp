@@ -266,3 +266,17 @@
     }
   }
 }
+
+// sb testimonial
+.sb-testimonial {
+  .elementor-widget-testimonial {
+    height: 100%;
+  }
+  .elementor-testimonial-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+}

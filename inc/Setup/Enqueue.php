@@ -22,9 +22,9 @@ class Enqueue {
 	}
 
 	function register_scripts() {
-		wp_register_style( 'sb-magnific-popup', shopbuilderwp_get_css( 'magnific-popup', true ), [], Constants::get_version() );
-		wp_register_script( 'sb-magnific-popup', shopbuilderwp_get_js( 'magnific-popup' ), [ 'jquery' ], Constants::get_version(), true );// magnific js
-		wp_register_script( 'sb-headroom', shopbuilderwp_get_js( 'headroom' ), [ 'jquery' ], Constants::get_version(), true );
+		wp_register_style( 'sb-magnific-popup', shopbuilderwp_get_file( '/assets/vendors/magnific-popup/magnific-popup.css', true ), [], Constants::get_version() );
+		wp_register_script( 'sb-magnific-popup', shopbuilderwp_get_file( '/assets/vendors/magnific-popup/magnific-popup.js' ), [ 'jquery' ], Constants::get_version(), true );
+		wp_register_script( 'sb-headroom', shopbuilderwp_get_file( '/assets/vendors/headroom/headroom.js' ), [ 'jquery' ], Constants::get_version(), true );
 	}
 
 	/**
