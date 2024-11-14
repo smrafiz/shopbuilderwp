@@ -18,7 +18,7 @@ $content_columns = Fns::content_columns();
 			<div class="row align-stretch">
 				<div class="<?php echo esc_attr( $content_columns ); ?>">
 					<main id="main" class="site-main" role="main">
-						<div class="row rt-masonry-grid">
+						<div class="row">
 							<?php
 							if ( have_posts() ) :
 								/* Start the Loop */

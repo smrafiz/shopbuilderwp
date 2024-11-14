@@ -26,7 +26,7 @@ $classes = Fns::class_list(
 				<?php do_action( 'shopbuilderwp_before_single_content', get_the_ID() ); ?>
 				<div class="container">
 					<div class="row content-row">
-						<div class="content-col <?php echo esc_attr( Fns::single_content_columns() ); ?>">
+						<div class="content-col">
 							<main id="main" class="site-main single-content" role="main">
 								<?php
 								get_template_part( 'views/content-single' );
@@ -37,7 +37,7 @@ $classes = Fns::class_list(
 								?>
 							</main><!-- #main -->
 						</div><!-- .col- -->
-						<?php get_sidebar(); ?>
+						<?php //get_sidebar(); ?>
 					</div><!-- .row -->
 				</div><!-- .container -->
 				<?php do_action( 'shopbuilderwp_after_single_content' ); ?>

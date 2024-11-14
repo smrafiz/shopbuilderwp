@@ -10,8 +10,4 @@
 
 use RT\ShopBuilderWP\Helpers\Fns;
 
-if ( is_singular() && is_active_sidebar( Fns::default_sidebar('single') ) ) {
-	shopbuilderwp_sidebar( Fns::default_sidebar('single')  );
-} else {
-	shopbuilderwp_sidebar( Fns::default_sidebar('main') );
-}
+shopbuilderwp_sidebar( Fns::default_sidebar('main') );

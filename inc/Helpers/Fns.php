@@ -110,37 +110,12 @@ class Fns {
 	}
 
 	/**
-	 * Return single content columns
-	 *
-	 * @return string
-	 */
-	public static function single_content_columns() {
-		$sidebar = 'rt-single-sidebar';
-
-		return is_active_sidebar( $sidebar ) ? 'col-xl-8' : 'col-xl-10 col-md-offset-1';
-	}
-
-	/**
-	 * Return product single content columns
-	 *
-	 * @param string $full_width_col Column.
-	 *
-	 * @return string
-	 */
-	public static function product_single_columns( $full_width_col = 'col-12' ) {
-		$sidebar = 'rt-single-sidebar';
-
-		return ! is_active_sidebar( $sidebar ) ? $full_width_col : 'col-xl-8';
-	}
-
-
-	/**
 	 * Get blog colum
 	 *
 	 * @return mixed|string
 	 */
 	public static function blog_column() {
-		return 'col-lg-6';
+		return 'col-lg-4';
 	}
 
 	/**
@@ -220,30 +195,12 @@ class Fns {
 				'name'  => __( 'Main Sidebar', 'shopbuilderwp' ),
 				'class' => 'rt-sidebar',
 			],
-			'single' => [
-				'id'    => 'rt-single-sidebar',
-				'name'  => __( 'Single Sidebar', 'shopbuilderwp' ),
-				'class' => 'rt-single-sidebar',
-			],
 			'footer' => [
 				'id'    => 'rt-footer-sidebar',
 				'name'  => 'Footer Sidebar',
 				'class' => 'footer-sidebar col-lg-3 col-md-6',
 			],
 		];
-
-		if ( class_exists( 'WooCommerce' ) ) {
-			$sidebar_lists['woo-archive'] = [
-				'id'    => 'rt-woo-archive-sidebar',
-				'name'  => __( 'WooCommerce Archive Sidebar', 'shopbuilderwp' ),
-				'class' => 'woo-archive-sidebar',
-			];
-			$sidebar_lists['woo-single']  = [
-				'id'    => 'rt-woo-single-sidebar',
-				'name'  => __( 'WooCommerce Single Sidebar', 'shopbuilderwp' ),
-				'class' => 'woo-single-sidebar',
-			];
-		}
 
 		if ( ! $id ) {
 			return $sidebar_lists;

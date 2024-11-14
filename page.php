@@ -12,30 +12,33 @@
  * @package shopbuilderwp
  */
 
-use RT\ShopBuilderWP\Helpers\Fns;
 
-get_header(); ?>
-	<div id="primary" class="content-area">
-		<div class="container">
-			<div class="row">
-				<div class="<?php echo esc_attr( Fns::content_columns() ); ?>">
-					<main id="main" class="site-main" role="main">
-						<?php
-						/* Start the Loop */
-						while ( have_posts() ) :
-							the_post();
-							get_template_part( 'views/content', 'page' );
-							// If comments are open or we have at least one comment, load up the comment template.
-							if ( comments_open() || get_comments_number() ) :
-								comments_template();
+get_header();
+
+?>
+    <div id="primary" class="content-area">
+        <div class="container">
+            <div class="row align-stretch">
+                <div class="col-12">
+                    <main id="main" class="site-main" role="main">
+                        <div class="row">
+							<?php
+							if ( have_posts() ) :
+								/* Start the Loop */
+								while ( have_posts() ) :
+									the_post();
+									get_template_part( 'views/content' );
+								endwhile;
+							else :
+								get_template_part( 'views/content', 'none' );
 							endif;
-						endwhile;
-						?>
-					</main><!-- #main -->
-				</div><!-- .col- -->
-				<?php get_sidebar(); ?>
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</div>
+							?>
+                        </div>
+                    </main><!-- #main -->
+                </div><!-- .col- -->
+				<?php //get_sidebar(); ?>
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- #primary -->
 <?php
 get_footer();
