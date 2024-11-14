@@ -9,6 +9,11 @@
     position: sticky;
     top: 32px;
   }
+  .shop-builder-sticky-200 {
+    align-self: flex-start;
+    position: sticky;
+    top: 250px;
+  }
 }
 
 // image over animation
@@ -111,7 +116,6 @@
 }
 
 // hero flash sale video
-
 .hero-flash-sale-video {
   .elementor-image-box-wrapper {
     display: flex;
@@ -217,6 +221,48 @@
       background: #FFECF2;
       filter: blur(100px);
       z-index: -1;
+    }
+  }
+}
+
+// sb theme information
+.sb-theme-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  @include list_default();
+  @media(max-width: 767px) {
+    gap: 10px;
+  }
+  li {
+    font-size: 14px;
+    color: $title_color;
+    background-color: $gray_color;
+    padding: 12px 20px;
+    border-radius: 8px;
+    line-height: 1.1;
+    span {
+      font-weight: 600;
+    }
+    &:nth-child(1) {
+      background-color: #FFE7E6;
+    }
+    &:nth-child(2) {
+      background-color: #FEF0D5;
+    }
+    &:nth-child(3) {
+      background-color: #D8FFED;
+    }
+    &:nth-child(4) {
+      background-color: #E0F2FB;
+    }
+    &:nth-child(5) {
+      background-color: #F7E1FF;
+    }
+    &:nth-child(6) {
+      background-color: #E8EBFF;
     }
   }
 }

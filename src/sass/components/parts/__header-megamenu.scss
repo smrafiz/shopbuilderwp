@@ -54,6 +54,11 @@
 	ul > li:hover > ul.dropdown-menu {
 		transform: translateY(0);
 		pointer-events: all;
+		li {
+			a {
+				transform: translateY(0px);
+			}
+		}
 	}
 
 	/*start mega menu two column*/
@@ -95,7 +100,7 @@
 					padding: 0;
 				}
 				> a {
-					font-weight: 800;
+					font-weight: 600;
 					font-size: 16px;
 					margin-bottom: 10px;
 					padding-left: 24px;

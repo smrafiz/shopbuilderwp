@@ -38,11 +38,8 @@ $dropdown_top_bottom_margin: 10px;
 .site-header {
 	position: relative;
 	z-index: 9;
-
 	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
+		@include list_default();
 	}
 }
 .main-header-section {
