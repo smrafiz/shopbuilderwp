@@ -81,7 +81,7 @@ class SBWidgets {
 							$single_term = $terms[0];
 							$single_term = str_replace( ' ', '-', strtolower( $single_term->name ) );
 							$meta        = get_post_meta( get_the_ID(), '_sb_widget_post_meta_key', true );
-							$is_pro      = $meta['is_pro'] == 1 ? 'Pro' : '';
+							$is_pro      = 1 === $meta['is_pro'] ? 'Pro' : '';
 
 							$badge = $meta['badge'] ? $meta['badge'] : '';
 

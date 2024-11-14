@@ -12,6 +12,9 @@ namespace RT\ShopBuilderWP;
 
 use RT\ShopBuilderWP\Traits\SingletonTraits;
 
+/**
+ * Theme Init.
+ */
 final class Init {
 	use SingletonTraits;
 
@@ -29,14 +32,15 @@ final class Init {
 	 */
 	public function register() {
 		Core\Tags::instance();
+		Setup\Setup::instance();
+		Setup\Menus::instance();
+		Custom\Hooks::instance();
 		Core\Sidebar::instance();
+		Custom\Extras::instance();
+		Setup\Enqueue::instance();
 		Core\PostTypes::instance();
 		Core\Elementor::instance();
 		Core\Shortcodes::instance();
-		Setup\Setup::instance();
-		Setup\Menus::instance();
-		Setup\Enqueue::instance();
-		Custom\Hooks::instance();
-		Custom\Extras::instance();
+		Custom\Debloater::instance();
 	}
 }

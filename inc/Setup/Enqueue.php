@@ -21,8 +21,13 @@ class Enqueue {
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_scripts' ], 25 );
 	}
 
-	function register_scripts() {
-		wp_register_style( 'sb-magnific-popup', shopbuilderwp_get_file( '/assets/vendors/magnific-popup/magnific-popup.css', true ), [], Constants::get_version() );
+	/**
+	 * Register all necessary scripts and styles for the theme
+	 *
+	 * @return void
+	 */
+	public function register_scripts() {
+		wp_register_style( 'sb-magnific-popup', shopbuilderwp_get_file( '/assets/vendors/magnific-popup/magnific-popup.css' ), [], Constants::get_version() );
 		wp_register_script( 'sb-magnific-popup', shopbuilderwp_get_file( '/assets/vendors/magnific-popup/magnific-popup.js' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'sb-headroom', shopbuilderwp_get_file( '/assets/vendors/headroom/headroom.js' ), [ 'jquery' ], Constants::get_version(), true );
 	}
