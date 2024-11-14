@@ -23,14 +23,14 @@ class Debloater {
 	public function __construct() {
 		$this
 			->disable_emojis()
-//			->remove_embed_scripts()
+			->remove_embed_scripts()
 			->remove_jQuery_migrate()
 			->remove_dashicons()
 			->remove_generator_meta()
 			->remove_rsd_link()
 			->remove_wlwmanifest_link()
 			->remove_shortlink()
-//			->disable_wp_embeds()
+			->disable_wp_embeds()
 			->disable_self_pingbacks()
 			->disable_XMLRPC()
 			->disable_rss_feeds()
