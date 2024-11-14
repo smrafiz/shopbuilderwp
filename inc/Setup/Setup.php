@@ -37,6 +37,7 @@ class Setup {
 	private function add_image_size() {
 		$sizes = [
 			'shopbuilderwp-size1' => [ 800, 533, true ],
+			'shopbuilderwp-theme' => [ 615, 345, true ],
 		];
 
 		foreach ( $sizes as $size => $value ) {

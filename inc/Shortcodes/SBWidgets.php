@@ -28,10 +28,9 @@ class SBWidgets {
 	/**
 	 * Render the shortcode output.
 	 *
-	 * @param array $atts Shortcode attributes.
 	 * @return string Shortcode output.
 	 */
-	public function render( $atts ) {
+	public function render() {
 		ob_start();
 
 		$terms = get_terms(
