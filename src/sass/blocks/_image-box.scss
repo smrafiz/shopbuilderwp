@@ -1,4 +1,3 @@
-
 // image box style
 .sb-image-box-01 {
   .elementor-widget-image {
@@ -97,6 +96,16 @@
       transform: perspective(0px) rotateX(0deg) rotateY(0deg) scaleX(1.01) scaleY(1.01);
     }
   }
+  .elementor-heading-title {
+    a {
+      display: inline;
+      padding-bottom: 0;
+      background-size: 0 6px;
+      background-repeat: no-repeat;
+      background-position: left 100%;
+      transition: all 0.7s;
+    }
+  }
   &:hover {
     .elementor-widget-image {
       img {
@@ -106,6 +115,7 @@
     .elementor-heading-title {
       a {
         color: $primary_color;
+        background-size: 100% 6px;
       }
     }
   }

@@ -45,6 +45,47 @@ $button_text_color: #FFFFFF;
 $body_bg_color: #FFFFFF;
 $white_color: #FFFFFF;
 
+// shop builder feature title animation
+$title_colors: #fadede, #D9DEFF, #CEE9FD, #CBEDE6, #d2caca, #E7D2FC, #F4F3D6, #FFEAE3, #D4F5E1, #E2EAFC, #CAF4FF, #DFEDF5, #F8D8F4, #EEEEEE, #DED5F5;
+@for $i from 1 through length($title_colors) {
+	.title-hover-#{$i} {
+		.elementor-heading-title {
+			a {
+				$color: nth($title_colors, $i);
+				background-image: linear-gradient(to bottom, #{$color} 0%, #{$color} 98%);
+			}
+		}
+	}
+}
+
+// theme info title animation
+$title_colors_02: #CEE9FD, #EFE3FE, #D3F6F1, #FBEAE3, #DFEDF5, #F4F3D6, #D4F5F2, #E9F4D1, #D9DEFF, #FBEAE3, #EEEEEE, #DFFBDD;
+@for $i from 1 through length($title_colors_02) {
+	.title-hover-two-#{$i} {
+		.elementor-heading-title {
+			a {
+				$color: nth($title_colors_02, $i);
+				background-image: linear-gradient(to bottom, #{$color} 0%, #{$color} 98%);
+			}
+		}
+	}
+}
+
+// theme info title animation
+$social_icon_colors: #1877f2, #1da1f2, #0077b5, #ff0000, #81b342;
+.rt-social {
+	@for $i from 1 through length($social_icon_colors) {
+		.rt-social-#{$i} {
+			a {
+				svg {
+					$color: nth($social_icon_colors, $i);
+					fill:  #{$color};
+				}
+			}
+		}
+	}
+}
+
 //Headers
 $dropdown_width: 240px;
 $transparent_menu_color: rgba(255, 255, 255, 0.9);

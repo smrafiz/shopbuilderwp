@@ -21,19 +21,15 @@ get_header();
             <div class="row align-stretch">
                 <div class="col-12">
                     <main id="main" class="site-main" role="main">
-                        <div class="row">
-							<?php
-							if ( have_posts() ) :
-								/* Start the Loop */
-								while ( have_posts() ) :
-									the_post();
-									get_template_part( 'views/content' );
-								endwhile;
-							else :
-								get_template_part( 'views/content', 'none' );
-							endif;
-							?>
-                        </div>
+		                <?php
+		                while ( have_posts() ) :
+			                the_post();
+			                get_template_part( 'views/content', 'page' );
+			                if ( comments_open() || get_comments_number() ) :
+				                comments_template();
+			                endif;
+		                endwhile;
+		                ?>
                     </main><!-- #main -->
                 </div><!-- .col- -->
 				<?php //get_sidebar(); ?>

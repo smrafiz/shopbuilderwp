@@ -7,6 +7,8 @@ use RT\ShopBuilderWP\Shortcodes\SBTyping;
 use RT\ShopBuilderWP\Shortcodes\SBWidgets;
 use RT\ShopBuilderWP\Traits\SingletonTraits;
 use RT\ShopBuilderWP\Shortcodes\SBPluginInfo;
+use RT\ShopBuilderWP\Shortcodes\SBThemeInfo;
+use RT\ShopBuilderWP\Shortcodes\SBSocialIcon;
 
 /**
  * Sidebar.
@@ -32,6 +34,8 @@ class Shortcodes {
 			SBTyping::class,
 			SBWidgets::class,
 			SBPluginInfo::class,
+			SBThemeInfo::class,
+			SBSocialIcon::class,
 		];
 
 		foreach ( $widgets as $class ) {

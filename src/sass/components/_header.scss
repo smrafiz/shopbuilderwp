@@ -2,12 +2,12 @@
 
 $dropdown_top_bottom_margin: 10px;
 
-@media (min-width: 1200px) {
+@media (min-width: 1025px) {
 	.header-mobile {
 		display: none;
 	}
 }
-@media (max-width: 1199px) {
+@media (max-width: 1024px) {
 	.header-desktop {
 		display: none;
 	}
@@ -18,6 +18,10 @@ $dropdown_top_bottom_margin: 10px;
 	align-items: center;
 	font-size: 28px;
 	font-weight: 700;
+	min-width: 172px;
+	.custom-logo-link {
+		position: absolute;
+	}
 
 	h1 {
 		margin: 0;

@@ -204,3 +204,24 @@
 	}
 }
 
+// social icon
+
+.rt-social {
+	display: flex;
+	gap: 9px;
+	li {
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid $border_color;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			transform: translateY(0);
+			&:hover {
+				transform: translateY(-4px);
+			}
+		}
+	}
+}
