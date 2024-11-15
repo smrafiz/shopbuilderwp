@@ -6,7 +6,7 @@
  *
  * @package finwave
  */
-
+use RadiusTheme\SB\Helpers\BuilderFns;
 /*banner title*/
 if ( is_404() ) {
 	$banner_title = 'Error Page';
@@ -28,7 +28,7 @@ if ( is_404() ) {
 	$banner_title = get_the_title();
 }
 
-use RadiusTheme\SB\Helpers\BuilderFns;
+
 if ( class_exists( 'WooCommerce' ) ) {
 	if ( is_shop() ) {
 		$banner_title = esc_html__( 'Shop', 'shopbuilderwp' );

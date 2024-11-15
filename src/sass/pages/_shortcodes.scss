@@ -90,20 +90,27 @@
 		position: relative;
 		z-index: 1;
 		background: #fff;
-		border-radius: 10px;
-		box-shadow: 0 0 50px rgba(0, 0, 0, 5%);
+		border-radius: 12px;
+		box-shadow: 0 5px 24px rgba(0, 0, 0, 0.1);;
 		height: 100%;
 		overflow: hidden;
-		transform: translate(0);
-		transition: transform .2s;
-
-		&:hover {
-			transform: translateY(-2px);
+		.item-thumb {
+			overflow: hidden;
+			line-height: 0;
+			img {
+				margin: 0;
+				width: 100%;
+				transition: all 520ms ease;
+				transform: perspective(0px) rotateX(0deg) rotateY(0deg) scaleX(1.01) scaleY(1.01);
+			}
 		}
 
-		img {
-			margin: 0;
-			width: 100%;
+		&:hover {
+			.item-thumb {
+				img {
+					transform: perspective(500px) rotateX(0.03deg) rotateY(0deg) scaleX(1.10) scaleY(1.10)
+				}
+			}
 		}
 
 		.item-content {
@@ -114,7 +121,6 @@
 		}
 
 		.item-footer {
-			margin-top: auto;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
@@ -123,30 +129,41 @@
 
 		.item-title {
 			font-size: 20px;
-			color: #000;
+			font-weight: 600;
+			color: $title_color;
 			margin-bottom: 6px;
 			line-height: 1.4;
 
 			a {
 				text-decoration: none;
-				color: #000;
+				color: $title_color;
 				transition: all .4s ease;
 
 				&:hover {
-					color: #004BFF;
+					color: $primary_color;
 				}
 			}
 		}
 
-		.theme-update {
-			color: #878585;
-			font-size: 14px;
+		.item-details {
 			margin-bottom: 20px;
-			line-height: 1.2;
 		}
 
 		.excerpt {
-			line-height: 28px;
+			font-size: 15px;
+			font-weight: 500;
+			p {
+				margin-bottom: 0;
+			}
+		}
+
+		.item-update {
+			font-size: 15px;
+			font-weight: 500;
+			span {
+				color: $title_color;
+				font-weight: 600;
+			}
 		}
 
 		.price {
@@ -159,8 +176,8 @@
 		.details-btn {
 			a {
 				font-size: 14px;
-				color: #004BFF;
-				font-weight: 500;
+				color: $primary_color;
+				font-weight: 600;
 				line-height: 1;
 				text-transform: capitalize;
 				display: inline-flex;
@@ -174,7 +191,7 @@
 				cursor: pointer;
 				user-select: none;
 				background-color: #f1f4ff;
-				border-radius: 30px;
+				border-radius: 10px;
 				padding: 14px 20px;
 				transition: all .3s ease-in-out;
 

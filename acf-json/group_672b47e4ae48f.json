@@ -73,6 +73,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "sb_theme"
+            }
         ]
     ],
     "menu_order": 0,
@@ -84,5 +91,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731586742
+    "modified": 1731640619
 }

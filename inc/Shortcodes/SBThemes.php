@@ -69,7 +69,7 @@ class SBThemes {
 								if ( $theme_last_update ) {
 									?>
 									<div class="item-update">
-										Last Updated: <?php echo esc_html( $theme_last_update ); ?>
+										Last Updated: <span><?php echo esc_html( $theme_last_update ); ?></span>
 									</div>
 									<?php
 								}
@@ -84,7 +84,10 @@ class SBThemes {
 								}
 								?>
 								<div class="details-btn">
-									<a href="<?php the_permalink(); ?>">More Details</a>
+									<a href="<?php the_permalink(); ?>">More Details<svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.910156 7H18.9102M18.9102 7L12.9102 1M18.9102 7L12.9102 13" stroke="currentColor" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
 								</div>
 							</div>
 						</div>
