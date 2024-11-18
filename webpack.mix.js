@@ -105,8 +105,8 @@ if (
 	// Frontend CSS
 	if (!mix.inProduction()) {
 		mix
-			.sass("src/sass/style.scss", "assets/css/",).sourceMaps(true, 'source-map')
-			.sass("src/sass/admin.scss", "assets/css/",).sourceMaps(true, 'source-map')
+			.sass("src/sass/style.scss", "assets/css/style.min.css",).sourceMaps(true, 'source-map')
+			.sass("src/sass/admin.scss", "assets/css/admin.min.css",).sourceMaps(true, 'source-map')
 			.webpackConfig({
 				module: {
 					rules: [
@@ -116,6 +116,7 @@ if (
 								{
 									loader: 'sass-loader',
 									options: {
+										sourceMap: true,
 										sassOptions: {
 											// Silences all deprecation warnings
 											logger: {
@@ -131,8 +132,8 @@ if (
 			});
 	} else {
 		mix
-			.sass("src/sass/style.scss", "assets/css/")
-			.sass("src/sass/admin.scss", "assets/css/");
+			.sass("src/sass/style.scss", "assets/css/style.min.css")
+			.sass("src/sass/admin.scss", "assets/css/admin.min.css");
 	}
 }
 

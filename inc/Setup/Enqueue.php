@@ -40,7 +40,7 @@ class Enqueue {
 	public function enqueue_scripts() {
 		// CSS.
 		wp_enqueue_style( 'sb-magnific-popup' );
-		wp_enqueue_style( 'shopbuilderwp-main', shopbuilderwp_get_css( 'style', true ), [], Constants::get_version() );
+		wp_enqueue_style( 'shopbuilderwp-main', shopbuilderwp_get_css( 'style' ), [], Constants::get_version() );
 
 		// JS.
 		wp_enqueue_script( 'sb-magnific-popup' );

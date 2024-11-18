@@ -440,7 +440,7 @@ if ( ! function_exists( 'shopbuilderwp_get_css' ) ) {
 	 * @return string
 	 */
 	function shopbuilderwp_get_css( $filename, $check_rtl = false ) {
-		$min    = WP_DEBUG ? '.css' : '.css';
+		$min    = '.min.css';
 		$is_rtl = $check_rtl && is_rtl() ? 'css-rtl' : 'css';
 		$path   = "/assets/$is_rtl/" . $filename . $min;
 
