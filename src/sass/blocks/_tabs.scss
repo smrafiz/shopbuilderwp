@@ -22,9 +22,6 @@
   }
   .e-n-tab-title {
     position: relative;
-    .e-n-tab-title-text {
-      column-gap: 5px;
-    }
     &:after {
       position: absolute;
       content: "";
@@ -60,10 +57,12 @@
       align-items: center;
       justify-content: center;
       svg {
-        filter: brightness(0) invert(1);
         width: 20px;
         height: 20px;
-
+        fill: $white_color;
+          path {
+            fill: $white_color;
+          }
       }
     }
   }

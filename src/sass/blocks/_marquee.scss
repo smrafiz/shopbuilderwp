@@ -8,7 +8,8 @@
     .marquee-item {
       display: inline-grid;
       row-gap: 24px;
-      > div {
+      margin-bottom: 24px;
+      .item-image {
         position: relative;
         white-space: normal;
       }
@@ -23,14 +24,28 @@
       .rt-marquee-item {
         display: inline-block;
         will-change: transform;
-        animation: marquee_top 20s linear infinite;
+        animation: marquee_top 40s linear infinite;
       }
     }
     &.marquee-bottom {
       .rt-marquee-item {
         display: inline-block;
         will-change: transform;
-        animation: marquee_bottom 20s linear infinite;
+        animation: marquee_bottom 40s linear infinite;
+      }
+    }
+    &.marquee-left {
+      .rt-marquee-item {
+        display: inline-block;
+        will-change: transform;
+        animation: marquee_left 40s linear infinite;
+      }
+    }
+    &.marquee-right {
+      .rt-marquee-item {
+        display: inline-block;
+        will-change: transform;
+        animation: marquee_right 40s linear infinite;
       }
     }
     &:hover {

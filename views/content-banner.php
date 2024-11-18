@@ -31,7 +31,7 @@ if ( is_404() ) {
 
 if ( class_exists( 'WooCommerce' ) ) {
 	if ( is_shop() ) {
-		$banner_title = esc_html__( 'Shop', 'shopbuilderwp' );
+		$banner_title = esc_html__( 'Shop Page', 'shopbuilderwp' );
 	} elseif ( class_exists( BuilderFns::class ) && is_singular( BuilderFns::$post_type_tb ) ) {
 		$banner_title  = get_the_title();
 	} elseif ( is_product_category() ) {
@@ -53,7 +53,7 @@ $page_description = get_custom_field( 'page_description' );
 
 <div class="sb-breadcrumb-banner">
 	<div class="container d-flex flex-column">
-		<h1 class="entry-title"><?php echo esc_html( $banner_title ); ?></h1>
+		<h1 class="entry-title"><?php shopbuilderwp_html( $banner_title, false ); ?></h1>
 		<?php if ( $page_description ) { ?><p><?php shopbuilderwp_html( $page_description, false ); ?></p><?php } ?>
 	</div>
 </div>

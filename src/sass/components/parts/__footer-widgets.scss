@@ -24,6 +24,10 @@
 			flex-grow: 25;
 		}
 
+		.footer-logo {
+			margin-bottom: 8px;
+		}
+
 		ul {
 			list-style: none;
 			padding-left: 0;
@@ -47,39 +51,6 @@
 	.footer-social:not(:has(*)) {
 		background: red;
 		padding: 15px;
-	}
-	.footer-social {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		flex-wrap: wrap;
-		margin-top: 24px;
-		a {
-			height: 38px;
-			width: 38px;
-			border-radius: 38px;
-			background-color: $tertiary_color;
-			color: $button_text_color;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			transition: all 0.4s ease-in-out;
-			overflow: hidden;
-			svg {
-				fill: $button_color;
-			}
-			&:hover {
-				background-color: $primary_color;
-				color: $button_color;
-				svg {
-					animation: toBottomFromTop 0.7s forwards;
-				}
-			}
-		}
-		svg {
-			width: 14px;
-			height: 14px;
-		}
 	}
 
 	.tagcloud {

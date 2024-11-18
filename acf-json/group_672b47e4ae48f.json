@@ -80,6 +80,13 @@
                 "operator": "==",
                 "value": "sb_theme"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "rtsb_builder"
+            }
         ]
     ],
     "menu_order": 0,
@@ -91,5 +98,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731640619
+    "modified": 1731904252
 }

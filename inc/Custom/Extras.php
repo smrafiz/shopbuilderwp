@@ -21,8 +21,7 @@ class Extras {
 		add_action( 'wp_update_nav_menu_item', [ $this, 'menu_update' ], 10, 2 );
 		add_filter( 'wp_get_nav_menu_items', [ $this, 'menu_modify' ], 11, 3 );
 		add_action( 'after_switch_theme', [ $this, 'rewrite_flush' ] );
-		add_action( 'wp_head', [ $this, 'insert_social_in_head' ] );
-		add_action( 'template_redirect', [ $this, 'w3c_validator' ] );
+		add_filter( 'upload_mimes', [ $this, 'svg_mime_types' ] );
 	}
 
 	/*
@@ -164,75 +163,18 @@ class Extras {
 		flush_rewrite_rules();
 	}
 
-	public function insert_social_in_head() {
-		global $post;
 
-		if ( ! isset( $post ) ) {
-			return;
-		}
-
-		$title = get_the_title();
-
-		if ( is_singular( 'post' ) ) {
-			$link = get_the_permalink() . '?v=' . time();
-			echo '<meta property="og:url" content="' . $link . '" />';
-			echo '<meta property="og:type" content="article" />';
-			echo '<meta property="og:title" content="' . $title . '" />';
-
-			if ( ! empty( $post->post_content ) ) {
-				echo '<meta property="og:description" content="' . wp_trim_words(
-					$post->post_content,
-					150
-				) . '" />';
-			}
-			$attachment_id = get_post_thumbnail_id( $post->ID );
-			if ( ! empty( $attachment_id ) ) {
-				$thumbnail = wp_get_attachment_image_src( $attachment_id, 'full' );
-				if ( ! empty( $thumbnail ) ) {
-					$attachment    = get_post( $attachment_id );
-					$thumbnail[0] .= '?v=' . time();
-					echo '<meta property="og:image" content="' . $thumbnail[0] . '" />';
-					echo '<link itemprop="thumbnailUrl" href="' . $thumbnail[0] . '">';
-					echo '<meta property="og:image:type" content="' . $attachment->post_mime_type . '">';
-				}
-			}
-			echo '<meta property="og:site_name" content="' . get_bloginfo( 'name' ) . '" />';
-			echo '<meta name="twitter:card" content="summary" />';
-			echo '<meta property="og:updated_time" content="' . time() . '" />';
-		}
+	/**
+	 * Enable svg upload
+	 *
+	 * @param $mimes
+	 *
+	 * @return mixed
+	 */
+	public function svg_mime_types( $mimes ) {
+		$mimes['svg'] = 'image/svg+xml';
+		return $mimes;
 	}
 
-	// W3C validator passing code
-	public function w3c_validator() {
-		ob_start(
-			function ( $buffer ) {
-				$buffer = str_replace( [ '<script type="text/javascript">', "<script type='text/javascript'>" ], '<script>', $buffer );
-				return $buffer;
-			}
-		);
-		ob_start(
-			function ( $buffer2 ) {
-				$buffer2 = str_replace( [ "<script type='text/javascript' src" ], '<script src', $buffer2 );
-				return $buffer2;
-			}
-		);
-		ob_start(
-			function ( $buffer3 ) {
-				$buffer3 = str_replace( [ 'type="text/css"', "type='text/css'", 'type="text/css"' ], '', $buffer3 );
-				return $buffer3;
-			}
-		);
-		ob_start(
-			function ( $buffer4 ) {
-				$buffer4 = str_replace( [ '<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"' ], '<iframe', $buffer4 );
-				return $buffer4;
-			}
-		);
-		ob_start(
-			function ( $buffer5 ) {
-				$buffer5 = str_replace( [ 'aria-required="true"' ], '', $buffer5 );
-				return $buffer5;
-			}
-		);
-	}
+
 }

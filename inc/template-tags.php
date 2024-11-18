@@ -834,7 +834,7 @@ if ( ! function_exists( 'shopbuilderwp_single_entry_header' ) ) {
 			<?php
 			shopbuilderwp_separate_meta( 'title-above-meta' );
 
-			the_title( '<h1 class="entry-title default-max-width">', '</h1>' );
+			the_title( '<h2 class="entry-title default-max-width">', '</h2>' );
 
 			if ( ! empty( Fns::single_meta_lists() ) ) {
 				echo shopbuilderwp_post_meta(

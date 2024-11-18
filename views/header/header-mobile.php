@@ -14,10 +14,11 @@
 				<div class="site-branding">
 					<?php //echo shopbuilderwp_site_logo(); ?>
                     <a href="<?php echo esc_url( home_url()); ?>" class="custom-logo-link dark-logo" rel="home" aria-current="page">
-                        <img width="172" height="46" src="http://shopbuilderwp.local/wp-content/uploads/2024/11/dark_logo-1.svg" class="custom-logo" alt="shopbuilderwp" decoding="async"></a>
+						<?php shopbuilderwp_get_img( 'dark_logo.svg', true, 'width="172" height="46"' ) . "' alt='"; ?>
+                    </a>
                     <a href="<?php echo esc_url( home_url()); ?>" class="custom-logo-link light-logo" rel="home" aria-current="page">
-                        <img width="172" height="46" src="http://shopbuilderwp.local/wp-content/uploads/2024/11/light_logo.svg" class="custom-logo" alt="shopbuilderwp" decoding="async"></a>
-
+						<?php shopbuilderwp_get_img( 'light_logo.svg', true, 'width="172" height="46"' ) . "' alt='"; ?>
+                    </a>
                 </div><!-- .site-branding -->
 
                 <ul class="menu-icon-action">
