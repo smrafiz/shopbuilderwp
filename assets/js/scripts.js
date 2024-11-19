@@ -310,7 +310,7 @@
 			    // Run 1st time
 			    var $isotopeContainer = $('.sb-isotope-wrapper');
 
-			    setTimeout(function () {
+			    // setTimeout(function () {
 				    $isotopeContainer.each(function () {
 					    var $container = $(this).find('.featured-container'),
 						    filter = $(this).find('.isotope-tab a.current').data('filter');
@@ -325,6 +325,14 @@
 					    $(this).addClass('current');
 					    var $container = $(this).closest('.filter-wrapper').siblings('.widgets-wrapper').find('.featured-container'),
 						    filter = $(this).attr('data-filter');
+					    var trackItemClass = $(this).parent().find('.sb-filter-item-track');
+					    var position = $(this).position();
+					    console.log(position)
+
+					    trackItemClass.css({
+						    left: `${position.left}px`,
+						    width: `${$(this).outerWidth()}px`,
+					    });
 					    runIsotope($container, filter);
 					    return false;
 				    });
@@ -344,48 +352,55 @@
 					    });
 				    }
 
-			    },1000);
+			    // },1000);
 
 		    }
 	    },
 
 	    tabTitleTrack: function() {
-		    var newChildDiv = $('<div>', { class: 'sb-filter-item-track' });
-			var $taxonomyFilter = $('.sb-filter-track .e-n-tabs-heading');
+		    // Helper function to adjust the track position
+		    function adjustTrack($container, trackSelector, activeSelector) {
+				var trackItemClass = 'sb-filter-item-track';
+			    var newChildDiv = $('<div>', { class: trackItemClass });
+			    $container.append(newChildDiv);
 
-		    $taxonomyFilter.append(newChildDiv);
+			    var track = $container.find(trackSelector);
+			    var selectedTrack = track.filter(activeSelector);
+			    var trackItem = $container.find(`.${trackItemClass}`);
 
-		    var track = $taxonomyFilter.find(
-			    '.e-n-tab-title'
-		    );
-			var selectedTrack = track.filter('[aria-selected=true]');
-		    var trackItem = $taxonomyFilter.find('.sb-filter-item-track');
-		    console.log(selectedTrack)
+			    if (selectedTrack.length > 0) {
+				    var trackPosition = selectedTrack.position();
 
-		    if (selectedTrack.length > 0) {
-			    var trackPosition = $(selectedTrack).position();
+				    trackItem.css({
+					    left: `${trackPosition.left}px`,
+					    width: `${selectedTrack.outerWidth()}px`,
+				    });
+			    } else {
+				    trackItem.css({ width: 0 });
+			    }
 
-			    trackItem.css({
-				    left: `${trackPosition.left}px`,
-				    width: `${selectedTrack.outerWidth()}px`,
+			    $container.on('click touchstart', trackSelector, function(event) {
+				    var $this = $(event.currentTarget);
+				    var position = $this.position();
+
+				    trackItem.css({
+					    left: `${position.left}px`,
+					    width: `${$this.outerWidth()}px`,
+				    });
 			    });
-		    } else {
-			    trackItem.css({ width: 0 });
 		    }
 
-		    $taxonomyFilter.on(
-			    'click touchstart',
-			    '.e-n-tab-title',
-			    function(event) {
-				    var $this = $(event.currentTarget);
-					    var position = $this.position();
+		    // Case 1: Using aria-selected for .sb-filter-track
+		    var $filterTrackContainer = $('.sb-filter-track .e-n-tabs-heading');
+		    if ($filterTrackContainer.length > 0) {
+			    adjustTrack($filterTrackContainer, '.e-n-tab-title', '[aria-selected="true"]');
+		    }
 
-					    $this.siblings('.sb-filter-item-track').css({
-						    left: position.left + 'px',
-						    width: $this.outerWidth() + 'px',
-					    });
-			    }
-		    );
+		    // Case 2: Using active class for .sb-isotope-wrapper
+		    var $isotopeContainer = $('.sb-isotope-wrapper .isotope-tab');
+		    if ($isotopeContainer.length > 0) {
+			    adjustTrack($isotopeContainer, '.nav-item', '.current');
+		    }
 	    },
     };
 
