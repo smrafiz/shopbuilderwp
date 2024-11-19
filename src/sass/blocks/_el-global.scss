@@ -18,12 +18,20 @@
 	.shop-builder-sticky {
 		align-self: flex-start;
 		position: sticky;
-		top: 32px;
+		top: 90px;
 	}
 	.shop-builder-sticky-200 {
 		align-self: flex-start;
 		position: sticky;
-		top: 250px;
+
+		$base-top: 300px;
+		$increment: 20px;
+
+		@for $i from 1 through 10 {
+			&:nth-child(#{$i}) {
+				top: $base-top + ($increment * ($i - 1));
+			}
+		}
 	}
 }
 
