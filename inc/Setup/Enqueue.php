@@ -29,6 +29,7 @@ class Enqueue {
 	public function register_scripts() {
 		wp_register_style( 'sb-magnific-popup', shopbuilderwp_get_file( '/assets/vendors/magnific-popup/magnific-popup.css' ), [], Constants::get_version() );
 		wp_register_script( 'sb-magnific-popup', shopbuilderwp_get_file( '/assets/vendors/magnific-popup/magnific-popup.js' ), [ 'jquery' ], Constants::get_version(), true );
+		wp_register_script( 'sb-isotope', shopbuilderwp_get_file( '/assets/vendors/isotope/isotope.pkgd.min.js' ), [ 'jquery' ], Constants::get_version(), true );
 		wp_register_script( 'sb-headroom', shopbuilderwp_get_file( '/assets/vendors/headroom/headroom.js' ), [ 'jquery' ], Constants::get_version(), true );
 	}
 

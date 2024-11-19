@@ -34,7 +34,7 @@
 
 	<div id="content" class="site-content">
 		<?php
-		$banner_display = get_custom_field( 'banner_display' );
+		$banner_display = get_custom_field( 'sb_banner_display' );
 
 		if ( ! $banner_display ) {
 			get_template_part( 'views/content-banner' );

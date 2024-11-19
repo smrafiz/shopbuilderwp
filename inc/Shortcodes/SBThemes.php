@@ -48,8 +48,8 @@ class SBThemes {
 				while ( $query->have_posts() ) {
 					$query->the_post();
 
-					$theme_last_update = get_custom_field( 'sb_theme_last_update' );
-					$theme_price       = get_custom_field( 'sb_theme_price' );
+					$theme_last_update = get_custom_field( 'sb_themes_last_update' );
+					$theme_price       = get_custom_field( 'sb_themes_price' );
 					?>
 					<div class="sb-theme-item">
 						<?php

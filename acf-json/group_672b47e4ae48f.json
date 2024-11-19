@@ -5,7 +5,7 @@
         {
             "key": "field_672b47e4aeef8",
             "label": "Hide Banner Display",
-            "name": "banner_display",
+            "name": "sb_banner_display",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
@@ -26,7 +26,7 @@
         {
             "key": "field_672b481caeef9",
             "label": "Page Title",
-            "name": "page_title",
+            "name": "sb_page_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -47,7 +47,7 @@
         {
             "key": "field_672b483aaeefa",
             "label": "Page Description",
-            "name": "page_description",
+            "name": "sb_page_description",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -73,20 +73,6 @@
                 "operator": "==",
                 "value": "page"
             }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "sb_theme"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "rtsb_builder"
-            }
         ]
     ],
     "menu_order": 0,
@@ -98,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731904252
+    "modified": 1731989461
 }

@@ -46,8 +46,8 @@ if ( class_exists( 'WooCommerce' ) ) {
 	}
 }
 
-$banner_title     = ! empty( get_custom_field( 'page_title' ) ) ? get_custom_field( 'page_title' ) : $banner_title;
-$page_description = get_custom_field( 'page_description' );
+$banner_title     = ! empty( get_custom_field( 'sb_page_title' ) ) ? get_custom_field( 'sb_page_title' ) : $banner_title;
+$page_description = get_custom_field( 'sb_page_description' );
 
 ?>
 

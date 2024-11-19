@@ -5,7 +5,7 @@
         {
             "key": "field_6735e75600a7d",
             "label": "Is it Pro?",
-            "name": "sb_widget_is_pro",
+            "name": "sb_widgets_is_pro",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
@@ -26,7 +26,7 @@
         {
             "key": "field_6735e79900a7e",
             "label": "Widget Badge",
-            "name": "sb_widget_badge",
+            "name": "sb_widgets_badge",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -47,7 +47,7 @@
         {
             "key": "field_6735e7d100a7f",
             "label": "Custom Link",
-            "name": "sb_widget_btn_link",
+            "name": "sb_widgets_btn_link",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -84,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731586742
+    "modified": 1731989662
 }

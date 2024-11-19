@@ -22,7 +22,7 @@ class SBWidgets {
 	 * Register to hook the shortcode.
 	 */
 	public function register() {
-		add_shortcode( 'sb_widgets_tab_shortcode', [ $this, 'render' ] );
+		add_shortcode( 'sb_widgets', [ $this, 'render' ] );
 	}
 
 	/**
@@ -32,6 +32,7 @@ class SBWidgets {
 	 */
 	public function render() {
 		ob_start();
+		wp_enqueue_script( 'sb-isotope' );
 
 		$terms = get_terms(
 			[
@@ -44,10 +45,10 @@ class SBWidgets {
 
 		?>
 
-		<div class="isotop-wrapper" id="inner-isotope">
+		<div class="sb-isotope-wrapper">
 			<div class="filter-wrapper">
-				<div class="isotope-classes-tab">
-					<a class="nav-item current" data-filter="*"><?php echo esc_html__( 'All Widgets', 'storefront-child' ); ?></a>
+				<div class="isotope-tab">
+					<a class="nav-item current" data-filter="*">All Widgets</a>
 					<?php
 					foreach ( $terms as $term ) :
 						$term_name = str_replace( ' ', '-', strtolower( $term->name ) );
@@ -67,11 +68,11 @@ class SBWidgets {
 			$query = new \WP_Query( $args );
 
 			?>
-			<div id="preloader">
+			<div id="sb-preloader">
 				<div class="loader"></div>
 			</div>
 			<div class="widgets-wrapper">
-				<div class="featuredContainer">
+				<div class="featured-container">
 					<?php
 					if ( $query->have_posts() ) {
 						while ( $query->have_posts() ) {
@@ -79,12 +80,9 @@ class SBWidgets {
 							$terms       = wp_get_post_terms( get_the_ID(), 'widget_category' );
 							$single_term = $terms[0];
 							$single_term = str_replace( ' ', '-', strtolower( $single_term->name ) );
-							$meta        = get_post_meta( get_the_ID(), '_sb_widget_post_meta_key', true );
-							$is_pro      = 1 === $meta['is_pro'] ? 'Pro' : '';
-
-							$badge = $meta['badge'] ? $meta['badge'] : '';
-
-							$btn_url = $meta['btn_url'] ? $meta['btn_url'] : '';
+							$is_pro      = get_custom_field( 'sb_widgets_is_pro' ) ? 'Pro' : '';
+							$badge       = get_custom_field( 'sb_widgets_badge' ) ?? '';
+							$btn_url     = get_custom_field( 'sb_widgets_btn_link' ) ?? '';
 
 							?>
 							<div class="<?php echo esc_attr( $single_term ); ?>">
@@ -93,21 +91,23 @@ class SBWidgets {
 									if ( ! empty( $is_pro ) ) {
 										?>
 										<div class="badge"><?php echo esc_html( $badge ); ?></div>
-									<?php } ?>
-									<?php
+										<?php
+									}
+
 									if ( ! empty( $is_pro ) ) {
 										?>
-										<div class="pro-badge"><?php esc_html_e( 'Pro', 'storefront-child' ); ?></div>
-									<?php } ?>
-									<div class="media-icon">
-										<?php the_post_thumbnail(); ?>
-									</div>
+										<div class="pro-badge">Pro</div>
+										<?php
+									}
+									?>
+									<div class="media-icon"><?php the_post_thumbnail(); ?></div>
 									<h3 class="title"><a target="_blank" href="<?php echo esc_url( $btn_url ); ?>"><?php the_title(); ?></a></h3>
 								</div>
 							</div>
 							<?php
 						}
 					}
+
 					wp_reset_postdata();
 					?>
 				</div>
@@ -117,7 +117,7 @@ class SBWidgets {
 		<?php
 		if ( Plugin::$instance->editor->is_edit_mode() ) {
 			?>
-			<script>jQuery('.featuredContainer').isotope();</script>
+			<script>jQuery('.featured-container').isotope();</script>
 			<?php
 		}
 		return ob_get_clean();

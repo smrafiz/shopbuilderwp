@@ -25,6 +25,7 @@
             ShopBuilderWP.headRoom();
             ShopBuilderWP.magnificPopup();
             ShopBuilderWP.typingEffect();
+            ShopBuilderWP.widgetsFilter();
         },
 
 		// headRoom js
@@ -300,6 +301,52 @@
 			    $newWord.removeClass('is-hidden').addClass('is-visible');
 		    }
 	    },
+
+	    widgetsFilter: function() {
+		    $('#sb-preloader').fadeIn('slow');
+
+		    if (typeof $.fn.isotope == 'function') {
+			    // Run 1st time
+			    var $isotopeContainer = $('.sb-isotope-wrapper');
+
+			    setTimeout(function () {
+				    $isotopeContainer.each(function () {
+					    var $container = $(this).find('.featured-container'),
+						    filter = $(this).find('.isotope-tab a.current').data('filter');
+					    runIsotope($container, filter);
+				    });
+
+				    $('#sb-preloader').fadeOut('slow');
+
+				    // Run on click event
+				    $('.isotope-tab a').on('click', function () {
+					    $(this).closest('.isotope-tab').find('.current').removeClass('current');
+					    $(this).addClass('current');
+					    var $container = $(this).closest('.filter-wrapper').siblings('.widgets-wrapper').find('.featured-container'),
+						    filter = $(this).attr('data-filter');
+					    runIsotope($container, filter);
+					    return false;
+				    });
+
+				    function runIsotope($container, filter) {
+					    $container.isotope({
+						    filter: filter,
+						    transitionDuration: ".6s",
+						    hiddenStyle: {
+							    opacity: 0,
+							    transform: "scale(0.001)"
+						    },
+						    visibleStyle: {
+							    transform: "scale(1)",
+							    opacity: 1
+						    }
+					    });
+				    }
+
+			    },1000);
+
+		    }
+	    },
     };
 
     $(document).ready(function (e) {
@@ -323,6 +370,7 @@
             //For all widgets
             elementorFrontend.hooks.addAction('frontend/element_ready/widget', () => {
 				ShopBuilderWP.magnificPopup();
+				ShopBuilderWP.widgetsFilter();
             });
 
         }
