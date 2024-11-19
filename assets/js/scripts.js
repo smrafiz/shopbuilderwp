@@ -26,6 +26,7 @@
             ShopBuilderWP.magnificPopup();
             ShopBuilderWP.typingEffect();
             ShopBuilderWP.widgetsFilter();
+            ShopBuilderWP.tabTitleTrack();
         },
 
 		// headRoom js
@@ -346,6 +347,45 @@
 			    },1000);
 
 		    }
+	    },
+
+	    tabTitleTrack: function() {
+		    var newChildDiv = $('<div>', { class: 'sb-filter-item-track' });
+			var $taxonomyFilter = $('.sb-filter-track .e-n-tabs-heading');
+
+		    $taxonomyFilter.append(newChildDiv);
+
+		    var track = $taxonomyFilter.find(
+			    '.e-n-tab-title'
+		    );
+			var selectedTrack = track.filter('[aria-selected=true]');
+		    var trackItem = $taxonomyFilter.find('.sb-filter-item-track');
+		    console.log(selectedTrack)
+
+		    if (selectedTrack.length > 0) {
+			    var trackPosition = $(selectedTrack).position();
+
+			    trackItem.css({
+				    left: `${trackPosition.left}px`,
+				    width: `${selectedTrack.outerWidth()}px`,
+			    });
+		    } else {
+			    trackItem.css({ width: 0 });
+		    }
+
+		    $taxonomyFilter.on(
+			    'click touchstart',
+			    '.e-n-tab-title',
+			    function(event) {
+				    var $this = $(event.currentTarget);
+					    var position = $this.position();
+
+					    $this.siblings('.sb-filter-item-track').css({
+						    left: position.left + 'px',
+						    width: $this.outerWidth() + 'px',
+					    });
+			    }
+		    );
 	    },
     };
 
