@@ -34,20 +34,6 @@
         animation: marquee_bottom 40s linear infinite;
       }
     }
-    &.marquee-left {
-      .rt-marquee-item {
-        display: inline-block;
-        will-change: transform;
-        animation: marquee_left 40s linear infinite;
-      }
-    }
-    &.marquee-right {
-      .rt-marquee-item {
-        display: inline-block;
-        will-change: transform;
-        animation: marquee_right 40s linear infinite;
-      }
-    }
     &:hover {
       .rt-marquee-item {
         animation-play-state: paused;

@@ -105,6 +105,22 @@
 			margin-block-start: 0 !important;
 		}
 	}
+
+	@media(max-width: 480px) {
+		.e-n-tabs-heading {
+			flex-direction: column;
+			gap: 10px;
+			.e-n-tab-title {
+				border: 1px solid $border_color;
+				border-radius: 6px;
+				padding: 9px 12px;
+				justify-content: flex-start;
+			}
+			&:after {
+				display: none;
+			}
+		}
+	}
 }
 
 .tab-style-2 {

@@ -1,7 +1,6 @@
 <?php
 
 namespace RT\ShopBuilderWP\Elementor;
-
 use Elementor\Widget_Base;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,7 +13,7 @@ class RTMarquee extends Widget_Base {
 	}
 
 	public function get_title() {
-		return esc_html__( 'RT Marquee', 'elementor-addon' );
+		return esc_html__( 'RT Marquee', 'shopbuilderwp' );
 	}
 
 	public function get_icon() {
@@ -25,35 +24,15 @@ class RTMarquee extends Widget_Base {
 		return [ 'basic' ];
 	}
 
-	public function get_keywords() {
-		return [ 'hello', 'world' ];
-	}
-
 	protected function register_controls() {
 
 		// Content Tab Start
+		$repeater = new \Elementor\Repeater();
 
-		$this->start_controls_section(
-			'section_title',
-			[
-				'label' => esc_html__( 'Title', 'elementor-addon' ),
-				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-			]
-		);
-
-		$this->add_control(
-			'title',
-			[
-				'label' => esc_html__( 'Title', 'elementor-addon' ),
-				'type' => \Elementor\Controls_Manager::TEXTAREA,
-				'default' => esc_html__( 'Hello world', 'elementor-addon' ),
-			]
-		);
-
-		$this->add_control(
+		$repeater->add_control(
 			'image',
 			[
-				'label' => esc_html__( 'Choose Image', 'textdomain' ),
+				'label' => esc_html__( 'Choose Image', 'shopbuilderwp' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -61,53 +40,89 @@ class RTMarquee extends Widget_Base {
 			]
 		);
 
-
-		$this->end_controls_section();
-
-		// Content Tab End
-
-
-		// Style Tab Start
-
 		$this->start_controls_section(
-			'section_title_style',
+			'section_image',
 			[
-				'label' => esc_html__( 'Title', 'elementor-addon' ),
-				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+				'label' => esc_html__( 'Image Item', 'shopbuilderwp' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
 
 		$this->add_control(
-			'title_color',
+			'marquee_direction',
 			[
-				'label' => esc_html__( 'Text Color', 'elementor-addon' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .hello-world' => 'color: {{VALUE}};',
+				'label'     => __( 'Direction', 'shopbuilderwp' ),
+				'type'      => \Elementor\Controls_Manager::SELECT,
+				'default'   => 'marquee-top',
+				'options'   => [
+					'marquee-top'  => __( 'Top', 'shopbuilderwp' ),
+					'marquee-bottom' => __( 'Bottom', 'shopbuilderwp' ),
 				],
 			]
 		);
 
-		$this->end_controls_section();
+		$this->add_responsive_control(
+			'marquee_height',
+			[
+				'type'    => \Elementor\Controls_Manager::SLIDER,
+				'mode'          => 'responsive',
+				'label'   => esc_html__( 'Section Height', 'shopbuilderwp' ),
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 1200,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .rt-marquee-wrap .rt-marquee' => 'height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
 
-		// Style Tab End
+		$this->add_control(
+			'items',
+			[
+				'label'       => __( 'Image List', 'shopbuilderwp' ),
+				'type'        => \Elementor\Controls_Manager::REPEATER,
+				'fields'      => $repeater->get_controls(),
+			]
+		);
+
+		$this->end_controls_section();
 
 	}
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 
-		if ( empty( $settings['title'] ) ) {
-			return;
-		}
 		?>
-		<p class="hello-world">
-			<?php echo $settings['title']; ?>
 
-            <?php echo wp_get_attachment_image( $settings['image']['id'], 'thumbnail' ); ?>
-		</p>
+
+        <div class="rt-marquee-wrap">
+            <div class="rt-marquee <?php echo esc_attr( $settings['marquee_direction'] ) ?>">
+                <div class="rt-marquee-item">
+                    <div class="marquee-item">
+		                <?php foreach ( $settings['items'] as $item ) : ?>
+                        <div class="item-image">
+	                        <?php echo wp_get_attachment_image( $item['image']['id'], 'full' ); ?>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <div class="rt-marquee-item">
+                    <div class="marquee-item">
+	                    <?php foreach ( $settings['items'] as $item ) : ?>
+                            <div class="item-image">
+			                    <?php echo wp_get_attachment_image( $item['image']['id'], 'full' ); ?>
+                            </div>
+	                    <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 		<?php
 	}
-
 
 }
