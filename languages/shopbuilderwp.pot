@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-05 12:18+0000\n"
+"POT-Creation-Date: 2024-11-19 10:19+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -37,119 +37,115 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: ../header.php:39
-msgid "Type your search........"
-msgstr ""
-
-#: ../inc/template-tags.php:211
+#: ../inc/template-tags.php:209
 msgid "Add %s Menu"
 msgstr ""
 
-#: ../inc/template-tags.php:212
+#: ../inc/template-tags.php:210
 msgid "Add a menu"
 msgstr ""
 
-#: ../inc/template-tags.php:215, ../inc/template-tags.php:866
+#: ../inc/template-tags.php:213, ../inc/template-tags.php:864
 msgid "Home"
 msgstr ""
 
-#: ../inc/template-tags.php:249
+#: ../inc/template-tags.php:247
 msgid "Continue Reading"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: ../inc/template-tags.php:268, ../inc/Core/Tags.php:60, ../inc/Core/Tags.php:65
+#: ../inc/template-tags.php:266, ../inc/Core/Tags.php:60, ../inc/Core/Tags.php:65
 msgid ", "
 msgstr ""
 
-#: ../inc/template-tags.php:323
+#: ../inc/template-tags.php:321
 msgid "%1$s %2$s"
 msgstr ""
 
-#: ../inc/template-tags.php:561
+#: ../inc/template-tags.php:559
 msgid "%s mins read"
 msgstr ""
 
-#: ../inc/template-tags.php:559
+#: ../inc/template-tags.php:557
 msgid "1 min read"
 msgstr ""
 
-#: ../inc/template-tags.php:557
+#: ../inc/template-tags.php:555
 msgid "%s hours read"
 msgstr ""
 
-#: ../inc/template-tags.php:555
+#: ../inc/template-tags.php:553
 msgid "Less than a minute"
 msgstr ""
 
-#: ../inc/template-tags.php:581
+#: ../inc/template-tags.php:579
 msgid "By"
 msgstr ""
 
-#: ../inc/template-tags.php:587
+#: ../inc/template-tags.php:585
 msgid "Comment: %s"
 msgid_plural "Comments: %s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:942
+#: ../inc/template-tags.php:940
 msgid "Shop"
 msgstr ""
 
-#: ../inc/template-tags.php:938
+#: ../inc/template-tags.php:936
 msgid "Blog"
 msgstr ""
 
-#: ../inc/template-tags.php:929
+#: ../inc/template-tags.php:927
 msgid "Posts by: "
 msgstr ""
 
-#: ../inc/template-tags.php:901
+#: ../inc/template-tags.php:899
 msgid "Posts Category: "
 msgstr ""
 
-#: ../inc/template-tags.php:889
+#: ../inc/template-tags.php:887
 msgid "404"
 msgstr ""
 
-#: ../inc/template-tags.php:884
+#: ../inc/template-tags.php:882
 msgid "Search results for: "
 msgstr ""
 
-#: ../inc/template-tags.php:879
+#: ../inc/template-tags.php:877
 msgid "Posts made in: "
 msgstr ""
 
-#: ../inc/template-tags.php:872
+#: ../inc/template-tags.php:870
 msgid "Posts Tagged: "
 msgstr ""
 
-#: ../inc/template-tags.php:975
+#: ../inc/template-tags.php:973
 msgid "Pingback:"
 msgstr ""
 
-#: ../inc/template-tags.php:997
+#: ../inc/template-tags.php:995
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
 #. translators: 1: date, 2: time
-#: ../inc/template-tags.php:1005
+#: ../inc/template-tags.php:1003
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: ../inc/template-tags.php:1012
+#: ../inc/template-tags.php:1010
 msgid "Edit"
 msgstr ""
 
-#: ../inc/template-tags.php:1022
+#: ../inc/template-tags.php:1020
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../inc/template-tags.php:1038
+#: ../inc/template-tags.php:1036
 msgid "Reply"
 msgstr ""
 
-#: ../inc/Core/Sidebar.php:35
+#: ../inc/Core/Sidebar.php:34
 msgctxt "Widget Name"
 msgid "%s"
 msgstr ""
@@ -182,28 +178,60 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: ../inc/Custom/Extras.php:57
+#: ../inc/Custom/Extras.php:56
 msgid "Make as Mega Menu"
 msgstr ""
 
-#: ../inc/Custom/Extras.php:59
+#: ../inc/Custom/Extras.php:58
 msgid "Choose Mega Menu"
 msgstr ""
 
-#: ../inc/Custom/Extras.php:74
+#: ../inc/Custom/Extras.php:73
 msgid "Mega menu - %1$s Col %2$s"
 msgstr ""
 
-#: ../inc/Custom/Extras.php:86
+#: ../inc/Custom/Extras.php:85
 msgid "Query String"
 msgstr ""
 
-#: ../inc/Custom/Extras.php:145
+#: ../inc/Custom/Extras.php:144
 msgid "Search here..."
 msgstr ""
 
-#: ../inc/Custom/Extras.php:148
+#: ../inc/Custom/Extras.php:147
 msgid "Search"
+msgstr ""
+
+#: ../inc/Elementor/RTMarquee.php:16
+msgid "RT Marquee"
+msgstr ""
+
+#: ../inc/Elementor/RTMarquee.php:35
+msgid "Choose Image"
+msgstr ""
+
+#: ../inc/Elementor/RTMarquee.php:46
+msgid "Image Item"
+msgstr ""
+
+#: ../inc/Elementor/RTMarquee.php:54
+msgid "Direction"
+msgstr ""
+
+#: ../inc/Elementor/RTMarquee.php:58
+msgid "Top"
+msgstr ""
+
+#: ../inc/Elementor/RTMarquee.php:59
+msgid "Bottom"
+msgstr ""
+
+#: ../inc/Elementor/RTMarquee.php:69
+msgid "Section Height"
+msgstr ""
+
+#: ../inc/Elementor/RTMarquee.php:86
+msgid "Image List"
 msgstr ""
 
 #: ../inc/Helpers/Fns.php:32
@@ -238,20 +266,8 @@ msgstr ""
 msgid "TikTok"
 msgstr ""
 
-#: ../inc/Helpers/Fns.php:220
+#: ../inc/Helpers/Fns.php:195
 msgid "Main Sidebar"
-msgstr ""
-
-#: ../inc/Helpers/Fns.php:225
-msgid "Single Sidebar"
-msgstr ""
-
-#: ../inc/Helpers/Fns.php:233
-msgid "WooCommerce Archive Sidebar"
-msgstr ""
-
-#: ../inc/Helpers/Fns.php:238
-msgid "WooCommerce Single Sidebar"
 msgstr ""
 
 #: ../inc/Setup/Menus.php:28
@@ -272,6 +288,22 @@ msgstr ""
 
 #: ../searchform.php:11
 msgid "Search here ..."
+msgstr ""
+
+#: ../views/content-banner.php:24
+msgid "Our Recent Posts"
+msgstr ""
+
+#: ../views/content-banner.php:19
+msgid "All Posts"
+msgstr ""
+
+#: ../views/content-banner.php:14
+msgid "Search Results for : "
+msgstr ""
+
+#: ../views/content-banner.php:34
+msgid "Shop Page"
 msgstr ""
 
 #: ../views/content-none.php:14
@@ -297,4 +329,12 @@ msgstr ""
 #. translators: %s: Name of current post.
 #: ../views/content-search.php:30
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../views/footer/footer.php:25
+msgid "Secure Payment:"
+msgstr ""
+
+#: ../views/header/header.php:39
+msgid "Purchase Now"
 msgstr ""

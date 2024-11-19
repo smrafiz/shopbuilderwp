@@ -29,16 +29,15 @@ if (process.env.npm_config_package) {
 		const copyTo = path.resolve(`${temDirectory}/${package_slug}`);
 		// Select All file then paste on list
 		let includes = [
+			"acf-json",
 			"assets",
 			"inc",
 			"languages",
 			"page-templates",
 			"vendor",
 			"views",
-			"woocommerce",
 			"404.php",
 			"archive.php",
-			"author.php",
 			"comments.php",
 			"footer.php",
 			"functions.php",
@@ -50,8 +49,8 @@ if (process.env.npm_config_package) {
 			"searchform.php",
 			"sidebar.php",
 			"single.php",
-			"style-editor.css",
 			"style.css",
+			"style-editor.css",
 		];
 		fs.ensureDir(copyTo, function (err) {
 			if (err) return console.error(err);

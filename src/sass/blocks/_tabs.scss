@@ -106,9 +106,8 @@
 		}
 	}
 
-	@media(max-width: 480px) {
+	@media(max-width: 1199px) {
 		.e-n-tabs-heading {
-			flex-direction: column;
 			gap: 10px;
 			.e-n-tab-title {
 				border: 1px solid $border_color;

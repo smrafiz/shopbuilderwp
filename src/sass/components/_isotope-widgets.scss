@@ -23,6 +23,12 @@
 		text-align: center;
 		position: relative;
 		background: #fff;
+		@media(max-width: 1199px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 5px;
+		}
 
 		.nav-item {
 			display: inline-block;
@@ -40,8 +46,19 @@
 			position: relative;
 			z-index: 1;
 
+			@media(max-width: 1199px) {
+				border: 1px solid $border_color;
+			}
+
 			&.current {
 				color: #fff;
+				@media(max-width: 1199px) {
+					background: linear-gradient(180deg, #5788FF -20%, #004BFF 100%);
+					box-shadow: 0 8px 10px rgba(1, 58, 194, 0.31);
+					border: 1px solid #004AFF;
+					transition: all 0.3s;
+					will-change: background;
+				}
 			}
 		}
 
@@ -62,6 +79,9 @@
 			background: linear-gradient(180deg, #5788FF -20%, #004BFF 100%);
 			box-shadow: 0 8px 10px rgba(1, 58, 194, 0.31);
 			border: 1px solid #004AFF;
+			@media(max-width: 1199px) {
+				display: none;
+			}
 		}
 	}
 
