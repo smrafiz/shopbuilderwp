@@ -78,8 +78,8 @@ class SBWidgets {
 						while ( $query->have_posts() ) {
 							$query->the_post();
 							$terms       = wp_get_post_terms( get_the_ID(), 'widget_category' );
-							$single_term = $terms[0];
-							$single_term = str_replace( ' ', '-', strtolower( $single_term->name ) );
+							$single_term = $terms[0] ?? '';
+							$single_term = ! empty( $single_term ) ? str_replace( ' ', '-', strtolower( $single_term->name ) ) : '';
 							$is_pro      = get_custom_field( 'sb_widgets_is_pro' ) ? 'Pro' : '';
 							$badge       = get_custom_field( 'sb_widgets_badge' ) ?? '';
 							$btn_url     = get_custom_field( 'sb_widgets_btn_link' ) ?? '';

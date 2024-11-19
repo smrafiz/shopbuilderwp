@@ -20,10 +20,12 @@
 }
 
 .sb-image-box-02 {
-  transition: all 0.5s cubic-bezier(0.08, 0.27, 0.04, 1.11);
-  &:hover {
-    transform: translateY(-5px);
-  }
+  opacity: 1;
+  visibility: visible;
+  //transition: all 0.5s cubic-bezier(0.08, 0.27, 0.04, 1.11);
+  //&:hover {
+  //  transform: translateY(-5px);
+  //}
   &:after {
     content: '';
     position: absolute;

@@ -1,7 +1,15 @@
 .elementor-widget-image-carousel .swiper .swiper-slide figure {
   line-height: 0;
 }
+.animated {
 
+}
+@media (max-width: 767px) {
+  .animated {
+    visibility: visible !important;
+    animation: none !important;
+  }
+}
 // sticky
 @media (min-width: 1140px) {
   .shop-builder-sticky {

@@ -8,13 +8,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Title extends Widget_Base {
+class RTMarquee extends Widget_Base {
 	public function get_name() {
-		return 'hello_world_widget_1';
+		return 'rt-marquee';
 	}
 
 	public function get_title() {
-		return esc_html__( 'Hello World 1', 'elementor-addon' );
+		return esc_html__( 'RT Marquee', 'elementor-addon' );
 	}
 
 	public function get_icon() {
@@ -49,6 +49,18 @@ class Title extends Widget_Base {
 				'default' => esc_html__( 'Hello world', 'elementor-addon' ),
 			]
 		);
+
+		$this->add_control(
+			'image',
+			[
+				'label' => esc_html__( 'Choose Image', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+			]
+		);
+
 
 		$this->end_controls_section();
 
@@ -91,7 +103,11 @@ class Title extends Widget_Base {
 		?>
 		<p class="hello-world">
 			<?php echo $settings['title']; ?>
+
+            <?php echo wp_get_attachment_image( $settings['image']['id'], 'thumbnail' ); ?>
 		</p>
 		<?php
 	}
+
+
 }
