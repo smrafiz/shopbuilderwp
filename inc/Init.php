@@ -32,6 +32,7 @@ final class Init {
 	 */
 	public function register() {
 		Core\Tags::instance();
+		Custom\WC::instance();
 		Setup\Setup::instance();
 		Setup\Menus::instance();
 		Custom\Hooks::instance();
