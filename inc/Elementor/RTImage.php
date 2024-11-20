@@ -16,7 +16,7 @@ class RTImage extends Widget_Base {
 	}
 
 	public function get_icon() {
-		return 'eicon-code';
+		return 'eicon-image';
 	}
 
 	public function get_categories() {
@@ -68,6 +68,18 @@ class RTImage extends Widget_Base {
 				'default'     => '2.00',
 				'condition'   => [
 					'mouse_animation' => 'yes',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'radius',
+			[
+				'label'      => __( 'Radius', 'quixa-core' ),
+				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%' ],
+				'selectors'  => [
+					'{{WRAPPER}} .rt-image img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
 				],
 			]
 		);
