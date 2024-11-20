@@ -8,3 +8,52 @@
 	}
 }
 
+a.sb-button,
+.sb-button a {
+	overflow: hidden;
+	display: inline-flex;
+	position: relative;
+
+	&::after {
+		content: attr(data-text);
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		opacity: 0;
+		transform: translate(0, 100%) scaleY(2) rotate(5deg);
+		transition: opacity 0.25s, transform 0.25s;
+		transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		white-space: nowrap;
+		transform-origin: top center;
+	}
+
+	.elementor-button-icon {
+		transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	}
+
+	.elementor-button-text {
+		transition: opacity 0.25s, transform 0.25s;
+		transition-timing-function: cubic-bezier(.455,.03,.515,.955);
+	}
+
+	&:hover {
+		&::before {
+			opacity: 1;
+		}
+
+		&::after {
+			transform: translate(0%, -50%);
+			opacity: 1;
+		}
+
+		.elementor-button-text {
+			transform: translateY(-150%) scaleY(2) rotate(5deg);
+			opacity: 0;
+		}
+
+		.elementor-button-icon {
+			transform: translateX(5px) scale(1.1);
+		}
+	}
+}
+

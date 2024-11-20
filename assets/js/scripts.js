@@ -28,6 +28,7 @@
             ShopBuilderWP.typingEffect();
             ShopBuilderWP.widgetsFilter();
             ShopBuilderWP.tabTitleTrack();
+            ShopBuilderWP.primaryButton();
         },
 
 		// headRoom js
@@ -417,6 +418,20 @@
 		    if ($isotopeContainer.length > 0) {
 			    adjustTrack($isotopeContainer, '.nav-item', '.current');
 		    }
+	    },
+
+	    primaryButton: function() {
+			var button = $('.sb-button a, a.sb-button');
+
+			if (button.length > 0) {
+				$('.sb-button a, a.sb-button').each(function() {
+					const buttonText = $(this).find('.elementor-button-text').text().trim();
+
+					if (buttonText) {
+						$(this).attr('data-text', buttonText);
+					}
+				});
+			}
 	    },
     };
 

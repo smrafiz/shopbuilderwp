@@ -12,14 +12,14 @@
 	<div class="header-container rt-container">
 		<div class="row navigation-menu-wrap m-0">
 			<div class="site-branding">
-				<?php //echo shopbuilderwp_site_logo(); ?>
+				<?php // echo shopbuilderwp_site_logo(); ?>
 
-                <a href="<?php echo esc_url( home_url()); ?>" class="custom-logo-link dark-logo" rel="home" aria-current="page">
-                    <?php shopbuilderwp_get_img( 'dark_logo.svg', true, 'width="172" height="46"' ) . "' alt='"; ?>
-                </a>
-                <a href="<?php echo esc_url( home_url()); ?>" class="custom-logo-link light-logo" rel="home" aria-current="page">
-	                <?php shopbuilderwp_get_img( 'light_logo.svg', true, 'width="172" height="46"' ) . "' alt='"; ?>
-                </a>
+				<a href="<?php echo esc_url( home_url() ); ?>" class="custom-logo-link dark-logo" rel="home" aria-current="page">
+					<?php shopbuilderwp_get_img( 'dark_logo.svg', true, 'width="172" height="46"' ) . "' alt='"; ?>
+				</a>
+				<a href="<?php echo esc_url( home_url() ); ?>" class="custom-logo-link light-logo" rel="home" aria-current="page">
+					<?php shopbuilderwp_get_img( 'light_logo.svg', true, 'width="172" height="46"' ) . "' alt='"; ?>
+				</a>
 
 			</div><!-- .site-branding -->
 			<nav class="shopbuilderwp-navigation" role="navigation">
@@ -35,9 +35,9 @@
 				);
 				?>
 			</nav><!-- .shopbuilderwp-navigation -->
-            <div class="shopbuilder-button rt-button">
-                <a class="btn button-1" href="https://www.radiustheme.com/downloads/woocommerce-bundle/" target="_blank"><?php echo esc_html__('Purchase Now', 'shopbuilderwp'); ?></a>
-            </div>
+			<div class="shopbuilder-button rt-button sb-button">
+				<a class="btn button-1" href="https://www.radiustheme.com/downloads/woocommerce-bundle/" target="_blank" data-text="Purchase Now"><span class="elementor-button-text">Purchase Now</span></a>
+			</div>
 		</div><!-- .row -->
 	</div><!-- .container -->
 </div>
