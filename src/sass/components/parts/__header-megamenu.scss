@@ -4,11 +4,13 @@
 	.e-con-inner {
 		position: relative;
 	}
+
 	.elementor-element,
 	.elementor-widget-container {
 		position: unset;
 	}
 }
+
 .shopbuilderwp-navigation {
 	ul.menu li.mega-menu ul.dropdown-menu li a:before,
 	ul.menu li.mega-menu ul.dropdown-menu li:after,
@@ -54,6 +56,7 @@
 	ul > li:hover > ul.dropdown-menu {
 		transform: translateY(0);
 		pointer-events: all;
+
 		li {
 			a {
 				transform: translateY(0px);
@@ -88,9 +91,11 @@
 				display: inline-block;
 				width: 100%;
 				border: none;
+
 				> ul.dropdown-menu {
 					transform: unset;
 				}
+
 				ul {
 					position: relative;
 					width: inherit;
@@ -99,12 +104,14 @@
 					border-top: none;
 					padding: 0;
 				}
+
 				> a {
 					font-weight: 600;
 					font-size: 16px;
 					margin-bottom: 10px;
 					padding-left: 24px;
 					border-bottom: 1px dashed $border_color;
+
 					&:before {
 						display: none;
 					}
@@ -127,7 +134,11 @@
 	}
 
 	ul li.mega-menu.mega-menu-col-3 > ul {
-		width: 65%;
+		width: 80%;
+
+		@media only screen and (max-width: 1199px) {
+			width: 100%;
+		}
 	}
 }
 

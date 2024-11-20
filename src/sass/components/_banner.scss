@@ -1,32 +1,39 @@
 // banner css
 
 .sb-breadcrumb-banner {
-  background-color: $tertiary_color;
-  color: $meta_light;
-  padding: 200px 0 120px;
-  text-align: center;
-  background-image: url(../images/banner_bg_min.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  @media(max-width: 767px) {
-    padding: 140px 0 70px;
-  }
-  .entry-title {
-    color: $white_color;
-    font-size: clamp(32px, 4vw, 44px);
-    line-height: 1.4;
-    br {
-      @media(max-width: 767px) {
-        display: none;
-      }
-    }
-  }
-  p {
-    br {
-      @media(max-width: 767px) {
-        display: none;
-      }
-    }
-  }
+	background-color: $tertiary_color;
+	color: $meta_light;
+	padding: 200px 0 120px;
+	text-align: center;
+	background-image: url(../images/banner_bg_min.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	@media(max-width: 767px) {
+		padding: 140px 0 70px;
+	}
+
+	>.container {
+		max-width: 960px;
+	}
+
+	.entry-title {
+		color: $white_color;
+		font-size: clamp(32px, 4vw, 44px);
+		line-height: 1.4;
+
+		br {
+			@media(max-width: 767px) {
+				display: none;
+			}
+		}
+	}
+
+	p {
+		br {
+			@media(max-width: 767px) {
+				display: none;
+			}
+		}
+	}
 }

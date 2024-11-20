@@ -78,13 +78,6 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "sb_theme"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
                 "value": "rtsb_builder"
             }
         ]
@@ -98,5 +91,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732015151
+    "modified": 1732092233
 }

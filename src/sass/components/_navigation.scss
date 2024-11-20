@@ -93,7 +93,7 @@
 
 	ul li ul li a {
 		position: relative;
-		display: block;
+		display: inline-block;
 		color: $title_color;
 		padding: 10px 0;
 		z-index: 2;
@@ -196,5 +196,38 @@
 
 	&.dropdown-inverse:hover .dropdown-menu {
 		margin-right: -5px;
+	}
+}
+
+.shopbuilderwp-navigation {
+	span {
+		&.pro,
+		&.hot,
+		&.new {
+			position: absolute;
+			font-size: 8px;
+			top: 2px;
+			left: calc(100% + 7px);
+			color: #fff;
+			padding: 0 5px;
+			border-radius: 5px;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			height: 18px;
+			line-height: 18px;
+			font-weight: 800;
+		}
+
+		&.pro {
+			background: #FF005C;
+		}
+
+		&.new {
+			background: #09A906;
+		}
+
+		&.hot {
+			background: #FF6E00;
+		}
 	}
 }
