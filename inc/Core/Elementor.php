@@ -4,6 +4,7 @@ namespace RT\ShopBuilderWP\Core;
 
 use Elementor\Plugin;
 use RT\ShopBuilderWP\Elementor\RTMarquee;
+use RT\ShopBuilderWP\Elementor\RTImage;
 use RT\ShopBuilderWP\Traits\SingletonTraits;
 
 /**
@@ -27,6 +28,7 @@ class Elementor {
 	public function register_widget() {
 		$widgets = [
 			RTMarquee::class,
+			RTImage::class,
 		];
 
 		foreach ( $widgets as $class ) {

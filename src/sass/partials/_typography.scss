@@ -21,11 +21,17 @@ h1, h2, h3, h4, h5, h6 {
 h1,
 .h1 {
 	@include font_size(44px, 54px);
+	@media(max-width: 767px) {
+		@include font_size(36px, 42px);
+	}
 }
 
 h2,
 .h2 {
 	@include font_size(36px, 42px);
+	@media(max-width: 767px) {
+		@include font_size(30px, 36px);
+	}
 }
 
 h3,

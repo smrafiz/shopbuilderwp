@@ -24,6 +24,7 @@
             ShopBuilderWP.menuOffset();
             ShopBuilderWP.headRoom();
             ShopBuilderWP.magnificPopup();
+            ShopBuilderWP.parallaxMouse();
             ShopBuilderWP.typingEffect();
             ShopBuilderWP.widgetsFilter();
             ShopBuilderWP.tabTitleTrack();
@@ -58,6 +59,21 @@
 					removalDelay: 160,
 					preloader: false,
 					fixedContentPos: false
+				});
+			}
+		},
+
+		//mouse-parallax
+		parallaxMouse: function () {
+			const parallaxWrapper = $(".rt-image-parallax");
+			if ( parallaxWrapper.length ) {
+				const parallaxInstances = [];
+				$('.rt-mouse-parallax').each(function(index) {
+					var $this = $(this);
+					$this.attr('id', "rt-parallax-instance-" + index);
+					if ($(window).width() > 1199) {
+						parallaxInstances[index] = new Parallax($("#rt-parallax-instance-" + index).get(0), {});
+					}
 				});
 			}
 		},
@@ -425,6 +441,7 @@
             //For all widgets
             elementorFrontend.hooks.addAction('frontend/element_ready/widget', () => {
 				ShopBuilderWP.magnificPopup();
+				ShopBuilderWP.parallaxMouse();
 				ShopBuilderWP.widgetsFilter();
             });
 
