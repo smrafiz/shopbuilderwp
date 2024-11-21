@@ -49,9 +49,8 @@
 	}
 }
 
-
 // sticky
-@media (min-width: 1140px) {
+@media (min-width: 1200px) and (min-height: 900px) {
 	.shop-builder-sticky {
 		align-self: flex-start;
 		position: sticky;
