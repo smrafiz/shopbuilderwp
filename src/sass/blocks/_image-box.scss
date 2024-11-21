@@ -27,7 +27,7 @@
   &:after {
     content: '';
     position: absolute;
-    top: -26px;
+    top: -25px;
     left: 0;
     width: 100%;
     height: 25px;
@@ -100,7 +100,8 @@
     a {
       display: inline;
       padding-bottom: 0;
-      background-size: 0 6px;
+      background-image: linear-gradient(to bottom, rgba(0, 75, 255, 0.2) 0%, rgba(0, 75, 255, 0.5) 98%);
+      background-size: 0 3px;
       background-repeat: no-repeat;
       background-position: left 100%;
       transition: all 0.7s;
@@ -114,8 +115,7 @@
     }
     .elementor-heading-title {
       a {
-        color: $primary_color;
-        background-size: 100% 6px;
+        background-size: 100% 3px;
       }
     }
   }

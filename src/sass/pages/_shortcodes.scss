@@ -200,23 +200,9 @@
 			a {
 				font-size: 14px;
 				color: $primary_color;
-				font-weight: 600;
-				line-height: 1;
-				text-transform: capitalize;
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
 				gap: 6px;
-				position: relative;
-				z-index: 1;
-				overflow: hidden;
-				text-decoration: none;
-				cursor: pointer;
-				user-select: none;
 				background-color: #f1f4ff;
-				border-radius: 10px;
 				padding: 14px 20px;
-				transition: all .3s ease-in-out;
 
 				&:hover {
 					background-color: #004BFF;

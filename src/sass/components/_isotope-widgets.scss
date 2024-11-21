@@ -113,14 +113,14 @@
 				width: 50%;
 			}
 			@media(max-width: 479px) {
-				padding-bottom: 20px;
-				padding-left: 10px;
-				padding-right: 10px;
+				padding-bottom: 12px;
+				padding-left: 6px;
+				padding-right: 6px;
 			}
 		}
 
 		.widget-box {
-			border-radius: 10px;
+			border-radius: 15px;
 			background: $white_color;
 			border: 1px solid #D0D6E2;
 			text-align: center;

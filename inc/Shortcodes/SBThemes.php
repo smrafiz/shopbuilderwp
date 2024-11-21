@@ -83,10 +83,16 @@ class SBThemes {
 									<?php
 								}
 								?>
-								<div class="details-btn">
-									<a href="<?php the_permalink(); ?>">More Details<svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.910156 7H18.9102M18.9102 7L12.9102 1M18.9102 7L12.9102 13" stroke="currentColor" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
+								<div class="details-btn rt-button sb-button">
+									<a class="btn button-1" href="<?php the_permalink(); ?>" data-text="More Details">
+                                        <span class="elementor-button-wrap">
+                                            <span class="elementor-button-text">More Details</span>
+                                            <span class="elementor-button-icon">
+                                            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.910156 7H18.9102M18.9102 7L12.9102 1M18.9102 7L12.9102 13" stroke="currentColor" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            </span>
+                                        </span>
                                     </a>
 								</div>
 							</div>
