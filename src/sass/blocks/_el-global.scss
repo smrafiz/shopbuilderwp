@@ -13,6 +13,11 @@
 		font-weight: 600;
 		border-radius: 10px;
 		padding: 19px 30px;
+
+		@media only screen and (max-width: 479px) {
+			padding: 15px 20px;
+			font-size: 14px;
+		}
 	}
 }
 .sb-button-2 {
@@ -29,6 +34,11 @@
 		&:hover {
 			background-color: $primary_color;
 			color: $white_color;
+		}
+
+		@media only screen and (max-width: 479px) {
+			padding: 15px 20px;
+			font-size: 14px;
 		}
 	}
 }
@@ -47,6 +57,11 @@
 		&:hover {
 			background-color: $white_color;
 			color: $title_color;
+		}
+
+		@media only screen and (max-width: 479px) {
+			padding: 15px 20px;
+			font-size: 14px;
 		}
 	}
 }
@@ -169,11 +184,11 @@
 
 @keyframes pulse-border {
 	0% {
-		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(0.8);
+		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
 		opacity: 1;
 	}
 	100% {
-		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.1);
+		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
 		opacity: 0;
 	}
 }
