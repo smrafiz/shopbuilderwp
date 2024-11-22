@@ -9,6 +9,10 @@
       display: inline-grid;
       row-gap: 24px;
       margin-bottom: 24px;
+      @media(max-width: 767px) {
+        row-gap: 12px;
+        margin-bottom: 12px;
+      }
       .item-image {
         position: relative;
         white-space: normal;

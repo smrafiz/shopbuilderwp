@@ -122,11 +122,39 @@
         },
 
         backToTop: function () {
-            /* Scroll to top */
-            $('.scrollToTop').on('click', function () {
-                $('html, body').animate({scrollTop: 0}, 800);
-                return false;
-            });
+			if ($(".scroll-wrap").length) {
+				var progressPath = document.querySelector('.scroll-wrap path');
+				var pathLength = progressPath.getTotalLength();
+				progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+				progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+				progressPath.style.strokeDashoffset = pathLength;
+				progressPath.getBoundingClientRect();
+				progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+				var updateProgress = function() {
+					var scroll = $(window).scrollTop();
+					var height = $(document).height() - $(window).height();
+					var progress = pathLength - (scroll * pathLength / height);
+					progressPath.style.strokeDashoffset = progress;
+				}
+				updateProgress();
+				$(window).scroll(updateProgress);
+				var offset = 50;
+				var duration = 10;
+				jQuery(window).on('scroll', function() {
+					if (jQuery(this).scrollTop() > offset) {
+						jQuery('.scroll-wrap').addClass('active-scroll');
+					} else {
+						jQuery('.scroll-wrap').removeClass('active-scroll');
+					}
+				});
+				jQuery('.scroll-wrap').on('click', function(event) {
+					event.preventDefault();
+					jQuery('html, body').animate({
+						scrollTop: 0
+					}, duration);
+					return false;
+				})
+			}
         },
 
 		/* windrow back to top scroll */

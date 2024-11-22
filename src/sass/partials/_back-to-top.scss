@@ -1,47 +1,46 @@
 /* Back to top */
-.scrollToTop {
-	width: 0;
-	height: 0;
-	border-radius: 50%;
-	background-color: $primary_color;
-	color: $button_color;
-	box-shadow: 0 4px 50px rgba(0, 0, 0, 0.15);
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
+.scroll-wrap {
 	position: fixed;
-	right: 0;
-	bottom: 0;
-	z-index: 999;
+	right: 24px;
+	bottom: 24px;
+	width: 37px;
+	height: 37px;
+	cursor: pointer;
+	display: block;
+	border-radius: 100%;
+	box-shadow: inset 0 0 0 0.1rem rgb(128 130 134 / 25%);
+	z-index: 9;
 	opacity: 0;
 	visibility: hidden;
-
-	@media(max-width: 767px) {
-		display: none;
-	}
-
-	&.show {
-		opacity: 1;
-		visibility: visible;
-		right: 30px;
-		bottom: 30px;
-		width: 40px;
-		height: 40px;
-	}
-
-	svg {
-		width: 12px;
-		fill: $button_text_color;
-	}
-
-	&:hover {
-		background: $secondary_color;
-		color: $button_text_color;
-		i {
-			animation: toBottomFromTop 0.7s forwards;
-		}
-		svg {
-			fill: $button_text_color;
-		}
-	}
+	transform: translateY(0.75rem);
+	transition: all 200ms linear, margin-right 0ms;
+}
+.scroll-wrap:after {
+	position: absolute;
+	content: "";
+	mask: url(../images/sb_arrow_icon.svg);
+	background-color: $primary_color;
+	left: 9px;
+	top: 10px;
+	height: 14px;
+	width: 20px;
+	cursor: pointer;
+	display: block;
+	z-index: 1;
+	transform: rotate(-90deg) scale(0.8);
+	transition: all 200ms linear;
+}
+.scroll-wrap.active-scroll {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+.scroll-wrap svg path {
+	fill: none;
+}
+.scroll-wrap svg.scroll-circle path {
+	stroke: $primary_color;
+	stroke-width: 4;
+	box-sizing: border-box;
+	transition: all 200ms linear;
 }
