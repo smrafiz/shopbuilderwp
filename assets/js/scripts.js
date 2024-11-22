@@ -54,7 +54,7 @@
 			var yPopup = $(".popup-youtube");
 			if (yPopup.length) {
 				yPopup.magnificPopup({
-					disableOn: 700,
+					//disableOn: 700,
 					type: 'iframe',
 					mainClass: 'mfp-fade',
 					removalDelay: 160,

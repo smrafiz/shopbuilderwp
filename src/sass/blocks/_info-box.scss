@@ -31,9 +31,12 @@
     @media(max-width: 991px) {
       padding: 20px;
     }
-    &:hover {
-      transform: translateY(-5px);
+    @media(min-width: 992px) and (max-width: 1199px) {
+      max-height: 400px;
     }
+  }
+  .elementor-icon-box-content {
+    margin-top: -2px;
   }
   .elementor-icon-box-icon {
     .elementor-icon {

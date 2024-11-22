@@ -1,7 +1,13 @@
 .elementor-widget-image-carousel .swiper .swiper-slide figure {
 	line-height: 0;
 }
-
+@media(max-width: 991px) {
+	.mfp-iframe-holder {
+		.mfp-close {
+			right: 5px;
+		}
+	}
+}
 // button
 .sb-button-1 {
 	.elementor-button {
@@ -407,5 +413,23 @@ body {
 	100% {
 		opacity: 1;
 		transform: none;
+	}
+}
+
+// elementor-accordion
+
+.elementor-accordion {
+	.elementor-accordion-item {
+		border: 1px solid #D9DCE3 !important;
+		border-radius: 6px;
+		margin-bottom: 10px;
+		.elementor-tab-title {
+			padding: 18px 24px;
+		}
+		.elementor-active {
+			.elementor-accordion-title {
+				color: $primary_color;
+			}
+		}
 	}
 }

@@ -104,7 +104,7 @@ class SBThemes {
                         </div>
 
                     </div>
-					<?php $i = $i + 200;
+					<?php $i = $i + 100;
 				}
 				?>
             </div>
