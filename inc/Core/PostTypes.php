@@ -53,7 +53,7 @@ class PostTypes {
 			'show_ui'            => true,
 			'show_in_menu'       => true,
 			'query_var'          => true,
-			'rewrite'            => [ 'slug' => 'sb_theme' ],
+			'rewrite'            => [ 'slug' => 'shopbuilder-themes' ],
 			'capability_type'    => 'post',
 			'has_archive'        => false,
 			'hierarchical'       => false,
