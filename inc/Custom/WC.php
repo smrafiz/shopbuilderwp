@@ -85,6 +85,10 @@ class WC {
 	public function my_account_endpoint_urls( $url, $endpoint ) {
 		$page = get_queried_object();
 
+		if ( ! is_object( $page ) ) {
+			return $url;
+		}
+
 		if ( is_user_logged_in() && 'rtsb_builder' !== $page->post_type ) {
 			return $url;
 		}

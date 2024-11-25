@@ -405,12 +405,14 @@ body {
 		border: 1px solid #D9DCE3 !important;
 		border-radius: 6px;
 		margin-bottom: 10px;
+		overflow: hidden;
 		.elementor-tab-title {
 			color: $title_color;
 			font-size: 17px;
 			font-weight: 600;
 			padding: 18px 24px;
 			line-height: 1.2;
+			background: #fff;
 		}
 		.elementor-active {
 			.elementor-accordion-title {
@@ -420,6 +422,7 @@ body {
 		.elementor-tab-content {
 			padding: 24px;
 			font-weight: 500;
+			background: #fff;
 			p:last-child {
 				margin-bottom: 0;
 			}
