@@ -35,8 +35,8 @@ class Sidebar {
 					'description'   => $sidebar['description'] ?? '',
 					'before_widget' => '<section id="%1$s" class="widget ' . $classes . ' %2$s">',
 					'after_widget'  => '</section>',
-					'before_title'  => '<h3 class="widget-title">',
-					'after_title'   => '</h3>',
+					'before_title'  => '<h2 class="widget-title">',
+					'after_title'   => '</h2>',
 				]
 			);
 		}
