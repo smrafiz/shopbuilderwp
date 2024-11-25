@@ -14,6 +14,9 @@
 	visibility: hidden;
 	transform: translateY(0.75rem);
 	transition: all 200ms linear, margin-right 0ms;
+	@media(max-width: 767px) {
+		display: none;
+	}
 }
 .scroll-wrap:after {
 	position: absolute;

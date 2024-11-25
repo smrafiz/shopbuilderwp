@@ -505,7 +505,6 @@ if ( ! function_exists( 'shopbuilderwp_scroll_top' ) ) {
 	 */
 	function shopbuilderwp_scroll_top( $class = '', $icon = 'scroll-top' ) {
 		?>
-
         <div class="scroll-wrap">
             <svg
                     class="scroll-circle svg-content"
