@@ -91,10 +91,9 @@ pre {
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
-mark, ins {
-	background: #006D5B;
+mark {
+	background: transparent;
 	text-decoration: none;
-	color: #ffffff;
 	padding: 1px 3px;
 	border-radius: 2px;
 	font-weight: 600;

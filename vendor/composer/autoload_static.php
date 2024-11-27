@@ -26,6 +26,31 @@ class ComposerStaticInitcfdce6375adcbfc867209e5989148c5d
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'RT\\ShopBuilderWP\\Core\\Elementor' => __DIR__ . '/../..' . '/inc/Core/Elementor.php',
+        'RT\\ShopBuilderWP\\Core\\PostTypes' => __DIR__ . '/../..' . '/inc/Core/PostTypes.php',
+        'RT\\ShopBuilderWP\\Core\\Shortcodes' => __DIR__ . '/../..' . '/inc/Core/Shortcodes.php',
+        'RT\\ShopBuilderWP\\Core\\Sidebar' => __DIR__ . '/../..' . '/inc/Core/Sidebar.php',
+        'RT\\ShopBuilderWP\\Core\\Tags' => __DIR__ . '/../..' . '/inc/Core/Tags.php',
+        'RT\\ShopBuilderWP\\Core\\WalkerNav' => __DIR__ . '/../..' . '/inc/Core/WalkerNav.php',
+        'RT\\ShopBuilderWP\\Custom\\Debloater' => __DIR__ . '/../..' . '/inc/Custom/Debloater.php',
+        'RT\\ShopBuilderWP\\Custom\\Extras' => __DIR__ . '/../..' . '/inc/Custom/Extras.php',
+        'RT\\ShopBuilderWP\\Custom\\Hooks' => __DIR__ . '/../..' . '/inc/Custom/Hooks.php',
+        'RT\\ShopBuilderWP\\Custom\\WC' => __DIR__ . '/../..' . '/inc/Custom/WC.php',
+        'RT\\ShopBuilderWP\\Elementor\\RTImage' => __DIR__ . '/../..' . '/inc/Elementor/RTImage.php',
+        'RT\\ShopBuilderWP\\Elementor\\RTMarquee' => __DIR__ . '/../..' . '/inc/Elementor/RTMarquee.php',
+        'RT\\ShopBuilderWP\\Helpers\\Constants' => __DIR__ . '/../..' . '/inc/Helpers/Constants.php',
+        'RT\\ShopBuilderWP\\Helpers\\Fns' => __DIR__ . '/../..' . '/inc/Helpers/Fns.php',
+        'RT\\ShopBuilderWP\\Init' => __DIR__ . '/../..' . '/inc/Init.php',
+        'RT\\ShopBuilderWP\\Setup\\Enqueue' => __DIR__ . '/../..' . '/inc/Setup/Enqueue.php',
+        'RT\\ShopBuilderWP\\Setup\\Menus' => __DIR__ . '/../..' . '/inc/Setup/Menus.php',
+        'RT\\ShopBuilderWP\\Setup\\Setup' => __DIR__ . '/../..' . '/inc/Setup/Setup.php',
+        'RT\\ShopBuilderWP\\Shortcodes\\SBPluginInfo' => __DIR__ . '/../..' . '/inc/Shortcodes/SBPluginInfo.php',
+        'RT\\ShopBuilderWP\\Shortcodes\\SBSocialIcon' => __DIR__ . '/../..' . '/inc/Shortcodes/SBSocialIcon.php',
+        'RT\\ShopBuilderWP\\Shortcodes\\SBThemeInfo' => __DIR__ . '/../..' . '/inc/Shortcodes/SBThemeInfo.php',
+        'RT\\ShopBuilderWP\\Shortcodes\\SBThemes' => __DIR__ . '/../..' . '/inc/Shortcodes/SBThemes.php',
+        'RT\\ShopBuilderWP\\Shortcodes\\SBTyping' => __DIR__ . '/../..' . '/inc/Shortcodes/SBTyping.php',
+        'RT\\ShopBuilderWP\\Shortcodes\\SBWidgets' => __DIR__ . '/../..' . '/inc/Shortcodes/SBWidgets.php',
+        'RT\\ShopBuilderWP\\Traits\\SingletonTraits' => __DIR__ . '/../..' . '/inc/Traits/SingletonTraits.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

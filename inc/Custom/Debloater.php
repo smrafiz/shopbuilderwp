@@ -33,7 +33,7 @@ class Debloater {
 			->disable_wp_embeds()
 			->disable_self_pingbacks()
 			->disable_XMLRPC()
-			->disable_rss_feeds()
+			->disable_site_rss_feeds()
 			->remove_query_strings()
 			->disable_gutenberg_editor()
 			->limit_post_revisions();
@@ -233,7 +233,7 @@ class Debloater {
 	 * @return Debloater
 	 * @since  1.0.0
 	 */
-	public function disable_rss_feeds() {
+	public function disable_site_rss_feeds() {
 		add_action(
 			'do_feed',
 			function () {
@@ -249,10 +249,10 @@ class Debloater {
 			},
 			1
 		);
-		add_action( 'do_feed_rdf', 'disable_rss_feeds', 1 );
-		add_action( 'do_feed_rss', 'disable_rss_feeds', 1 );
-		add_action( 'do_feed_rss2', 'disable_rss_feeds', 1 );
-		add_action( 'do_feed_atom', 'disable_rss_feeds', 1 );
+		add_action( 'do_feed_rdf', [ $this, 'disable_rss_feeds' ], 1 );
+		add_action( 'do_feed_rss', [ $this, 'disable_rss_feeds' ], 1 );
+		add_action( 'do_feed_rss2', [ $this, 'disable_rss_feeds' ], 1 );
+		add_action( 'do_feed_atom', [ $this, 'disable_rss_feeds' ], 1 );
 
 		return $this;
 	}
@@ -340,5 +340,18 @@ class Debloater {
 		}
 
 		return $this;
+	}
+
+	/**
+	 * Disable RSS feeds and display a message.
+	 *
+	 * @return void
+	 */
+	public function disable_rss_feeds() {
+		wp_die(
+			esc_html__( 'RSS feeds are disabled on this site. Please visit the homepage for updates.', 'shopbuilderwp' ),
+			esc_html__( 'No RSS Feeds', 'shopbuilderwp' ),
+			[ 'response' => 403 ]
+		);
 	}
 }

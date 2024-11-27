@@ -40,18 +40,39 @@ class SBPluginInfo {
 		);
 
 		$plugin_slug   = 'shopbuilder';
-		$transient_key = 'sb_plugin_data_' . $plugin_slug;
+		$transient_key = 'sb_plugin_cache_data_' . $plugin_slug;
 		$data          = get_transient( $transient_key );
 
 		if ( false === $data ) {
-			$api_url  = 'https://api.wordpress.org/plugins/info/1.2/?action=query_plugins&request[author]=techlabpro1';
-			$response = wp_remote_get( $api_url );
+			$api_url = 'https://api.wordpress.org/plugins/info/1.2/?action=query_plugins&request[author]=techlabpro1';
 
-			if ( is_wp_error( $response ) ) {
-				return 'Error fetching plugin data.';
+			$curl = curl_init();
+
+			curl_setopt_array(
+				$curl,
+				[
+					CURLOPT_URL            => $api_url,
+					CURLOPT_RETURNTRANSFER => true,
+					CURLOPT_TIMEOUT        => 10,
+					CURLOPT_SSL_VERIFYPEER => true,
+					CURLOPT_USERAGENT      => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+					CURLOPT_HTTPHEADER     => [ 'Content-Type: application/json' ],
+				]
+			);
+
+			$response  = curl_exec( $curl );
+			$http_code = curl_getinfo( $curl, CURLINFO_HTTP_CODE );
+			$error     = curl_error( $curl );
+
+			curl_close( $curl );
+
+			if ( false === $response || 200 !== $http_code ) {
+				$error_message = false === $response ? $error : "HTTP Code: $http_code";
+
+				return 'Error fetching plugin data: ' . $error_message;
 			}
 
-			$response_data = json_decode( wp_remote_retrieve_body( $response ), true );
+			$response_data = json_decode( $response, true );
 			$plugin_data   = array_filter(
 				$response_data['plugins'],
 				function ( $plugin ) use ( $plugin_slug ) {
@@ -63,7 +84,7 @@ class SBPluginInfo {
 
 			unset( $data['description'] );
 
-			set_transient( $transient_key, $data, 7 * DAY_IN_SECONDS );
+			set_transient( $transient_key, $data, 3 * DAY_IN_SECONDS );
 		}
 
 		if ( empty( $data ) ) {

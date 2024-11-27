@@ -42,6 +42,13 @@
 
 .sb-headline {
 	display: inline-block;
+
+	@media only screen and (min-width: 992px) {
+		position: absolute;
+		left: 0;
+		text-align: left;
+	}
+
 	@media(max-width: 767px) {
 		display: block;
 	}
@@ -117,9 +124,11 @@
 		box-shadow: 0 5px 24px rgba(0, 0, 0, 0.1);;
 		height: 100%;
 		overflow: hidden;
+
 		.item-thumb {
 			overflow: hidden;
 			line-height: 0;
+
 			img {
 				margin: 0;
 				width: 100%;
@@ -175,6 +184,7 @@
 		.excerpt {
 			font-size: 15px;
 			font-weight: 500;
+
 			p {
 				margin-bottom: 0;
 			}
@@ -183,6 +193,7 @@
 		.item-update {
 			font-size: 15px;
 			font-weight: 500;
+
 			span {
 				color: $title_color;
 				font-weight: 600;
@@ -218,6 +229,7 @@
 .rt-social {
 	display: flex;
 	gap: 9px;
+
 	li {
 		a {
 			display: flex;
@@ -228,6 +240,7 @@
 			width: 40px;
 			height: 40px;
 			transform: translateY(0);
+
 			&:hover {
 				transform: translateY(-4px);
 			}

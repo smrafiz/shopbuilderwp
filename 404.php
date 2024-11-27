@@ -12,7 +12,7 @@ get_header();
 ?>
 
 <div id="primary" class="content-area">
-	<div class="container">
+	<div class="container 404-container">
 		<main id="main" class="site-main error-404" role="main">
 			<?php shopbuilderwp_get_img( '404.png', true, 'width="1007" height="530"' ) . "' alt='"; ?>
 

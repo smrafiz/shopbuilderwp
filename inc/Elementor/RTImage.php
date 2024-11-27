@@ -1,6 +1,10 @@
 <?php
 namespace RT\ShopBuilderWP\Elementor;
+
+use Elementor\Plugin;
+use Elementor\Utils;
 use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -24,6 +28,10 @@ class RTImage extends Widget_Base {
 	}
 
 	public function get_script_depends() {
+		if ( Plugin::$instance->editor->is_edit_mode() ) {
+			return [];
+		}
+
 		return [ 'sb-parallax' ];
 	}
 
@@ -33,17 +41,17 @@ class RTImage extends Widget_Base {
 			'section_image',
 			[
 				'label' => esc_html__( 'Image', 'shopbuilderwp' ),
-				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+				'tab'   => Controls_Manager::TAB_CONTENT,
 			]
 		);
 
 		$this->add_control(
 			'image',
 			[
-				'label' => esc_html__( 'Choose Image', 'shopbuilderwp' ),
-				'type' => \Elementor\Controls_Manager::MEDIA,
+				'label'   => esc_html__( 'Choose Image', 'shopbuilderwp' ),
+				'type'    => Controls_Manager::MEDIA,
 				'default' => [
-					'url' => \Elementor\Utils::get_placeholder_image_src(),
+					'url' => Utils::get_placeholder_image_src(),
 				],
 			]
 		);
@@ -52,7 +60,7 @@ class RTImage extends Widget_Base {
 			'mouse_animation',
 			[
 				'label'        => __( 'Mouse Animation', 'shopbuilderwp' ),
-				'type'         => \Elementor\Controls_Manager::SWITCHER,
+				'type'         => Controls_Manager::SWITCHER,
 				'label_on'     => __( 'Show', 'shopbuilderwp' ),
 				'label_off'    => __( 'Hide', 'shopbuilderwp' ),
 				'return_value' => 'yes',
@@ -63,7 +71,7 @@ class RTImage extends Widget_Base {
 			'data_depth',
 			[
 				'label'       => esc_html__( 'Data Depth', 'shopbuilderwp' ),
-				'type'        => \Elementor\Controls_Manager::TEXT,
+				'type'        => Controls_Manager::TEXT,
 				'label_block' => true,
 				'default'     => '2.00',
 				'condition'   => [
@@ -75,8 +83,8 @@ class RTImage extends Widget_Base {
 		$this->add_responsive_control(
 			'radius',
 			[
-				'label'      => __( 'Radius', 'quixa-core' ),
-				'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+				'label'      => __( 'Radius', 'shopbuilderwp' ),
+				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors'  => [
 					'{{WRAPPER}} .rt-image img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
@@ -85,25 +93,22 @@ class RTImage extends Widget_Base {
 		);
 
 		$this->end_controls_section();
-
 	}
 
 	protected function render() {
-		$settings = $this->get_settings_for_display();
-
-		$mouse_animation = ( $settings['mouse_animation'] == 'yes' ) ? 'rt-image-parallax' : '';
+		$settings        = $this->get_settings_for_display();
+		$mouse_animation = 'yes' === $settings['mouse_animation'] ? 'rt-image-parallax' : '';
 
 		?>
 
-        <div class="rt-image <?php echo esc_attr( $mouse_animation ); ?>">
-            <div class="rt-mouse-parallax">
-                <div class="item-image" data-depth="<?php echo esc_attr( $settings['data_depth'] ); ?>">
-		            <?php echo wp_get_attachment_image( $settings['image']['id'], 'full' ); ?>
-                </div>
-            </div>
-        </div>
+		<div class="rt-image <?php echo esc_attr( $mouse_animation ); ?>">
+			<div class="rt-mouse-parallax">
+				<div class="item-image" data-depth="<?php echo esc_attr( $settings['data_depth'] ); ?>">
+					<?php echo wp_get_attachment_image( $settings['image']['id'], 'full' ); ?>
+				</div>
+			</div>
+		</div>
 
 		<?php
 	}
-
 }

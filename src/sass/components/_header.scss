@@ -41,7 +41,7 @@ $dropdown_top_bottom_margin: 10px;
 }
 .site-header {
 	position: relative;
-	z-index: 9;
+	z-index: 999;
 	ul {
 		@include list_default();
 	}

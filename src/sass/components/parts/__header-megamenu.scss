@@ -49,8 +49,8 @@
 	ul li > ul.dropdown-menu {
 		transform: translate3d(0px, 2rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
 		pointer-events: none;
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 20px;
+		padding-bottom: 20px;
 	}
 
 	ul > li:hover > ul.dropdown-menu {

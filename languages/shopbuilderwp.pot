@@ -6,7 +6,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-22 09:15+0000\n"
+"POT-Creation-Date: 2024-11-27 11:46+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -45,7 +45,7 @@ msgstr ""
 msgid "Add a menu"
 msgstr ""
 
-#: ../inc/template-tags.php:213, ../inc/template-tags.php:864
+#: ../inc/template-tags.php:213, ../inc/template-tags.php:874
 msgid "Home"
 msgstr ""
 
@@ -62,86 +62,86 @@ msgstr ""
 msgid "%1$s %2$s"
 msgstr ""
 
-#: ../inc/template-tags.php:559
+#: ../inc/template-tags.php:569
 msgid "%s mins read"
 msgstr ""
 
-#: ../inc/template-tags.php:557
+#: ../inc/template-tags.php:567
 msgid "1 min read"
 msgstr ""
 
-#: ../inc/template-tags.php:555
+#: ../inc/template-tags.php:565
 msgid "%s hours read"
 msgstr ""
 
-#: ../inc/template-tags.php:553
+#: ../inc/template-tags.php:563
 msgid "Less than a minute"
 msgstr ""
 
-#: ../inc/template-tags.php:579
+#: ../inc/template-tags.php:589
 msgid "By"
 msgstr ""
 
-#: ../inc/template-tags.php:585
+#: ../inc/template-tags.php:595
 msgid "Comment: %s"
 msgid_plural "Comments: %s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/template-tags.php:940
+#: ../inc/template-tags.php:950
 msgid "Shop"
 msgstr ""
 
-#: ../inc/template-tags.php:936
+#: ../inc/template-tags.php:946
 msgid "Blog"
 msgstr ""
 
-#: ../inc/template-tags.php:927
+#: ../inc/template-tags.php:937
 msgid "Posts by: "
 msgstr ""
 
-#: ../inc/template-tags.php:899
+#: ../inc/template-tags.php:909
 msgid "Posts Category: "
 msgstr ""
 
-#: ../inc/template-tags.php:887
+#: ../inc/template-tags.php:897
 msgid "404"
 msgstr ""
 
-#: ../inc/template-tags.php:882
+#: ../inc/template-tags.php:892
 msgid "Search results for: "
 msgstr ""
 
-#: ../inc/template-tags.php:877
+#: ../inc/template-tags.php:887
 msgid "Posts made in: "
 msgstr ""
 
-#: ../inc/template-tags.php:870
+#: ../inc/template-tags.php:880
 msgid "Posts Tagged: "
 msgstr ""
 
-#: ../inc/template-tags.php:973
+#: ../inc/template-tags.php:983
 msgid "Pingback:"
 msgstr ""
 
-#: ../inc/template-tags.php:995
+#: ../inc/template-tags.php:1005
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
 #. translators: 1: date, 2: time
-#: ../inc/template-tags.php:1003
+#: ../inc/template-tags.php:1013
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: ../inc/template-tags.php:1010
+#: ../inc/template-tags.php:1020
 msgid "Edit"
 msgstr ""
 
-#: ../inc/template-tags.php:1020
+#: ../inc/template-tags.php:1030
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../inc/template-tags.php:1036
+#: ../inc/template-tags.php:1046
 msgid "Reply"
 msgstr ""
 
@@ -178,6 +178,14 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
+#: ../inc/Custom/Debloater.php:352
+msgid "RSS feeds are disabled on this site. Please visit the homepage for updates."
+msgstr ""
+
+#: ../inc/Custom/Debloater.php:353
+msgid "No RSS Feeds"
+msgstr ""
+
 #: ../inc/Custom/Extras.php:56
 msgid "Make as Mega Menu"
 msgstr ""
@@ -202,32 +210,36 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: ../inc/Elementor/RTImage.php:15
+#: ../inc/Elementor/RTImage.php:19
 msgid "RT Image"
 msgstr ""
 
-#: ../inc/Elementor/RTImage.php:35
+#: ../inc/Elementor/RTImage.php:43
 msgid "Image"
 msgstr ""
 
-#: ../inc/Elementor/RTImage.php:43, ../inc/Elementor/RTMarquee.php:35
+#: ../inc/Elementor/RTImage.php:51, ../inc/Elementor/RTMarquee.php:35
 msgid "Choose Image"
 msgstr ""
 
-#: ../inc/Elementor/RTImage.php:54
+#: ../inc/Elementor/RTImage.php:62
 msgid "Mouse Animation"
 msgstr ""
 
-#: ../inc/Elementor/RTImage.php:56
+#: ../inc/Elementor/RTImage.php:64
 msgid "Show"
 msgstr ""
 
-#: ../inc/Elementor/RTImage.php:57
+#: ../inc/Elementor/RTImage.php:65
 msgid "Hide"
 msgstr ""
 
-#: ../inc/Elementor/RTImage.php:65
+#: ../inc/Elementor/RTImage.php:73
 msgid "Data Depth"
+msgstr ""
+
+#: ../inc/Elementor/RTImage.php:86
+msgid "Radius"
 msgstr ""
 
 #: ../inc/Elementor/RTMarquee.php:16

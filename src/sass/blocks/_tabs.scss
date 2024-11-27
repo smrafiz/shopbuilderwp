@@ -52,27 +52,27 @@
 		}
 	}
 
-	.elementor-widget-icon {
-		.elementor-icon {
-			background-color: $primary_color;
-			border-radius: 15px;
-			width: 50px;
-			height: 50px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			svg {
-				width: 20px;
-				height: 20px;
-				fill: $white_color;
-
-				path {
-					fill: $white_color;
-				}
-			}
-		}
-	}
+	//.elementor-widget-icon {
+	//	.elementor-icon {
+	//		background-color: $primary_color;
+	//		border-radius: 15px;
+	//		width: 50px;
+	//		height: 50px;
+	//		display: flex;
+	//		align-items: center;
+	//		justify-content: center;
+	//
+	//		svg {
+	//			width: 20px;
+	//			height: 20px;
+	//			fill: $white_color;
+	//
+	//			path {
+	//				fill: $white_color;
+	//			}
+	//		}
+	//	}
+	//}
 
 	.e-n-tabs-content {
 		display: block !important;

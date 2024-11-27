@@ -9,7 +9,7 @@
 use RadiusTheme\SB\Helpers\BuilderFns;
 /*banner title*/
 if ( is_404() ) {
-	$banner_title = 'Error Page';
+	$banner_title = 'Error 404: Page Not Found';
 } elseif ( is_search() ) {
 	$banner_title = esc_html__( 'Search Results for : ', 'shopbuilderwp' ) . get_search_query();
 } elseif ( is_home() ) {
