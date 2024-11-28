@@ -107,6 +107,7 @@
 	img {
 		transition: all 520ms ease;
 		transform: perspective(0px) rotateX(0deg) rotateY(0deg) scaleX(1.01) scaleY(1.01);
+		backface-visibility: hidden;
 	}
 
 	&:hover {

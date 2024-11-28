@@ -1,53 +1,62 @@
 // Info box css
 
 .rtsb-info-box-01 {
-  .elementor-widget-icon-box {
-    background-color: #FFFFFF;
-    padding: 35px 24px 25px 24px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #D0D6E2;
-    border-radius: 15px;
-    transition: all 0.5s cubic-bezier(0.08, 0.27, 0.04, 1.11);
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 24px rgba(0, 75, 255, 0.1);
-      .elementor-icon-box-title {
-        a {
-          color: $primary_color;
-        }
-      }
-    }
-  }
+	.elementor-widget-icon-box {
+		background-color: #FFFFFF;
+		padding: 35px 24px 25px 24px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #D0D6E2;
+		border-radius: 15px;
+		transition: all 0.5s cubic-bezier(0.08, 0.27, 0.04, 1.11);
+
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 5px 24px rgba(0, 75, 255, 0.1);
+
+			.elementor-icon-box-title {
+				a {
+					color: $primary_color;
+				}
+			}
+		}
+	}
 }
 
 // info box style 02
 .rtsb-info-box-02 {
-  .elementor-icon-box-wrapper {
-    background-color: $gray_color;
-    border-radius: 15px;
-    padding: 45px;
-    transition: all 520ms ease;
-    @media(max-width: 991px) {
-      padding: 20px;
-    }
-    @media(min-width: 992px) and (max-width: 1199px) {
-      max-height: 400px;
-    }
-  }
-  .elementor-icon-box-content {
-    margin-top: -3px;
-  }
-  .elementor-icon-box-icon {
-    .elementor-icon {
-      background-color: $primary_color;
-      border-radius: 6px;
-      font-size: 17px;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
+	.elementor-icon-box-wrapper {
+		background-color: $gray_color;
+		border-radius: 15px;
+		padding: 40px;
+		transition: all 520ms ease;
+		@media(max-width: 991px) {
+			padding: 20px;
+		}
+		@media(min-width: 992px) and (max-width: 1199px) {
+			max-height: 400px;
+		}
+	}
+
+	.elementor-icon-box-content {
+		margin-top: -3px;
+	}
+
+	.elementor-icon-box-icon {
+		.elementor-icon {
+			background-color: $primary_color;
+			border-radius: 6px;
+			font-size: 17px;
+			width: 30px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.elementor-icon-box-title {
+		margin-bottom: 10px !important;
+		font-weight: 600;
+	}
 }
