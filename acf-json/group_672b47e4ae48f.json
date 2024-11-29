@@ -80,6 +80,13 @@
                 "operator": "==",
                 "value": "rtsb_builder"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "sb_app"
+            }
         ]
     ],
     "menu_order": 0,
@@ -91,5 +98,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732092233
+    "modified": 1732859668
 }

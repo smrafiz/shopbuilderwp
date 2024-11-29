@@ -15,14 +15,14 @@ use RT\ShopBuilderWP\Traits\SingletonTraits;
 /**
  * Shortcode: SBThemes.
  */
-class SBThemes {
+class SBApps {
 	use SingletonTraits;
 
 	/**
 	 * Register to hook the shortcode.
 	 */
 	public function register() {
-		add_shortcode( 'sb_themes', [ $this, 'render' ] );
+		add_shortcode( 'sb_apps', [ $this, 'render' ] );
 	}
 
 	/**
@@ -34,7 +34,7 @@ class SBThemes {
 		ob_start();
 
 		$args  = [
-			'post_type'      => 'sb_theme',
+			'post_type'      => 'sb_app',
 			'posts_per_page' => - 1,
 			'orderby'        => 'date',
 			'post_status'    => 'publish',
@@ -43,22 +43,22 @@ class SBThemes {
 
 		if ( $query->have_posts() ) {
 			?>
-			<div class="sb-themes-wrapper">
+			<div class="sb-themes-wrapper sb-apps">
 				<?php
 				$i = 100;
 				while ( $query->have_posts() ) {
 					$query->the_post();
-					$theme_last_update = get_custom_field( 'sb_themes_last_update' );
-					$theme_price       = get_custom_field( 'sb_themes_price' );
+					$app_last_update = get_custom_field( 'sb_app_last_update' );
+					$app_price       = get_custom_field( 'sb_app_price' );
 
 					?>
-					<div class="sb-theme-item animated fadeInUp" style="animation-delay: <?php echo absint( $i ); ?>ms">
+					<div class="sb-theme-item sb-app-item animated fadeInUp" style="animation-delay: <?php echo absint( $i ); ?>ms">
 						<?php
 						if ( has_post_thumbnail() ) {
 							?>
 							<div class="item-thumb">
 								<a href='<?php echo esc_url( get_the_permalink() ); ?>' target="_blank">
-									<?php the_post_thumbnail( 'shopbuilderwp-theme' ); ?>
+									<?php the_post_thumbnail( 'full' ); ?>
 								</a>
 							</div>
 						<?php } ?>
@@ -67,10 +67,10 @@ class SBThemes {
 								<a href='<?php echo esc_url( get_the_permalink() ); ?>'><?php the_title(); ?></a>
 							</h2>
 							<?php
-							if ( $theme_last_update ) {
+							if ( $app_last_update ) {
 								?>
 								<div class="item-update">
-									Last Updated: <span><?php echo esc_html( $theme_last_update ); ?></span>
+									Last Updated: <span><?php echo esc_html( $app_last_update ); ?></span>
 								</div>
 								<?php
 							}
@@ -80,9 +80,9 @@ class SBThemes {
 							</div>
 							<div class="item-footer">
 								<?php
-								if ( $theme_price ) {
+								if ( $app_price ) {
 									?>
-									<div class="price"><?php echo esc_html( $theme_price ); ?></div>
+									<div class="price"><?php echo esc_html( $app_price ); ?></div>
 									<?php
 								}
 								?>

@@ -25,6 +25,8 @@ return array(
     'RT\\ShopBuilderWP\\Setup\\Enqueue' => $baseDir . '/inc/Setup/Enqueue.php',
     'RT\\ShopBuilderWP\\Setup\\Menus' => $baseDir . '/inc/Setup/Menus.php',
     'RT\\ShopBuilderWP\\Setup\\Setup' => $baseDir . '/inc/Setup/Setup.php',
+    'RT\\ShopBuilderWP\\Shortcodes\\SBAppInfo' => $baseDir . '/inc/Shortcodes/SBAppInfo.php',
+    'RT\\ShopBuilderWP\\Shortcodes\\SBApps' => $baseDir . '/inc/Shortcodes/SBApps.php',
     'RT\\ShopBuilderWP\\Shortcodes\\SBPluginInfo' => $baseDir . '/inc/Shortcodes/SBPluginInfo.php',
     'RT\\ShopBuilderWP\\Shortcodes\\SBSocialIcon' => $baseDir . '/inc/Shortcodes/SBSocialIcon.php',
     'RT\\ShopBuilderWP\\Shortcodes\\SBThemeInfo' => $baseDir . '/inc/Shortcodes/SBThemeInfo.php',

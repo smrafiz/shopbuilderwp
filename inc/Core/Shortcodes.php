@@ -2,13 +2,15 @@
 
 namespace RT\ShopBuilderWP\Core;
 
+use RT\ShopBuilderWP\Shortcodes\SBApps;
 use RT\ShopBuilderWP\Shortcodes\SBThemes;
 use RT\ShopBuilderWP\Shortcodes\SBTyping;
+use RT\ShopBuilderWP\Shortcodes\SBAppInfo;
 use RT\ShopBuilderWP\Shortcodes\SBWidgets;
 use RT\ShopBuilderWP\Traits\SingletonTraits;
-use RT\ShopBuilderWP\Shortcodes\SBPluginInfo;
 use RT\ShopBuilderWP\Shortcodes\SBThemeInfo;
 use RT\ShopBuilderWP\Shortcodes\SBSocialIcon;
+use RT\ShopBuilderWP\Shortcodes\SBPluginInfo;
 
 /**
  * Sidebar.
@@ -30,11 +32,13 @@ class Shortcodes {
 	 */
 	public function register_shortcodes() {
 		$widgets = [
+			SBApps::class,
 			SBThemes::class,
 			SBTyping::class,
 			SBWidgets::class,
-			SBPluginInfo::class,
+			SBAppInfo::class,
 			SBThemeInfo::class,
+			SBPluginInfo::class,
 			SBSocialIcon::class,
 		];
 

@@ -44,6 +44,8 @@ class ComposerStaticInitcfdce6375adcbfc867209e5989148c5d
         'RT\\ShopBuilderWP\\Setup\\Enqueue' => __DIR__ . '/../..' . '/inc/Setup/Enqueue.php',
         'RT\\ShopBuilderWP\\Setup\\Menus' => __DIR__ . '/../..' . '/inc/Setup/Menus.php',
         'RT\\ShopBuilderWP\\Setup\\Setup' => __DIR__ . '/../..' . '/inc/Setup/Setup.php',
+        'RT\\ShopBuilderWP\\Shortcodes\\SBAppInfo' => __DIR__ . '/../..' . '/inc/Shortcodes/SBAppInfo.php',
+        'RT\\ShopBuilderWP\\Shortcodes\\SBApps' => __DIR__ . '/../..' . '/inc/Shortcodes/SBApps.php',
         'RT\\ShopBuilderWP\\Shortcodes\\SBPluginInfo' => __DIR__ . '/../..' . '/inc/Shortcodes/SBPluginInfo.php',
         'RT\\ShopBuilderWP\\Shortcodes\\SBSocialIcon' => __DIR__ . '/../..' . '/inc/Shortcodes/SBSocialIcon.php',
         'RT\\ShopBuilderWP\\Shortcodes\\SBThemeInfo' => __DIR__ . '/../..' . '/inc/Shortcodes/SBThemeInfo.php',
