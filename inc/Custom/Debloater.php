@@ -25,7 +25,7 @@ class Debloater {
 			->disable_emojis()
 			->remove_embed_scripts()
 			->remove_jQuery_migrate()
-			->remove_dashicons()
+//			->remove_dashicons()
 			->remove_generator_meta()
 			->remove_rsd_link()
 			->remove_wlwmanifest_link()
