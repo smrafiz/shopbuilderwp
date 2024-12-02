@@ -115,6 +115,9 @@ class WC {
 			case 'customer-logout':
 				$url = home_url( '/rtsb-template/login-register-template-1/' );
 				break;
+			case 'my-custom-rtsb-wishlist':
+				$url = home_url( '/rtsb-template/wishlist/' );
+				break;
 		}
 
 		return $url;
