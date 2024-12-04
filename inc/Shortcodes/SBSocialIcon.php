@@ -45,7 +45,7 @@ class SBSocialIcon {
 			<li class="rt-social-item rt-social-4">
 				<a class="rt-social-link yu" href="https://www.youtube.com/c/RadiusTheme" target="_blank" rel="noopener"><?php echo shopbuilderwp_get_svg('youtube') ?></a>
 			</li>
-			<li class="rt-social-item rt-social-5"><a class="rt-social-link env" href="https://themeforest.net/user/radiustheme" target="_blank" rel="noopener"><?php echo shopbuilderwp_get_svg('map-pin') ?></a></li>
+			<li class="rt-social-item rt-social-5"><a class="rt-social-link env" href="https://themeforest.net/user/radiustheme" target="_blank" rel="noopener"><?php echo shopbuilderwp_get_svg('envato') ?></a></li>
 		</ul>
 			<?php
 
